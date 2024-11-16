@@ -1,0 +1,123 @@
+[gd_scene load_steps=15 format=3 uid="uid://qq5dw07f4rmg"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_apd20"]
+[ext_resource type="Texture2D" uid="uid://by62be7ke5rel" path="res://art/World of Solaria Demo Pack Update 04/RPG Maker/characters/Actor1.png" id="2_l2m1a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wn8kd"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otvnu"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4t2v5"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdkrn"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4uyv"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcmoq"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48t0f"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi4ui"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1705"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r5a3"]
+atlas = ExtResource("2_l2m1a")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44ien"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wn8kd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otvnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4t2v5")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdkrn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4uyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcmoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48t0f")
+}],
+"loop": true,
+"name": &"side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi4ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1705")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r5a3")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jx7mm"]
+radius = 29.4118
+height = 62.7451
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.51, 0.51)
+script = ExtResource("1_apd20")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_44ien")
+animation = &"side"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+shape = SubResource("CapsuleShape2D_jx7mm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -1.19209e-07)
+zoom = Vector2(4, 4)
+limit_left = -891
+limit_top = -189
+limit_right = 1016
+limit_bottom = 691
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
