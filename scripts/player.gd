@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Movement speed of the player
-@export var speed: float = 200.0
+@export var speed: float = 100.0
 
 # Reference to the AnimatedSprite2D node
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -15,13 +15,13 @@ func _process(delta: float) -> void:
 	var direction = Vector2.ZERO
 
 	# Check for input from arrow keys or WASD
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		direction.x += 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_backward"):
 		direction.y += 1
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_forward"):
 		direction.y -= 1
 
 	# Normalize the direction vector to prevent faster diagonal movement
@@ -47,9 +47,4 @@ func _process(delta: float) -> void:
 				animated_sprite.play("side")  # Play left animation
 				animated_sprite.flip_h = false
 		else:
-			# Stop the animation and set to the first frame of the last direction
-			if last_direction != "":
-				animated_sprite.play(last_direction)
-				animated_sprite.frame = 0  # Set to the first frame of the last direction
-			else:
-				animated_sprite.stop()  # Stop the animation when not moving
+			animated_sprite.play("idle")
