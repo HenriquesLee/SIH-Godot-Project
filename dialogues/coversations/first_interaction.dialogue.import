@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bvb8xltnpt28p"
+path="res://.godot/imported/first_interaction.dialogue-93ee35b577fb742a0b933019e70fc00c.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/first_interaction.dialogue"
+dest_files=["res://.godot/imported/first_interaction.dialogue-93ee35b577fb742a0b933019e70fc00c.tres"]
+
+[params]
+
+defaults=true

@@ -1,5 +1,6 @@
-[gd_scene load_steps=79 format=4 uid="uid://c140hdqrxiavp"]
+[gd_scene load_steps=81 format=4 uid="uid://c140hdqrxiavp"]
 
+[ext_resource type="Script" path="res://scripts/start.gd" id="1_dcfrr"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/player.tscn" id="1_ku0bw"]
 [ext_resource type="Texture2D" uid="uid://brxv8nei62307" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/GROUND DETAIL 1 - DAY.png" id="3_dv2it"]
 [ext_resource type="Texture2D" uid="uid://catbhqolh6cwn" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/GROUND DETAIL 2 - DAY.png" id="4_qgt3v"]
@@ -37,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ubvu56ku77d" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 1 - DAY.png" id="35_5ovb5"]
 [ext_resource type="Texture2D" uid="uid://exnlmgsbqetp" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 2 - DAY.png" id="36_elx3p"]
 [ext_resource type="PackedScene" uid="uid://cvuhy3dvh607g" path="res://scenes/npc.tscn" id="37_poc7i"]
+[ext_resource type="AudioStream" uid="uid://bamgeffx68ga2" path="res://audio/time_for_adventure.mp3" id="39_o242v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i1hlg"]
 texture = ExtResource("20_d8ute")
@@ -596,11 +598,9 @@ texture = ExtResource("16_sbyey")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n56o1"]
 texture = ExtResource("17_asl33")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
@@ -608,20 +608,16 @@ texture = ExtResource("17_asl33")
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dl4e4"]
 texture = ExtResource("18_oip10")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
@@ -629,11 +625,9 @@ texture = ExtResource("18_oip10")
 2:1/0 = 0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:2/0 = 0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ih4l4"]
 texture = ExtResource("19_e4sys")
@@ -1403,9 +1397,13 @@ sources/8 = SubResource("TileSetAtlasSource_ugtt4")
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_dcfrr")
 
 [node name="player" parent="." instance=ExtResource("1_ku0bw")]
-position = Vector2(-85, 397)
+position = Vector2(-66, 354)
+
+[node name="NPC" parent="." instance=ExtResource("37_poc7i")]
+position = Vector2(-282, 165)
 
 [node name="TileMap" type="TileMap" parent="."]
 physics_interpolation_mode = 1
@@ -1456,5 +1454,6 @@ rotation = 1.56871
 tile_map_data = PackedByteArray("AADv/wQAAgAAAAEAAADv/wUAAgAAAAIAAADv/wYAAgAAAAMAAADv/wcAAgAAAAQAAADv/wgAAgAAAAUAAADv/wkAAgAAAAYAAADw/wMAAgABAAAAAADw/wQAAgABAAEAAADw/wUAAgABAAIAAADw/wYAAgABAAMAAADw/wcAAgABAAQAAADw/wgAAgABAAUAAADw/wkAAgABAAYAAADx/wMAAgACAAAAAADx/wQAAgACAAEAAADx/wUAAgACAAIAAADx/wYAAgACAAMAAADx/wcAAgACAAQAAADx/wgAAgACAAUAAADx/wkAAgACAAYAAADy/wMAAgADAAAAAADy/wQAAgADAAEAAADy/wUAAgADAAIAAADy/wYAAgADAAMAAADy/wcAAgADAAQAAADy/wgAAgADAAUAAADy/wkAAgADAAYAAADz/wQAAgAEAAEAAADz/wUAAgAEAAIAAADz/wYAAgAEAAMAAADz/wcAAgAEAAQAAADz/wgAAgAEAAUAAADz/wkAAgAEAAYAAAD0/wUAAgAFAAIAAAD0/wYAAgAFAAMAAAD0/wcAAgAFAAQAAAD0/wgAAgAFAAUAAAD1/wUAAgAGAAIAAAD1/wYAAgAGAAMAAAD1/wcAAgAGAAQAAAD1/wgAAgAGAAUAAAD2/wUAAgAHAAIAAAD2/wYAAgAHAAMAAAD2/wcAAgAHAAQAAAD2/wgAAgAHAAUAAAAbAAMAAgAAAAEAAAAbAAQAAgAAAAIAAAAbAAUAAgAAAAMAAAAbAAYAAgAAAAQAAAAbAAcAAgAAAAUAAAAbAAgAAgAAAAYAAAAcAAIAAgABAAAAAAAcAAMAAgABAAEAAAAcAAQAAgABAAIAAAAcAAUAAgABAAMAAAAcAAYAAgABAAQAAAAcAAcAAgABAAUAAAAcAAgAAgABAAYAAAAdAAIAAgACAAAAAAAdAAMAAgACAAEAAAAdAAQAAgACAAIAAAAdAAUAAgACAAMAAAAdAAYAAgACAAQAAAAdAAcAAgACAAUAAAAdAAgAAgACAAYAAAAeAAIAAgADAAAAAAAeAAMAAgADAAEAAAAeAAQAAgADAAIAAAAeAAUAAgADAAMAAAAeAAYAAgADAAQAAAAeAAcAAgADAAUAAAAeAAgAAgADAAYAAAAfAAMAAgAEAAEAAAAfAAQAAgAEAAIAAAAfAAUAAgAEAAMAAAAfAAYAAgAEAAQAAAAfAAcAAgAEAAUAAAAfAAgAAgAEAAYAAAAgAAQAAgAFAAIAAAAgAAUAAgAFAAMAAAAgAAYAAgAFAAQAAAAgAAcAAgAFAAUAAAAhAAQAAgAGAAIAAAAhAAUAAgAGAAMAAAAhAAYAAgAGAAQAAAAhAAcAAgAGAAUAAAAiAAQAAgAHAAIAAAAiAAUAAgAHAAMAAAAiAAYAAgAHAAQAAAAiAAcAAgAHAAUAAAAEAP3/AQAAAAAAAAAEAP7/AQAAAAEAAAAEAP//AQAAAAIAAAAEAAAAAQAAAAMAAAAEAAEAAQAAAAQAAAAEAAIAAQAAAAUAAAAFAP3/AQABAAAAAAAFAP7/AQABAAEAAAAFAP//AQABAAIAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAFAAIAAQABAAUAAAAGAP3/AQACAAAAAAAGAP7/AQACAAEAAAAGAP//AQACAAIAAAAGAAAAAQACAAMAAAAGAAEAAQACAAQAAAAGAAIAAQACAAUAAAAHAP3/AQADAAAAAAAHAP7/AQADAAEAAAAHAP//AQADAAIAAAAHAAAAAQADAAMAAAAHAAEAAQADAAQAAAAHAAIAAQADAAUAAAAIAP7/AQAEAAEAAAAIAP//AQAEAAIAAAAIAAAAAQAEAAMAAAAIAAEAAQAEAAQAAAAIAAIAAQAEAAUAAAAEAAMAAQAAAAYAAAAFAAMAAQABAAYAAAAGAAMAAQACAAYAAAAHAAMAAQADAAYAAAAIAAMAAQAEAAYAAADu/xMAAQAAAAAAAADu/xQAAQAAAAEAAADu/xUAAQAAAAIAAADu/xYAAQAAAAMAAADu/xcAAQAAAAQAAADu/xgAAQAAAAUAAADu/xkAAQAAAAYAAADv/xMAAQABAAAAAADv/xQAAQABAAEAAADv/xUAAQABAAIAAADv/xYAAQABAAMAAADv/xcAAQABAAQAAADv/xgAAQABAAUAAADv/xkAAQABAAYAAADw/xMAAQACAAAAAADw/xQAAQACAAEAAADw/xUAAQACAAIAAADw/xYAAQACAAMAAADw/xcAAQACAAQAAADw/xgAAQACAAUAAADw/xkAAQACAAYAAADx/xMAAQADAAAAAADx/xQAAQADAAEAAADx/xUAAQADAAIAAADx/xYAAQADAAMAAADx/xcAAQADAAQAAADx/xgAAQADAAUAAADx/xkAAQADAAYAAADy/xQAAQAEAAEAAADy/xUAAQAEAAIAAADy/xYAAQAEAAMAAADy/xcAAQAEAAQAAADy/xgAAQAEAAUAAADy/xkAAQAEAAYAAAAaAAwACAABAAIAAAAbAAwACAACAAMAAAAcAAwACAACAAMAAAAdAAwACAACAAMAAAAeAAwACAACAAMAAAAfAAwACAACAAMAAAAgAAwACAACAAMAAAAhAAwACAACAAMAAAAiAAwACAACAAMAAAAjAAwACAADAAIAAAAjAAsACAAAAAEAAAAjAAoACAAAAAEAAAAjAAkACAAAAAEAAAAjAAgACAAAAAEAAAAjAAcACAAAAAEAAAAjAAYACAAAAAEAAAAjAAUACAAAAAEAAAAjAAQACAAAAAEAAAAjAAMACAADAAAAAAAiAAMACAACAAMAAAAhAAMACAACAAMAAAAgAAMACAACAAMAAAAaAAsACAAAAAEAAAAaAAoACAAAAAAAAAAaAAYACAAAAAIAAAAaAAUACAAAAAAAAAAaAAQACAAAAAAAAAAaAAMACAABAAAAAAACAP//CAAAAAAAAAACAAAACAAAAAEAAAACAAEACAAAAAEAAAACAAIACAAAAAEAAAACAAMACAABAAIAAAAKAP//CAAAAAAAAAAKAAAACAAAAAEAAAAKAAEACAAAAAEAAAAKAAIACAAAAAEAAAAKAAMACAADAAIAAAAJAAMACAABAAMAAAADAAMACAADAAMAAAA=")
 tile_set = SubResource("TileSet_utdtt")
 
-[node name="NPC" parent="." instance=ExtResource("37_poc7i")]
-position = Vector2(-184, 139)
+[node name="Backgroudmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("39_o242v")
+autoplay = true

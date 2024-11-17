@@ -143,16 +143,14 @@ radius = 9.80392
 height = 31.3726
 
 [node name="player" type="CharacterBody2D"]
-collision_layer = 255
-collision_mask = 255
+collision_mask = 7
 script = ExtResource("1_apd20")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.96078, 13.7255)
 sprite_frames = SubResource("SpriteFrames_44ien")
-animation = &"up"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.931497
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
