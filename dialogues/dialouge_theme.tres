@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c4ip668vah8mo"]
+
+[ext_resource type="Texture2D" uid="uid://bono3jpc7c03d" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_kax1b"]
+[ext_resource type="FontFile" uid="uid://cau878ysrfagg" path="res://assets/UI/fonts/PixelOperator8.ttf" id="2_ea4ot"]
+[ext_resource type="FontFile" uid="uid://depvtfwajo3mq" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_g3b5e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iivk"]
+atlas = ExtResource("1_kax1b")
+region = Rect2(259, 180, 90, 25)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ocaff"]
+texture = SubResource("AtlasTexture_4iivk")
+texture_margin_left = 2.07654
+texture_margin_top = 2.44382
+texture_margin_right = 2.35376
+texture_margin_bottom = 2.17109
+
+[resource]
+CharacterName/base_type = &"RichTextLabel"
+CharacterName/colors/default_color = Color(0.334413, 0.234388, 0.146102, 1)
+CharacterName/font_sizes/normal_font_size = 20
+CharacterName/fonts/normal_font = ExtResource("2_ea4ot")
+DialogueText/base_type = &"RichTextLabel"
+DialogueText/colors/default_color = Color(0.666819, 0.474342, 0.348791, 1)
+DialogueText/font_sizes/normal_font_size = 36
+DialogueText/fonts/bold_font = ExtResource("2_ea4ot")
+DialogueText/fonts/normal_font = ExtResource("2_g3b5e")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+Panel/styles/panel = SubResource("StyleBoxTexture_ocaff")

@@ -1449,6 +1449,7 @@ metadata/_edit_vertical_guides_ = [173.0, 112.0]
 metadata/_edit_horizontal_guides_ = [567.0, 488.0]
 
 [node name="Controls" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Directions" type="HBoxContainer" parent="Controls"]
 anchors_preset = 2
@@ -1581,7 +1582,7 @@ position = Vector2(-2.04446, 934.006)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_6q1o6")
 
-[node name="Backgroudmusic" type="AudioStreamPlayer2D" parent="."]
+[node name="Backgroudmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("40_3r1ig")
 autoplay = true
 
