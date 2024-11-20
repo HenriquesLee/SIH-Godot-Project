@@ -29,6 +29,11 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")

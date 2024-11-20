@@ -4,7 +4,6 @@ var balloon_scene = preload("res://dialogues/game_balloon.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Fade_trans/AnimationPlayer.play("Fade_out")
 	trigger_dialogue_on_start()
 	
 func trigger_dialogue_on_start() -> void:
