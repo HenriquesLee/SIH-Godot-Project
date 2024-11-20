@@ -38,4 +38,4 @@ rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_vjlfk")
 autoplay = "default"
-frame_progress = 0.384852
+frame_progress = 0.298001

@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://qq5dw07f4rmg"]
+[gd_scene load_steps=32 format=3 uid="uid://qq5dw07f4rmg"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_apd20"]
 [ext_resource type="Texture2D" uid="uid://dkhlgqe03iuqj" path="res://assets/Sprites/characters/Male4.png" id="2_it5h4"]
+[ext_resource type="Texture2D" uid="uid://bono3jpc7c03d" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="3_q36ku"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjqai"]
 atlas = ExtResource("2_it5h4")
@@ -142,8 +143,49 @@ animations = [{
 radius = 9.80392
 height = 31.3726
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_11b2w"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(275, 36, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wkvo"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(291, 36, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xx6x"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(275, 52, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tph4g"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(291, 52, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_je2rb"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(277, 2, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rt8hi"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(293, 2, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08l0r"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(709, 132, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcic5"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(741, 134, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ykf1"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(276, 18, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu4iq"]
+atlas = ExtResource("3_q36ku")
+region = Rect2(292, 18, 7, 12)
+
 [node name="player" type="CharacterBody2D"]
-collision_mask = 7
+collision_layer = 3
+collision_mask = 15
 script = ExtResource("1_apd20")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -151,6 +193,7 @@ position = Vector2(1.96078, 13.7255)
 sprite_frames = SubResource("SpriteFrames_44ien")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.218545
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
@@ -159,7 +202,41 @@ shape = SubResource("CapsuleShape2D_jx7mm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
-limit_left = -380
-limit_top = -18
-limit_right = 580
-limit_bottom = 430
+limit_top = -100000
+limit_right = 100000
+limit_bottom = 100000
+
+[node name="Up" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(-106, 22)
+scale = Vector2(1.5, 1.5)
+texture_normal = SubResource("AtlasTexture_11b2w")
+texture_pressed = SubResource("AtlasTexture_4wkvo")
+action = "move_forward"
+
+[node name="down" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(-106, 60)
+scale = Vector2(1.5, 1.5)
+texture_normal = SubResource("AtlasTexture_6xx6x")
+texture_pressed = SubResource("AtlasTexture_tph4g")
+action = "move_backward"
+
+[node name="right" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(-82, 39)
+scale = Vector2(1.5, 1.5)
+texture_normal = SubResource("AtlasTexture_je2rb")
+texture_pressed = SubResource("AtlasTexture_rt8hi")
+shape_visible = false
+action = "move_right"
+
+[node name="interact" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(104, 29)
+texture_normal = SubResource("AtlasTexture_08l0r")
+texture_pressed = SubResource("AtlasTexture_bcic5")
+action = "interact"
+
+[node name="left" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2(-126, 39)
+scale = Vector2(1.5, 1.5)
+texture_normal = SubResource("AtlasTexture_8ykf1")
+texture_pressed = SubResource("AtlasTexture_bu4iq")
+action = "move_left"
