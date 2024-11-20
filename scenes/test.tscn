@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmn1tvrwwe28x"]
+
+[ext_resource type="Script" path="res://scripts/test.gd" id="1_u8egm"]
+[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/fade_transition.tscn" id="2_bxqmc"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_u8egm")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(68.6946, 36.798)
+
+[node name="Fade_transition" parent="Control" instance=ExtResource("2_bxqmc")]
+layout_mode = 1

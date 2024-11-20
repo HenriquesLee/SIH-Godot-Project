@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=4 uid="uid://c140hdqrxiavp"]
+[gd_scene load_steps=95 format=4 uid="uid://c140hdqrxiavp"]
 
 [ext_resource type="Script" path="res://scripts/start.gd" id="1_dcfrr"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/player.tscn" id="1_ku0bw"]
@@ -39,7 +39,8 @@
 [ext_resource type="Texture2D" uid="uid://b3ubvu56ku77d" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 1 - DAY.png" id="35_5ovb5"]
 [ext_resource type="Texture2D" uid="uid://exnlmgsbqetp" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 2 - DAY.png" id="36_elx3p"]
 [ext_resource type="PackedScene" uid="uid://cvuhy3dvh607g" path="res://scenes/npc.tscn" id="37_poc7i"]
-[ext_resource type="AudioStream" uid="uid://bamgeffx68ga2" path="res://audio/time_for_adventure.mp3" id="39_o242v"]
+[ext_resource type="AudioStream" uid="uid://b8fdqnyfd4q78" path="res://audio/background_music.mp3" id="40_3r1ig"]
+[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/fade_transition.tscn" id="40_4gopi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_seq1w"]
 atlas = ExtResource("2_3m7sa")
@@ -1447,9 +1448,9 @@ script = ExtResource("1_dcfrr")
 metadata/_edit_vertical_guides_ = [173.0, 112.0]
 metadata/_edit_horizontal_guides_ = [567.0, 488.0]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Controls" type="CanvasLayer" parent="."]
 
-[node name="Directions" type="HBoxContainer" parent="CanvasLayer"]
+[node name="Directions" type="HBoxContainer" parent="Controls"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -1457,21 +1458,21 @@ offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
 
-[node name="Up" type="TouchScreenButton" parent="CanvasLayer/Directions"]
+[node name="Up" type="TouchScreenButton" parent="Controls/Directions"]
 position = Vector2(113, -172)
 scale = Vector2(6, 6)
 texture_normal = SubResource("AtlasTexture_seq1w")
 texture_pressed = SubResource("AtlasTexture_3iuno")
 action = "move_forward"
 
-[node name="down" type="TouchScreenButton" parent="CanvasLayer/Directions"]
+[node name="down" type="TouchScreenButton" parent="Controls/Directions"]
 position = Vector2(112, -40)
 scale = Vector2(6, 6)
 texture_normal = SubResource("AtlasTexture_baui6")
 texture_pressed = SubResource("AtlasTexture_lvrlq")
 action = "move_backward"
 
-[node name="right" type="TouchScreenButton" parent="CanvasLayer/Directions"]
+[node name="right" type="TouchScreenButton" parent="Controls/Directions"]
 position = Vector2(185, -116)
 scale = Vector2(6, 6)
 texture_normal = SubResource("AtlasTexture_xe2wu")
@@ -1479,14 +1480,14 @@ texture_pressed = SubResource("AtlasTexture_wlxqt")
 shape_visible = false
 action = "move_right"
 
-[node name="left" type="TouchScreenButton" parent="CanvasLayer/Directions"]
+[node name="left" type="TouchScreenButton" parent="Controls/Directions"]
 position = Vector2(60, -117)
 scale = Vector2(6, 6)
 texture_normal = SubResource("AtlasTexture_qo8rf")
 texture_pressed = SubResource("AtlasTexture_xrwl3")
 action = "move_left"
 
-[node name="interact" type="HBoxContainer" parent="CanvasLayer"]
+[node name="interact" type="HBoxContainer" parent="Controls"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -1497,7 +1498,7 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="interact" type="TouchScreenButton" parent="CanvasLayer/interact"]
+[node name="interact" type="TouchScreenButton" parent="Controls/interact"]
 position = Vector2(-136, -139)
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_jhfv0")
@@ -1581,5 +1582,14 @@ rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_6q1o6")
 
 [node name="Backgroudmusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("39_o242v")
+stream = ExtResource("40_3r1ig")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fade_transition" parent="CanvasLayer" instance=ExtResource("40_4gopi")]
+visible = false
+offset_left = 1.52588e-05
+offset_top = -3.0
+offset_bottom = -3.0
+scale = Vector2(89.7875, 72.2241)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8ku584hmtl2q"]
+[gd_scene load_steps=10 format=3 uid="uid://b8ku584hmtl2q"]
 
 [ext_resource type="Texture2D" uid="uid://vsejj6uvux2d" path="res://assets/UI/background.jpeg" id="1_d1ula"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_iq75x"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cvvc2abnl2ua5" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="3_o7cay"]
 [ext_resource type="FontFile" uid="uid://cau878ysrfagg" path="res://assets/UI/fonts/PixelOperator8.ttf" id="3_po6o1"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/fade_transition.tscn" id="6_d6c0m"]
+[ext_resource type="AudioStream" uid="uid://cwvf71gnvx8nx" path="res://audio/menu_screen.mp3" id="7_ynvj7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
 atlas = ExtResource("3_o7cay")
@@ -116,15 +117,17 @@ theme_override_colors/font_color = Color(0.768917, 0.6038, 0.423545, 1)
 theme_override_fonts/font = ExtResource("3_po6o1")
 text = "QUIT"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ynvj7")
+autoplay = true
+
 [node name="Fade_transition" parent="." instance=ExtResource("6_d6c0m")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+visible = false
+layout_mode = 1
 
 [node name="Timer" type="Timer" parent="Fade_transition"]
+wait_time = 1.5
+one_shot = true
 
 [connection signal="pressed" from="TextureRect/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]
