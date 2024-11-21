@@ -28,5 +28,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.is_action_pressed("interact"):
 			var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
 			get_tree().root.add_child(balloon)
-			balloon.
 			balloon.start(load("res://dialogues/coversations/first_interaction.dialogue"), "Villager")
