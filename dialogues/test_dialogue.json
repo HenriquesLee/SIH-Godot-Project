@@ -1,0 +1,40 @@
+{
+  "nodes": [
+	{
+	  "id": "start",
+	  "text": "Hello, welcome to the game!",
+	  "choices": [
+		{
+		  "text": "Who are you?",
+		  "target": "who_are_you"
+		},
+		{
+		  "text": "Goodbye.",
+		  "target": "end"
+		}
+	  ]
+	},
+	{
+	  "id": "who_are_you",
+	  "text": "I'm the guide here to help you.",
+	  "choices": [
+		{
+		  "text": "Tell me more.",
+		  "target": "tell_me_more"
+		},
+		{
+		  "text": "Thanks, goodbye.",
+		  "target": "end"
+		}
+	  ]
+	},
+	{
+	  "id": "tell_me_more",
+	  "text": "Sure, let me explain how this works..."
+	},
+	{
+	  "id": "end",
+	  "text": "See you later!"
+	}
+  ]
+}

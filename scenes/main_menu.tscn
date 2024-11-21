@@ -117,9 +117,11 @@ theme_override_colors/font_color = Color(0.768917, 0.6038, 0.423545, 1)
 theme_override_fonts/font = ExtResource("3_po6o1")
 text = "QUIT"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ynvj7")
+volume_db = 2.0
 autoplay = true
+bus = &"Main menu"
 
 [node name="Fade_transition" parent="." instance=ExtResource("6_d6c0m")]
 visible = false
