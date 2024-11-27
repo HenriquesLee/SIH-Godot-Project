@@ -11,7 +11,7 @@ const float precision =0.1;
 
 void fragment() {
 	vec4 color = texture(TEXTURE, UV);
-	
+
 	if(distance(color, original_0)<=0.1){
 		color = replace_0;
 	}
