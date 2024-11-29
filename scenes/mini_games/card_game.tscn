@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu48ig0me6svs"]
+
+[ext_resource type="Texture2D" uid="uid://ct75xjdff5g4p" path="res://assets/UI/card_game/background.jpg" id="1_hunma"]
+[ext_resource type="Texture2D" uid="uid://cnblruh4hmwfd" path="res://assets/UI/card_game/box.png" id="2_xds4v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvorp"]
+atlas = ExtResource("2_xds4v")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(579, 329.75)
+scale = Vector2(0.257111, 0.218167)
+texture = ExtResource("1_hunma")
+
+[node name="Questions" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -416.0
+offset_top = 77.0
+offset_right = 404.0
+offset_bottom = 305.0
+grow_horizontal = 2
+text = "Questions"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 291.0
+offset_right = 226.0
+offset_bottom = 560.0
+size_flags_horizontal = 0
+texture = SubResource("AtlasTexture_hvorp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 291.0
+offset_right = 1153.0
+offset_bottom = 627.0

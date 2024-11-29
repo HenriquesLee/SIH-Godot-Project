@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjxo728bh4po"]
+
+[ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_om4px"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oclev"]
+atlas = ExtResource("1_om4px")
+region = Rect2(275, 36, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so8e6"]
+atlas = ExtResource("1_om4px")
+region = Rect2(291, 36, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h2e2"]
+atlas = ExtResource("1_om4px")
+region = Rect2(275, 52, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv0u8"]
+atlas = ExtResource("1_om4px")
+region = Rect2(291, 52, 10, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shs2n"]
+atlas = ExtResource("1_om4px")
+region = Rect2(277, 2, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6nws"]
+atlas = ExtResource("1_om4px")
+region = Rect2(293, 2, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfll4"]
+atlas = ExtResource("1_om4px")
+region = Rect2(276, 18, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p16dr"]
+atlas = ExtResource("1_om4px")
+region = Rect2(292, 18, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkbfk"]
+atlas = ExtResource("1_om4px")
+region = Rect2(709, 132, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnt8h"]
+atlas = ExtResource("1_om4px")
+region = Rect2(741, 134, 22, 22)
+
+[node name="Controls" type="CanvasLayer"]
+visible = false
+
+[node name="Directions2" type="HBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Up" type="TouchScreenButton" parent="Directions2"]
+position = Vector2(113, -172)
+scale = Vector2(6, 6)
+texture_normal = SubResource("AtlasTexture_oclev")
+texture_pressed = SubResource("AtlasTexture_so8e6")
+action = "move_forward"
+
+[node name="down" type="TouchScreenButton" parent="Directions2"]
+position = Vector2(112, -40)
+scale = Vector2(6, 6)
+texture_normal = SubResource("AtlasTexture_2h2e2")
+texture_pressed = SubResource("AtlasTexture_iv0u8")
+action = "move_backward"
+
+[node name="right" type="TouchScreenButton" parent="Directions2"]
+position = Vector2(185, -116)
+scale = Vector2(6, 6)
+texture_normal = SubResource("AtlasTexture_shs2n")
+texture_pressed = SubResource("AtlasTexture_o6nws")
+shape_visible = false
+action = "move_right"
+
+[node name="left" type="TouchScreenButton" parent="Directions2"]
+position = Vector2(60, -117)
+scale = Vector2(6, 6)
+texture_normal = SubResource("AtlasTexture_tfll4")
+texture_pressed = SubResource("AtlasTexture_p16dr")
+action = "move_left"
+
+[node name="interact2" type="HBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="interact" type="TouchScreenButton" parent="interact2"]
+position = Vector2(-136, -139)
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_rkbfk")
+texture_pressed = SubResource("AtlasTexture_wnt8h")
+action = "interact"

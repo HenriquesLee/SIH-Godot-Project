@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://b8ku584hmtl2q"]
 
-[ext_resource type="Texture2D" uid="uid://vsejj6uvux2d" path="res://assets/UI/background.jpeg" id="1_d1ula"]
+[ext_resource type="Texture2D" uid="uid://bop0udc76wudq" path="res://assets/UI/background.jpeg" id="1_d1ula"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_iq75x"]
-[ext_resource type="Texture2D" uid="uid://cvvc2abnl2ua5" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="3_o7cay"]
-[ext_resource type="FontFile" uid="uid://depvtfwajo3mq" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_pje0l"]
-[ext_resource type="FontFile" uid="uid://cau878ysrfagg" path="res://assets/UI/fonts/PixelOperator8.ttf" id="3_po6o1"]
-[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/fade_transition.tscn" id="6_d6c0m"]
-[ext_resource type="AudioStream" uid="uid://cwvf71gnvx8nx" path="res://audio/menu_screen.mp3" id="7_ynvj7"]
+[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="3_o7cay"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_pje0l"]
+[ext_resource type="FontFile" uid="uid://k5q4oy0rhbbv" path="res://assets/UI/fonts/PixelOperator8.ttf" id="3_po6o1"]
+[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/objects/fade_transition.tscn" id="6_d6c0m"]
+[ext_resource type="AudioStream" uid="uid://dsvxqsfjbdka7" path="res://audio/menu_screen.mp3" id="7_ynvj7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
 atlas = ExtResource("3_o7cay")

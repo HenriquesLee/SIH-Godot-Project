@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://fji184fo376d"]
 
-[ext_resource type="Shader" path="res://scenes/water.gdshader" id="1_dkao4"]
-[ext_resource type="Texture2D" uid="uid://cij4edxdcvg13" path="res://assets/Sprites/characters/!Other1.png" id="1_x4ktj"]
+[ext_resource type="Shader" path="res://scenes/objects/water.gdshader" id="1_dkao4"]
+[ext_resource type="Texture2D" uid="uid://btldss6q8x3hc" path="res://assets/Sprites/characters/!Other1.png" id="1_x4ktj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c0nio"]
 shader = ExtResource("1_dkao4")

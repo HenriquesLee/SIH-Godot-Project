@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://c4ip668vah8mo"]
 
-[ext_resource type="Texture2D" uid="uid://bono3jpc7c03d" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_kax1b"]
-[ext_resource type="FontFile" uid="uid://cau878ysrfagg" path="res://assets/UI/fonts/PixelOperator8.ttf" id="2_ea4ot"]
-[ext_resource type="FontFile" uid="uid://depvtfwajo3mq" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_g3b5e"]
+[ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_kax1b"]
+[ext_resource type="FontFile" uid="uid://k5q4oy0rhbbv" path="res://assets/UI/fonts/PixelOperator8.ttf" id="2_ea4ot"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_g3b5e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4iivk"]
 atlas = ExtResource("1_kax1b")
