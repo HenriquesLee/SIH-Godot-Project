@@ -159,7 +159,3 @@ frame_progress = 0.218545
 y_sort_enabled = true
 position = Vector2(1.96078, 13.7255)
 shape = SubResource("CapsuleShape2D_jx7mm")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
-limit_smoothed = true
