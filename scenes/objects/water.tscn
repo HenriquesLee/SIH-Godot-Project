@@ -1,14 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://fji184fo376d"]
+[gd_scene load_steps=6 format=3 uid="uid://fji184fo376d"]
 
-[ext_resource type="Shader" path="res://scenes/objects/water.gdshader" id="1_dkao4"]
 [ext_resource type="Texture2D" uid="uid://btldss6q8x3hc" path="res://assets/Sprites/characters/!Other1.png" id="1_x4ktj"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c0nio"]
-shader = ExtResource("1_dkao4")
-shader_parameter/original_0 = Color(0.3019, 0.607706, 0.902281, 1)
-shader_parameter/original_1 = Color(0.560815, 0.827543, 1, 1)
-shader_parameter/replace_0 = Color(0.172442, 0.340978, 0.568627, 1)
-shader_parameter/replace_1 = Color(0.285191, 0.493116, 0.776416, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wcqyw"]
 atlas = ExtResource("1_x4ktj")
@@ -42,7 +34,6 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 light_mask = 2
 visibility_layer = 2
-material = SubResource("ShaderMaterial_c0nio")
 rotation = 1.5708
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_vjlfk")

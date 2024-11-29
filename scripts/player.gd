@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Movement speed of the player
-@export var speed: float = 100.0
+@export var speed: float = 80.0
 
 # Reference to the AnimatedSprite2D node
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D

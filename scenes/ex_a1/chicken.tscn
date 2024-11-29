@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bal5e5e8x7q7j"]
+
+[ext_resource type="Texture2D" uid="uid://xnxjtfg1sonb" path="res://assets/Animals/Chicken/Chicken.png" id="1_ux3fi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g85qj"]
+atlas = ExtResource("1_ux3fi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vut7c"]
+atlas = ExtResource("1_ux3fi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2x2jy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g85qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vut7c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2x2jy")
+frame_progress = 0.95473
