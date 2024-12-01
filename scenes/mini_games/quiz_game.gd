@@ -31,6 +31,7 @@ var questions = [
 	$TextureRect/Button3,
 	$TextureRect/Button4
 ]
+@onready var exit_button = $TextureRect/ExitButton  # Add this line for the exit button
 
 func _ready() -> void:
 	# Initialize the quiz by displaying the first question
@@ -39,12 +40,19 @@ func _ready() -> void:
 	# Connect button signals
 	for i in range(buttons.size()):
 		buttons[i].pressed.connect(_on_button_pressed.bind(i))
+	
+	# Connect exit button and hide it initially
+	exit_button.pressed.connect(_on_exit_pressed)
+	exit_button.visible = false
 
 func display_question() -> void:
 	# Reset button colors
 	for button in buttons:
 		button.modulate = Color(1, 1, 1, 1)  # Reset to default white color
 		button.disabled = false
+	
+	# Hide exit button
+	exit_button.visible = false
 
 	# Display the current question and set the text for the answer buttons
 	var question = questions[current_question_index]
@@ -94,6 +102,13 @@ func check_game_complete() -> void:
 	# Display the result of the quiz
 	if score >= required_score:
 		question_label.text = "Congratulations! You passed the quiz!\nScore: %d/%d" % [score, questions.size()]
+		
+		# Hide answer buttons
+		for button in buttons:
+			button.visible = false
+		
+		# Show exit button
+		exit_button.visible = true
 	else:
 		question_label.text = "Game over! You need at least %d correct answers to pass.\nYour score: %d/%d" % [required_score, score, questions.size()]
 		# Reset the game after a brief delay
@@ -104,4 +119,13 @@ func reset_game() -> void:
 	# Reset score and start the game over
 	score = 0
 	current_question_index = 0
+	
+	# Restore buttons
+	for button in buttons:
+		button.visible = true
+	
 	display_question()
+
+func _on_exit_pressed() -> void:
+	# Exit the application when exit button is pressed
+	get_tree().quit()
