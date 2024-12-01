@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_isy6x"]
 [ext_resource type="Theme" uid="uid://c4ip668vah8mo" path="res://dialogues/dialouge_theme.tres" id="2_kjhrd"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_klvce"]
-[ext_resource type="Texture2D" uid="uid://cxhcfdnk215vs" path="res://assets/UI/Sprite sheets/Dialouge UI/dialog box character finished talking click to continue indicator - spritesheet .png" id="4_cnuis"]
-[ext_resource type="AudioStream" uid="uid://nqx51dp0iwg2" path="res://audio/BlackBoard_Single_v6_wav.wav" id="5_xf057"]
+[ext_resource type="Texture2D" uid="uid://crb036uv2d50v" path="res://assets/UI/Sprite sheets/Dialouge UI/dialog box character finished talking click to continue indicator - spritesheet .png" id="4_cnuis"]
+[ext_resource type="AudioStream" uid="uid://d1hkdpt8quse1" path="res://audio/BlackBoard_Single_v6_wav.wav" id="5_xf057"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11jgh"]
 atlas = ExtResource("4_cnuis")
