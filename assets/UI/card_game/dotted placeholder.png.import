@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xbeo658223by"
-path="res://.godot/imported/write_ans.png-50144e62e536519f0f255961006e7468.ctex"
+uid="uid://c852n1u0dd067"
+path="res://.godot/imported/dotted placeholder.png-0890248f5ba1bdb38be89eb60c088de8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/card_game/write_ans.png"
-dest_files=["res://.godot/imported/write_ans.png-50144e62e536519f0f255961006e7468.ctex"]
+source_file="res://assets/UI/card_game/dotted placeholder.png"
+dest_files=["res://.godot/imported/dotted placeholder.png-0890248f5ba1bdb38be89eb60c088de8.ctex"]
 
 [params]
 

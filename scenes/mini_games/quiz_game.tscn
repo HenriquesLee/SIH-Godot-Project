@@ -65,6 +65,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
 text = "a) Running for re-election"
 
 [node name="Button2" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 270.0
 offset_top = 308.0
 offset_right = 1015.0
@@ -77,6 +78,7 @@ text = "b) Holding any office of profit
 "
 
 [node name="Button3" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 271.0
 offset_top = 403.0
 offset_right = 1017.0
@@ -89,6 +91,7 @@ text = "c) Resigning before their term ends
 "
 
 [node name="Button4" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 268.0
 offset_top = 504.0
 offset_right = 1019.0

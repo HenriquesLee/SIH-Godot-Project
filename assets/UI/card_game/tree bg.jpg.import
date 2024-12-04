@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2wfsrsnatqcv"
-valid=false
+uid="uid://yeq5u8wmgji1"
+path="res://.godot/imported/tree bg.jpg-d762e67888117eb87bf2de91bd614e0b.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/UI/card_game/background.png"
+source_file="res://assets/UI/card_game/tree bg.jpg"
+dest_files=["res://.godot/imported/tree bg.jpg-d762e67888117eb87bf2de91bd614e0b.ctex"]
 
 [params]
 

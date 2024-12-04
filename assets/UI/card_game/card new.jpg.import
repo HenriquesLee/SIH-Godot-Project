@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beqddcfsvdbvl"
-path="res://.godot/imported/wrong_ans.png-0d136a3b3e8dbdc6da8e91827ed68a86.ctex"
+uid="uid://xk3dtrr8poyr"
+path="res://.godot/imported/card new.jpg-26afdd86988247499ad744a8b87d770d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/card_game/wrong_ans.png"
-dest_files=["res://.godot/imported/wrong_ans.png-0d136a3b3e8dbdc6da8e91827ed68a86.ctex"]
+source_file="res://assets/UI/card_game/card new.jpg"
+dest_files=["res://.godot/imported/card new.jpg-26afdd86988247499ad744a8b87d770d.ctex"]
 
 [params]
 
