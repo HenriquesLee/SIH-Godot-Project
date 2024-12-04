@@ -151,9 +151,8 @@ script = ExtResource("1_apd20")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.96078, 13.7255)
 sprite_frames = SubResource("SpriteFrames_44ien")
-animation = &"idle"
+animation = &"side"
 autoplay = "idle"
-frame_progress = 0.218545
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

@@ -43,7 +43,7 @@
 [ext_resource type="AudioStream" uid="uid://8jqgc0b2wme2" path="res://audio/background_music.mp3" id="36_uhtv6"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/objects/fade_transition.tscn" id="37_2yplp"]
 [ext_resource type="PackedScene" uid="uid://fji184fo376d" path="res://scenes/objects/water.tscn" id="41_5tdkg"]
-[ext_resource type="PackedScene" path="res://scenes/ex_a1/chicken.tscn" id="42_di7an"]
+[ext_resource type="PackedScene" uid="uid://bal5e5e8x7q7j" path="res://scenes/ex_a1/chicken.tscn" id="42_di7an"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_seq1w"]
 atlas = ExtResource("2_eucif")
