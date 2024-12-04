@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg0gn3idudnim"]
+
+[ext_resource type="Script" path="res://scripts/quiz_game.gd" id="1_vdq6o"]
+[ext_resource type="Texture2D" uid="uid://cbj68ak3juejg" path="res://assets/bg.jpg" id="2_pgvyi"]
+[ext_resource type="FontFile" uid="uid://dfihqwqd7guf7" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_qalyu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2peq"]
+bg_color = Color(0.937255, 1, 0.956863, 0.505882)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 17
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="Theme" id="Theme_45wjs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x8qd7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdq6o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -325.0
+offset_right = 1269.0
+offset_bottom = 323.0
+grow_vertical = 2
+texture = ExtResource("2_pgvyi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -445.5
+offset_top = 6.0
+offset_right = 527.5
+offset_bottom = 207.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_qalyu")
+theme_override_font_sizes/normal_font_size = 62
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 209.0
+offset_right = 1018.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qalyu")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+
+[node name="Button2" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 308.0
+offset_right = 1015.0
+offset_bottom = 397.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qalyu")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+
+[node name="Button3" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 403.0
+offset_right = 1017.0
+offset_bottom = 499.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qalyu")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+text = "
+"
+
+[node name="Button4" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 504.0
+offset_right = 1019.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qalyu")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+
+[node name="ExitButton" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1009.0
+offset_top = 592.0
+offset_right = 1127.0
+offset_bottom = 623.0
+theme = SubResource("Theme_45wjs")
+theme_override_fonts/font = ExtResource("3_qalyu")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x8qd7")
+text = ">>EXIT"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

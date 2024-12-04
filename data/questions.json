@@ -1,0 +1,158 @@
+{
+  "Legislature": [
+    {
+      "question": "What is the primary role of the Legislature?",
+      "answers": ["Law-making", "Judicial review", "Executive decisions", "Military strategy"],
+      "correct": 0
+    },
+    {
+      "question": "What is a bicameral legislature?",
+      "answers": ["One with two houses", "One with one house", "One with three houses", "None of the above"],
+      "correct": 0
+    },
+    {
+      "question": "Who presides over the Lok Sabha?",
+      "answers": ["Prime Minister", "President", "Speaker", "Chief Justice"],
+      "correct": 2
+    },
+    {
+      "question": "What is the term duration of Rajya Sabha members?",
+      "answers": ["6 years", "5 years", "4 years", "2 years"],
+      "correct": 0
+    },
+    {
+      "question": "Which Article deals with the formation of the Parliament?",
+      "answers": ["Article 79", "Article 50", "Article 356", "Article 123"],
+      "correct": 0
+    },
+    {
+      "question": "What is a Money Bill?",
+      "answers": ["A bill solely about taxation", "A constitutional amendment bill", "A bill passed by Rajya Sabha", "A bill for foreign trade"],
+      "correct": 0
+    },
+    {
+      "question": "Who has the final say in passing a Money Bill?",
+      "answers": ["Lok Sabha", "Rajya Sabha", "President", "Prime Minister"],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of the Public Accounts Committee?",
+      "answers": ["Audits government expenditure", "Proposes laws", "Handles impeachment cases", "Manages foreign affairs"],
+      "correct": 0
+    },
+    {
+      "question": "Who can summon a session of the Parliament?",
+      "answers": ["President", "Prime Minister", "Speaker", "Chief Justice"],
+      "correct": 0
+    },
+    {
+      "question": "What is a joint session of Parliament?",
+      "answers": ["A session of both houses", "Only Rajya Sabha session", "Only Lok Sabha session", "Session with Chief Justice"],
+      "correct": 0
+    }
+  ],
+  "Judiciary": [
+    {
+      "question": "What is the highest court in India?",
+      "answers": ["Supreme Court", "High Court", "District Court", "Subordinate Court"],
+      "correct": 0
+    },
+    {
+      "question": "How many judges are in the Supreme Court (excluding CJI)?",
+      "answers": ["33", "45", "25", "50"],
+      "correct": 0
+    },
+    {
+      "question": "What is judicial review?",
+      "answers": ["Review of laws for constitutionality", "Review of taxes", "Judicial elections", "Review of executive orders"],
+      "correct": 0
+    },
+    {
+      "question": "Which Article establishes the Supreme Court?",
+      "answers": ["Article 124", "Article 76", "Article 51", "Article 356"],
+      "correct": 0
+    },
+    {
+      "question": "What is the minimum age to be a Supreme Court judge?",
+      "answers": ["No age limit", "35 years", "45 years", "50 years"],
+      "correct": 0
+    },
+    {
+      "question": "Who appoints Supreme Court judges?",
+      "answers": ["President", "Prime Minister", "Chief Justice", "Attorney General"],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of a Public Interest Litigation (PIL)?",
+      "answers": ["Allows citizens to seek justice for public issues", "Focuses on tax laws", "Handles private property disputes", "Manages political campaigns"],
+      "correct": 0
+    },
+    {
+      "question": "Which court has original jurisdiction over constitutional matters?",
+      "answers": ["Supreme Court", "High Court", "District Court", "Session Court"],
+      "correct": 0
+    },
+    {
+      "question": "What is the term of a Supreme Court judge?",
+      "answers": ["Till 65 years", "Till 70 years", "5 years", "10 years"],
+      "correct": 0
+    },
+    {
+      "question": "Which body handles judicial appointments?",
+      "answers": ["Collegium", "Parliament", "President", "Bar Council"],
+      "correct": 0
+    }
+  ],
+  "Executive": [
+    {
+      "question": "Who is the head of the Executive in India?",
+      "answers": ["President", "Prime Minister", "Speaker", "Chief Justice"],
+      "correct": 0
+    },
+    {
+      "question": "Who is the Chief Executive of the state?",
+      "answers": ["Governor", "Chief Minister", "Speaker", "District Collector"],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of the Prime Minister?",
+      "answers": ["Head of Council of Ministers", "Judicial head", "Head of Armed Forces", "Manages foreign courts"],
+      "correct": 0
+    },
+    {
+      "question": "Who appoints the Council of Ministers?",
+      "answers": ["President", "Prime Minister", "Speaker", "Chief Justice"],
+      "correct": 0
+    },
+    {
+      "question": "Which Article outlines the President's executive powers?",
+      "answers": ["Article 53", "Article 123", "Article 72", "Article 324"],
+      "correct": 0
+    },
+    {
+      "question": "What is an ordinance?",
+      "answers": ["A temporary law passed by the President", "A bill passed by Lok Sabha", "A constitutional amendment", "An executive decision of the judiciary"],
+      "correct": 0
+    },
+    {
+      "question": "Who implements laws passed by the Legislature?",
+      "answers": ["Executive", "Judiciary", "Parliament", "Electoral Commission"],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of the Cabinet Secretariat?",
+      "answers": ["Coordinates between ministries", "Manages judiciary", "Handles state laws", "Approves budgets"],
+      "correct": 0
+    },
+    {
+      "question": "Who can declare a national emergency?",
+      "answers": ["President", "Prime Minister", "Speaker", "Chief Justice"],
+      "correct": 0
+    },
+    {
+      "question": "What is the tenure of the President of India?",
+      "answers": ["5 years", "4 years", "6 years", "7 years"],
+      "correct": 0
+    }
+  ]
+}
