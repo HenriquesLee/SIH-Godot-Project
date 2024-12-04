@@ -33,10 +33,10 @@ loop = true
 script = ExtResource("1_tmeep")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_axrim")]
-position = Vector2(1091, 534)
+position = Vector2(1155, 512)
 
 [node name="CardSlot2" parent="." instance=ExtResource("3_axrim")]
-position = Vector2(763, 539)
+position = Vector2(777, 510)
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_jg3bf")
@@ -58,13 +58,13 @@ text = "What is the primary responsibility of the Vice-President as per Article 
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 814.0
-offset_top = 309.0
-offset_right = 1062.0
-offset_bottom = 396.0
-theme_override_colors/default_color = Color(0, 0, 0.886275, 1)
+offset_left = 843.0
+offset_top = 298.0
+offset_right = 1091.0
+offset_bottom = 385.0
+theme_override_colors/default_color = Color(0.292209, 0.00512987, 0.00283474, 1)
 theme_override_fonts/normal_font = ExtResource("5_2q5i0")
-theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/normal_font_size = 50
 text = "CORRECT ZONE"
 
 [node name="Camera2D" type="Camera2D" parent="."]
