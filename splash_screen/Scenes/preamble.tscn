@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqna6djsnx1jc"]
+
+[ext_resource type="Script" path="res://preamble.gd" id="1_fltba"]
+
+[node name="Preamble" type="Node2D"]
+script = ExtResource("1_fltba")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 222.0
+offset_top = 37.0
+offset_right = 442.0
+offset_bottom = 60.0
+text = "THE PREAMBLE OF INDIA"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 78.0
+offset_top = 91.0
+offset_right = 949.0
+offset_bottom = 478.0
+text = "WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC and to secure to all its citizens:
+
+JUSTICE, social, economic and political;
+
+LIBERTY of thought, expression, belief, faith and worship;
+
+EQUALITY of status and of opportunity;
+
+and to promote among them all
+
+FRATERNITY assuring the dignity of the individual and the unity and integrity of the Nation;
+
+IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION."
+autowrap_mode = 3
+
+[node name="Loading" type="Label" parent="."]
+offset_left = 93.0
+offset_top = 539.0
+offset_right = 249.0
+offset_bottom = 583.0
+text = "LOADING..."
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 93.0
+offset_top = 573.0
+offset_right = 1017.0
+offset_bottom = 617.0
