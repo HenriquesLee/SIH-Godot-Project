@@ -14,15 +14,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="VideoStreamPlayer" parent="."]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -12.0
+offset_right = 24.0
+offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("1_oo2o0")
 autoplay = true
+expand = true
 loop = true
 
 [node name="CardManager" type="Node2D" parent="."]
@@ -64,5 +68,5 @@ theme_override_font_sizes/normal_font_size = 48
 text = "CORRECT ZONE"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(959, 551)
-zoom = Vector2(0.9, 0.9)
+position = Vector2(969, 554)
+scale = Vector2(500, 500)

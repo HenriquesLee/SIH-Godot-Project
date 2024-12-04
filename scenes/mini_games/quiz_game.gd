@@ -24,14 +24,14 @@ var questions = [
 ]
 
 # Cached UI elements
-@onready var question_label = $TextureRect/RichTextLabel
+@onready var question_label = $VideoStreamPlayer/RichTextLabel
 @onready var buttons = [
-	$TextureRect/Button,
-	$TextureRect/Button2,
-	$TextureRect/Button3,
-	$TextureRect/Button4
+	$VideoStreamPlayer/Button,
+	$VideoStreamPlayer/Button2,
+	$VideoStreamPlayer/Button3,
+	$VideoStreamPlayer/Button4
 ]
-@onready var exit_button = $TextureRect/ExitButton  # Add this line for the exit button
+@onready var exit_button = $VideoStreamPlayer/ExitButton  # Add this line for the exit button
 
 func _ready() -> void:
 	# Initialize the quiz by displaying the first question
