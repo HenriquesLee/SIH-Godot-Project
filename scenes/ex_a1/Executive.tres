@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=180 format=3 uid="uid://cj1objhepkpgw"]
+[gd_resource type="TileSet" load_steps=182 format=3 uid="uid://cj1objhepkpgw"]
 
 [ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="1_toglf"]
 [ext_resource type="Texture2D" uid="uid://c5fysfoeisnat" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Grass_1_Middle.png" id="2_pnd0i"]
@@ -87,6 +87,7 @@
 [ext_resource type="Texture2D" uid="uid://dc8iuy4b6q2af" path="res://assets/Cute_Fantasy_assets/House/Objects/Golden_Jeweled_Chest_Anim.png" id="84_e2r1g"]
 [ext_resource type="Texture2D" uid="uid://bnywc7d11ml" path="res://assets/Cute_Fantasy_assets/House/Objects/Indoor_Decor.png" id="86_e1nqh"]
 [ext_resource type="Texture2D" uid="uid://gtpprmpp5sxh" path="res://assets/Cute_Fantasy_assets/Outdoor decoration/Signs.png" id="87_rxkp8"]
+[ext_resource type="Texture2D" uid="uid://b71y2eptduhs3" path="res://assets/Cute_Fantasy_assets/House/Objects/Furnace_Anim.png" id="88_k50lw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tvec5"]
 texture = ExtResource("1_toglf")
@@ -1932,6 +1933,18 @@ texture = ExtResource("87_rxkp8")
 5:7/0 = 0
 5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -1.94454, -14.1421, 4.5962, -11.6673, 8, -8, 5.83363, 3.0052, 1.94454, 4.24264, 0.353554, 15.3796, -1.23744, 4.59619, -8, 2.12132)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6syf"]
+texture = ExtResource("88_k50lw")
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/animation_columns = 5
+0:0/animation_speed = 2.0
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tvec5")
@@ -2026,3 +2039,4 @@ sources/88 = SubResource("TileSetAtlasSource_rw6o1")
 sources/89 = SubResource("TileSetAtlasSource_e8cjt")
 sources/90 = SubResource("TileSetAtlasSource_uekde")
 sources/91 = SubResource("TileSetAtlasSource_uyjb6")
+sources/92 = SubResource("TileSetAtlasSource_o6syf")
