@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0k44kvkwrsie"]
+
+[ext_resource type="Texture2D" uid="uid://5lvj8pnm41x" path="res://assets/Sprites/characters/Female2.png" id="1_1y3vg"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/objects/interactable_label_component.tscn" id="1_ded4p"]
+[ext_resource type="Script" path="res://scripts/Npc/exc_guide.gd" id="1_scayx"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/objects/interactablecomponent.tscn" id="2_3m0uf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhidd"]
+atlas = ExtResource("1_1y3vg")
+region = Rect2(0, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ci5sk"]
+atlas = ExtResource("1_1y3vg")
+region = Rect2(32, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avq5r"]
+atlas = ExtResource("1_1y3vg")
+region = Rect2(64, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8skv"]
+atlas = ExtResource("1_1y3vg")
+region = Rect2(96, 192, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fc0vw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhidd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ci5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avq5r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8skv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_am46x"]
+radius = 34.0147
+
+[node name="Exc_Guide" type="Node2D"]
+script = ExtResource("1_scayx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fc0vw")
+frame_progress = 0.286629
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("1_ded4p")]
+offset_left = 11.0
+offset_top = -38.0
+offset_right = 31.0
+offset_bottom = -18.0
+
+[node name="interablecomponent" parent="." instance=ExtResource("2_3m0uf")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interablecomponent"]
+shape = SubResource("CircleShape2D_am46x")
