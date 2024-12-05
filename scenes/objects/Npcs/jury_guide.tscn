@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvuhy3dvh607g"]
+
+[ext_resource type="Script" path="res://scripts/Npc/jury_guide.gd" id="1_xeheb"]
+[ext_resource type="Texture2D" uid="uid://q6gpgb7f20du" path="res://assets/Sprites/characters/Male3.png" id="2_mv082"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/objects/interactablecomponent.tscn" id="3_8ojas"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/objects/interactable_label_component.tscn" id="4_r8the"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mftpd"]
+atlas = ExtResource("2_mv082")
+region = Rect2(0, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuf27"]
+atlas = ExtResource("2_mv082")
+region = Rect2(32, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdros"]
+atlas = ExtResource("2_mv082")
+region = Rect2(64, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rms2"]
+atlas = ExtResource("2_mv082")
+region = Rect2(96, 336, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkcbn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mftpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuf27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdros")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rms2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmsti"]
+radius = 30.0167
+
+[node name="Jury GUide" type="Node2D"]
+script = ExtResource("1_xeheb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kkcbn")
+autoplay = "default"
+frame_progress = 0.0424253
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_r8the")]
+offset_left = 8.0
+offset_top = -38.0
+offset_right = 32.0
+offset_bottom = -14.0
+metadata/_edit_use_anchors_ = true
+
+[node name="interactablecomponent" parent="." instance=ExtResource("3_8ojas")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactablecomponent"]
+shape = SubResource("CircleShape2D_wmsti")
