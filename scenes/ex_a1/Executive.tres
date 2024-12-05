@@ -450,6 +450,7 @@ texture = ExtResource("1_toglf")
 7:3/0 = 0
 7:0/size_in_atlas = Vector2i(3, 3)
 7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(2, -19.5, 3.5, -12, -8, -8, -8, 2, 1, 15, 8, 0.5)
 6:10/size_in_atlas = Vector2i(3, 5)
 6:10/0 = 0
 
@@ -541,6 +542,7 @@ texture = ExtResource("16_btxep")
 texture = ExtResource("17_eclqb")
 2:0/size_in_atlas = Vector2i(2, 4)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.5, -27.5, -8, -8, -8, 2, 1, 15, 8, 0.5)
 4:0/size_in_atlas = Vector2i(2, 3)
 4:0/0 = 0
 
@@ -548,6 +550,7 @@ texture = ExtResource("17_eclqb")
 texture = ExtResource("18_7535r")
 2:0/size_in_atlas = Vector2i(2, 3)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.5, -13, -4, -12, 3.5, -2.5)
 4:0/size_in_atlas = Vector2i(2, 2)
 4:0/0 = 0
 
@@ -555,6 +558,7 @@ texture = ExtResource("18_7535r")
 texture = ExtResource("19_rsmc1")
 5:0/size_in_atlas = Vector2i(2, 5)
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.5, -27.5, -8, -8, -8, 2, 1, 15, 8, 0.5)
 9:0/size_in_atlas = Vector2i(2, 4)
 9:0/0 = 0
 
@@ -569,6 +573,7 @@ texture = ExtResource("20_dgulf")
 texture = ExtResource("21_jwcrn")
 2:0/size_in_atlas = Vector2i(2, 5)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.5, -8, 3.5, -29.5, 3, -8, 2, 20, -0.5, 21.5)
 4:0/size_in_atlas = Vector2i(2, 5)
 4:0/0 = 0
 
@@ -771,6 +776,7 @@ texture = ExtResource("25_7mk72")
 4:11/0 = 0
 4:13/size_in_atlas = Vector2i(2, 2)
 4:13/0 = 0
+4:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, -2, -1.5, -9.5, 13, 16.5, 12)
 6:11/size_in_atlas = Vector2i(2, 2)
 6:11/0 = 0
 6:13/size_in_atlas = Vector2i(2, 2)
