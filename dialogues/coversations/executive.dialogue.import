@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cdvf742nne76r"
+path="res://.godot/imported/executive.dialogue-e409efa850a7459cf7e3aca2e19238e4.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/executive.dialogue"
+dest_files=["res://.godot/imported/executive.dialogue-e409efa850a7459cf7e3aca2e19238e4.tres"]
+
+[params]
+
+defaults=true

@@ -139,8 +139,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jx7mm"]
-radius = 9.80392
-height = 31.3726
+radius = 6.0
+height = 24.0
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(0, 59)
@@ -156,5 +156,5 @@ autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(1.96078, 13.7255)
+position = Vector2(2, 18)
 shape = SubResource("CapsuleShape2D_jx7mm")
