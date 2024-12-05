@@ -1,52 +1,58 @@
-[gd_scene load_steps=7 format=3 uid="uid://p1wbja2orq0x"]
+[gd_scene load_steps=6 format=3 uid="uid://p1wbja2orq0x"]
 
-[ext_resource type="Texture2D" uid="uid://cydyky4hxwk55" path="res://assets/bg_spin.jpg" id="1_017us"]
-[ext_resource type="Script" path="res://scripts/wheel.gd" id="2_6wnhm"]
-[ext_resource type="Texture2D" uid="uid://1wpff2gcf62r" path="res://assets/Roulette.png" id="3_fuq5h"]
-[ext_resource type="Texture2D" uid="uid://d23ryld8u1ylj" path="res://assets/background.png" id="4_6oj5f"]
-[ext_resource type="Texture2D" uid="uid://cqv52p5v8x758" path="res://assets/Screenshot_2024-12-03_123339-removebg-preview.png" id="5_ebmi5"]
-[ext_resource type="Texture2D" uid="uid://cq1n13nwkeuh2" path="res://assets/image-removebg-preview__1___1_-removebg-preview.png" id="6_cosr7"]
+[ext_resource type="VideoStream" path="res://assets/UI/spin_the_wheel/spin-bg.ogv" id="1_voc3o"]
+[ext_resource type="Texture2D" uid="uid://dvfistk2qxru4" path="res://assets/UI/spin_the_wheel/wheel-modified.png" id="2_wqtqw"]
+[ext_resource type="Texture2D" uid="uid://vnw7sfsmampa" path="res://assets/UI/spin_the_wheel/image-removebg-preview.png" id="3_ntne6"]
+[ext_resource type="Texture2D" uid="uid://csd87rh0scp6j" path="res://assets/UI/spin_the_wheel/arrow-removebg-preview.png" id="4_xs1qc"]
+[ext_resource type="Texture2D" uid="uid://dife8cqurjxcv" path="res://assets/UI/spin_the_wheel/button_newest-removebg-preview.png" id="5_s3uwn"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="BgSpin" type="Sprite2D" parent="."]
-position = Vector2(1079.75, 461)
+[node name="BgSpin" type="VideoStreamPlayer" parent="."]
+offset_left = -1632.0
+offset_top = -814.0
+offset_right = -638.0
+offset_bottom = -327.0
 scale = Vector2(5.61252, 5.68387)
-texture = ExtResource("1_017us")
+stream = ExtResource("1_voc3o")
+autoplay = true
+expand = true
+loop = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1074, 453)
+position = Vector2(1019, 620)
 zoom = Vector2(0.375, 0.375)
 
 [node name="Wheel" type="Node2D" parent="."]
 position = Vector2(711, 559)
-script = ExtResource("2_6wnhm")
 
 [node name="WheelSprite" type="Sprite2D" parent="Wheel"]
+position = Vector2(11.9866, -6.03382)
 rotation = 0.349066
-scale = Vector2(7, 7)
-texture = ExtResource("3_fuq5h")
+scale = Vector2(5.51607, 5.36001)
+texture = ExtResource("2_wqtqw")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0.796078, 0.721569)
-position = Vector2(711, 563.5)
-scale = Vector2(3.43888, 3.35271)
-texture = ExtResource("4_6oj5f")
+position = Vector2(723, 552)
+scale = Vector2(11.8667, 11.5667)
+texture = ExtResource("3_ntne6")
 
 [node name="Pin" type="Node2D" parent="."]
 position = Vector2(102, -462)
 
 [node name="PinSprite" type="Sprite2D" parent="Pin"]
-position = Vector2(613, 373)
-scale = Vector2(1.24556, 1.01651)
-texture = ExtResource("5_ebmi5")
+position = Vector2(605, 151)
+rotation = -4.70025
+scale = Vector2(3.40891, 3.31255)
+texture = ExtResource("4_xs1qc")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1452.0
-offset_top = 515.0
-offset_right = 1954.0
-offset_bottom = 1028.0
-icon = ExtResource("6_cosr7")
+offset_left = 1776.0
+offset_top = 1030.0
+offset_right = 2344.0
+offset_bottom = 1648.0
+icon = ExtResource("5_s3uwn")
 flat = true
 
 [connection signal="pressed" from="Button" to="Wheel" method="spin_wheel"]

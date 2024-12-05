@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cydyky4hxwk55"
-path="res://.godot/imported/bg_spin.jpg-28a765d9714518ec5ae6e9acdb8e7d47.ctex"
+uid="uid://vnw7sfsmampa"
+path="res://.godot/imported/image-removebg-preview.png-050b75f92c7c8316631168f868465467.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/spin_the_wheel/bg_spin.jpg"
-dest_files=["res://.godot/imported/bg_spin.jpg-28a765d9714518ec5ae6e9acdb8e7d47.ctex"]
+source_file="res://assets/UI/spin_the_wheel/image-removebg-preview.png"
+dest_files=["res://.godot/imported/image-removebg-preview.png-050b75f92c7c8316631168f868465467.ctex"]
 
 [params]
 
