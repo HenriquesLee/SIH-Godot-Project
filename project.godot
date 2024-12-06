@@ -18,8 +18,6 @@ config/icon="res://art/icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Dialogues="*res://dialogues.gd"
-User="*res://user.gd"
 
 [dialogic]
 
