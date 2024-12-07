@@ -16,7 +16,7 @@ func _ready() -> void:
 func on_interactable_activated() -> void:
 	interactable_label_component.show()
 	in_range = true
-
+	fetch_dialogue()
 
 
 func on_interactable_deactivated() -> void:
@@ -25,11 +25,11 @@ func on_interactable_deactivated() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if in_range:
 		if event.is_action_pressed("interact"):
-			fetch_dialogue()
+			trigger_dialogue_on_start()
 func fetch_dialogue():
 	var post_data = {"area":"base_map"}
 	var headers = ["Content-Type: application/json"]
-	var response = http_request.request("https://sih-api-1efm.onrender.com/dialogue",headers,HTTPClient.METHOD_GET,
+	var response = http_request.request(Api.API_LINK,headers,HTTPClient.METHOD_GET,
 	JSON.stringify(post_data))
 	if response != OK:
 		print("An error occurred in the HTTP request.")
@@ -58,7 +58,6 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 			file.store_string(dialogue_file_content)
 			file.close()
 			
-			trigger_dialogue_on_start()
 	else:
 		print(response_code)
 

@@ -31,7 +31,7 @@ func _on_texture_button_pressed() -> void:
 	var post_data = {"username": username, "age": int(age)}
 	var headers = ["Content-Type: application/json"]
 	
-	http_request.request("https://sih-api-1efm.onrender.com/insert",headers,
+	http_request.request(Api.API_LINK,headers,
 	HTTPClient.METHOD_POST,
 	JSON.stringify(post_data))
 	
