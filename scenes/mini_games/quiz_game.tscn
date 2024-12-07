@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5e865v7pson6"]
 
-[ext_resource type="Script" path="res://scenes/mini_games/quiz_game.gd" id="1_0cs8l"]
+[ext_resource type="Script" path="res://scripts/mini_games/quiz_game/quiz_game.gd" id="1_0cs8l"]
 [ext_resource type="VideoStream" path="res://assets/UI/quiz_game/newest_quiz_bg.ogv" id="2_8a6xg"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_jjdsn"]
 
