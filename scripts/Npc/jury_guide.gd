@@ -2,15 +2,16 @@ extends Node2D
 
 var balloon_scene = preload("res://dialogues/game_balloon.tscn")
 @onready var interactable_label_component: Control = $InteractableLabelComponent
-@onready var interablecomponent: InteractableComponent = $interablecomponent
+@onready var interactablecomponent: InteractableComponent = $interactablecomponent
+
 var in_range: bool
 var json_parser = JSON.new()
 @onready var http_request: HTTPRequest = $HTTPRequest
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	interablecomponent.interactable_activated.connect(on_interactable_activated)
-	interablecomponent.interactable_deactivated.connect(on_interactable_deactivated)
+	interactablecomponent.interactable_activated.connect(on_interactable_activated)
+	interactablecomponent.interactable_deactivated.connect(on_interactable_deactivated)
 	interactable_label_component.hide()	
 
 func on_interactable_activated() -> void:

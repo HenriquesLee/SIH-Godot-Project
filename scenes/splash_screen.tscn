@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5tac550dp7ay"]
 
-[ext_resource type="Script" path="res://splash_screen/scripts/splash_screen.gd" id="1_lnd0w"]
+[ext_resource type="Script" path="res://scripts/splash_screen/splash_screen.gd" id="1_lnd0w"]
 [ext_resource type="Texture2D" uid="uid://cfpql373qr22e" path="res://assets/UI/splash screen/byte-high-resolution-logo-transparent.png" id="2_p6mqn"]
 
 [node name="MainScene" type="Control"]
