@@ -1497,7 +1497,6 @@ sources/50 = SubResource("TileSetAtlasSource_excc2")
 sources/51 = SubResource("TileSetAtlasSource_nrl0i")
 
 [node name="ex_a1" type="Node2D"]
-y_sort_enabled = true
 position = Vector2(377, 140)
 script = ExtResource("1_d1ek0")
 
