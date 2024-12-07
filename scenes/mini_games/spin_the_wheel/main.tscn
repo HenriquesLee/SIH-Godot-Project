@@ -9,10 +9,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="BgSpin" type="VideoStreamPlayer" parent="."]
-offset_left = -1632.0
-offset_top = -814.0
-offset_right = -638.0
-offset_bottom = -327.0
+offset_left = -170.0
+offset_top = -21.0
+offset_right = 441.0
+offset_bottom = 332.0
 scale = Vector2(5.61252, 5.68387)
 stream = ExtResource("1_voc3o")
 autoplay = true
@@ -20,38 +20,38 @@ expand = true
 loop = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1019, 620)
+position = Vector2(1546, 848)
 zoom = Vector2(0.375, 0.375)
 
 [node name="Wheel" type="Node2D" parent="."]
 position = Vector2(711, 559)
 
 [node name="WheelSprite" type="Sprite2D" parent="Wheel"]
-position = Vector2(11.9866, -6.03382)
+position = Vector2(648.657, 300.058)
 rotation = 0.349066
-scale = Vector2(5.51607, 5.36001)
+scale = Vector2(3.99988, 3.81943)
 texture = ExtResource("2_wqtqw")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0.796078, 0.721569)
-position = Vector2(723, 552)
-scale = Vector2(11.8667, 11.5667)
+position = Vector2(1359, 858)
+scale = Vector2(8.54445, 8.16667)
 texture = ExtResource("3_ntne6")
 
 [node name="Pin" type="Node2D" parent="."]
 position = Vector2(102, -462)
 
 [node name="PinSprite" type="Sprite2D" parent="Pin"]
-position = Vector2(605, 151)
+position = Vector2(1240, 768)
 rotation = -4.70025
-scale = Vector2(3.40891, 3.31255)
+scale = Vector2(2.44361, 2.22696)
 texture = ExtResource("4_xs1qc")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1776.0
-offset_top = 1030.0
-offset_right = 2344.0
-offset_bottom = 1648.0
+offset_left = 2291.0
+offset_top = 982.0
+offset_right = 2859.0
+offset_bottom = 1600.0
 icon = ExtResource("5_s3uwn")
 flat = true
 

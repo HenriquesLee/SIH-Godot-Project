@@ -30,10 +30,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 4.0
-offset_top = -539.0
-offset_right = 1965.0
-offset_bottom = 533.0
+offset_left = 8.0
+offset_top = -327.0
+offset_right = 1969.0
+offset_bottom = 745.0
 grow_vertical = 2
 audio_track = 1
 stream = ExtResource("1_qgaxs")
@@ -102,10 +102,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
 
 [node name="ExitButton" type="Button" parent="VideoStreamPlayer"]
 layout_mode = 0
-offset_left = 1609.0
-offset_top = 948.0
-offset_right = 1727.0
-offset_bottom = 979.0
+offset_left = 1369.0
+offset_top = 848.0
+offset_right = 1487.0
+offset_bottom = 879.0
 theme = SubResource("Theme_45wjs")
 theme_override_fonts/font = ExtResource("3_qalyu")
 theme_override_font_sizes/font_size = 28
@@ -115,4 +115,4 @@ text = ">>EXIT"
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(967, 537)
+position = Vector2(959, 585)

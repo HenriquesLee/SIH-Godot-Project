@@ -19,9 +19,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -12.0
-offset_right = 24.0
-offset_bottom = 24.0
+offset_left = -371.0
+offset_top = -139.0
+offset_right = 250.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("1_oo2o0")
@@ -33,10 +34,10 @@ loop = true
 script = ExtResource("1_tmeep")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_axrim")]
-position = Vector2(1155, 512)
+position = Vector2(702, 238)
 
 [node name="CardSlot2" parent="." instance=ExtResource("3_axrim")]
-position = Vector2(777, 510)
+position = Vector2(423, 246)
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_jg3bf")
@@ -46,27 +47,28 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -558.0
-offset_top = 27.0
-offset_right = 592.0
-offset_bottom = 279.0
+offset_left = -495.0
+offset_top = -108.0
+offset_right = 577.0
+offset_bottom = 76.0
 grow_horizontal = 2
 theme_override_colors/default_color = Color(0.294118, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("5_2q5i0")
-theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/normal_font_size = 67
 text = "What is the primary responsibility of the Vice-President as per Article 89?"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 843.0
-offset_top = 298.0
-offset_right = 1091.0
-offset_bottom = 385.0
+offset_left = 431.0
+offset_top = 63.0
+offset_right = 679.0
+offset_bottom = 150.0
 theme_override_colors/default_color = Color(0.292209, 0.00512987, 0.00283474, 1)
 theme_override_fonts/normal_font = ExtResource("5_2q5i0")
 theme_override_font_sizes/normal_font_size = 50
 text = "CORRECT ZONE"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(969, 554)
+position = Vector2(573, 318)
 scale = Vector2(500, 500)
+zoom = Vector2(0.7, 0.7)

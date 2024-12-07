@@ -34,10 +34,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = -547.0
-offset_right = 1949.0
-offset_bottom = 526.0
+offset_left = -453.0
+offset_top = -640.0
+offset_right = 1539.0
+offset_bottom = 433.0
 grow_vertical = 2
 stream = ExtResource("2_8a6xg")
 autoplay = true
@@ -49,9 +49,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -361.0
+offset_left = -351.0
 offset_top = 146.0
-offset_right = 374.0
+offset_right = 384.0
 offset_bottom = 389.0
 grow_horizontal = 2
 theme_override_colors/table_border = Color(0, 0, 0, 1)
@@ -112,10 +112,10 @@ text = "d) Presiding over Parliament sessions"
 
 [node name="ExitButton" type="Button" parent="VideoStreamPlayer"]
 layout_mode = 0
-offset_left = 1600.0
-offset_top = 764.0
-offset_right = 1803.0
-offset_bottom = 840.0
+offset_left = 1426.0
+offset_top = 857.0
+offset_right = 1576.0
+offset_bottom = 926.0
 theme = SubResource("Theme_45wjs")
 theme_override_fonts/font = ExtResource("3_jjdsn")
 theme_override_font_sizes/font_size = 59
@@ -125,4 +125,5 @@ text = ">>EXIT"
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(952, 538)
+position = Vector2(571, 234)
+zoom = Vector2(0.7, 0.7)
