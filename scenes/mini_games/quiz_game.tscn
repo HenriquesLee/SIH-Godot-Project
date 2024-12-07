@@ -1,0 +1,129 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5e865v7pson6"]
+
+[ext_resource type="Script" path="res://scenes/mini_games/quiz_game.gd" id="1_0cs8l"]
+[ext_resource type="VideoStream" path="res://assets/UI/quiz_game/newest_quiz_bg.ogv" id="2_8a6xg"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_jjdsn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2peq"]
+bg_color = Color(0, 0, 0, 0.505882)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.8, 0.87451, 1, 1)
+shadow_size = 17
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="Theme" id="Theme_45wjs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x8qd7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0cs8l")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -453.0
+offset_top = -640.0
+offset_right = 1539.0
+offset_bottom = 433.0
+grow_vertical = 2
+stream = ExtResource("2_8a6xg")
+autoplay = true
+expand = true
+loop = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VideoStreamPlayer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -351.0
+offset_top = 146.0
+offset_right = 384.0
+offset_bottom = 389.0
+grow_horizontal = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_jjdsn")
+theme_override_font_sizes/normal_font_size = 63
+text = "What is the President prohibited from doing while in office?"
+
+[node name="Button" type="Button" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 422.0
+offset_right = 1382.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjdsn")
+theme_override_font_sizes/font_size = 46
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+text = "a) Running for re-election"
+
+[node name="Button2" type="Button" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 555.0
+offset_right = 1386.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjdsn")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+text = "b) Holding any office of profit 
+"
+
+[node name="Button3" type="Button" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 686.0
+offset_right = 1384.0
+offset_bottom = 782.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjdsn")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+text = "c) Resigning before their term ends 
+"
+
+[node name="Button4" type="Button" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 825.0
+offset_right = 1385.0
+offset_bottom = 921.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_jjdsn")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
+text = "d) Presiding over Parliament sessions"
+
+[node name="ExitButton" type="Button" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_left = 1426.0
+offset_top = 857.0
+offset_right = 1576.0
+offset_bottom = 926.0
+theme = SubResource("Theme_45wjs")
+theme_override_fonts/font = ExtResource("3_jjdsn")
+theme_override_font_sizes/font_size = 59
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x8qd7")
+text = ">>EXIT"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(571, 234)
+zoom = Vector2(0.7, 0.7)

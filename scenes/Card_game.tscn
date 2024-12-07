@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://buln8ut8mh3ay"]
+
+[ext_resource type="VideoStream" path="res://assets/UI/card_game/video_bg.ogv" id="1_oo2o0"]
+[ext_resource type="Script" path="res://scripts/CardManager.gd" id="1_tmeep"]
+[ext_resource type="PackedScene" uid="uid://bob85mqp4p0ui" path="res://scenes/CardSlot.tscn" id="3_axrim"]
+[ext_resource type="Script" path="res://scenes/PlayerHand.gd" id="3_jg3bf"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="5_2q5i0"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -371.0
+offset_top = -139.0
+offset_right = 250.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_oo2o0")
+autoplay = true
+expand = true
+loop = true
+
+[node name="CardManager" type="Node2D" parent="."]
+script = ExtResource("1_tmeep")
+
+[node name="CardSlot" parent="." instance=ExtResource("3_axrim")]
+position = Vector2(702, 238)
+
+[node name="CardSlot2" parent="." instance=ExtResource("3_axrim")]
+position = Vector2(423, 246)
+
+[node name="PlayerHand" type="Node2D" parent="."]
+script = ExtResource("3_jg3bf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -495.0
+offset_top = -108.0
+offset_right = 577.0
+offset_bottom = 76.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.294118, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_2q5i0")
+theme_override_font_sizes/normal_font_size = 67
+text = "What is the primary responsibility of the Vice-President as per Article 89?"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 63.0
+offset_right = 679.0
+offset_bottom = 150.0
+theme_override_colors/default_color = Color(0.292209, 0.00512987, 0.00283474, 1)
+theme_override_fonts/normal_font = ExtResource("5_2q5i0")
+theme_override_font_sizes/normal_font_size = 50
+text = "CORRECT ZONE"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 318)
+scale = Vector2(500, 500)
+zoom = Vector2(0.7, 0.7)

@@ -10,7 +10,7 @@ script = ExtResource("1_lnd0w")
 
 [node name="SplashScreen" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
+offset_right = 1328.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
