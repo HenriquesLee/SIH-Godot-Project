@@ -1,20 +1,20 @@
 [gd_scene load_steps=8 format=3 uid="uid://c257g577mvpbw"]
 
-[ext_resource type="Script" path="res://scripts/form.gd" id="1_i4d1v"]
-[ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="1_i13f6"]
-[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_v1dmw"]
-[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="4_dfvw2"]
+[ext_resource type="Script" path="res://scripts/form.gd" id="1_5yfi8"]
+[ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="2_pl4o8"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_ybiyg"]
+[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="4_wot5u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fpyfw"]
-atlas = ExtResource("1_i13f6")
+atlas = ExtResource("2_pl4o8")
 region = Rect2(138.667, 10.9997, 107.192, 123.809)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vi4mf"]
-atlas = ExtResource("4_dfvw2")
+atlas = ExtResource("4_wot5u")
 region = Rect2(2.11051, 1.09323, 92.1905, 27.4022)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rstd2"]
-atlas = ExtResource("4_dfvw2")
+atlas = ExtResource("4_wot5u")
 region = Rect2(98.1246, 3.21743, 91.7657, 26.1277)
 
 [node name="Control" type="Control"]
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_i4d1v")
+script = ExtResource("1_5yfi8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -51,7 +51,7 @@ offset_right = -256.5
 offset_bottom = 185.5
 grow_horizontal = 2
 theme_override_colors/default_color = Color(0.666819, 0.474342, 0.348791, 1)
-theme_override_fonts/normal_font = ExtResource("2_v1dmw")
+theme_override_fonts/normal_font = ExtResource("3_ybiyg")
 theme_override_font_sizes/normal_font_size = 32
 text = "Age"
 
@@ -65,7 +65,7 @@ offset_right = -254.0
 offset_bottom = 133.0
 grow_horizontal = 2
 theme_override_colors/default_color = Color(0.666819, 0.474342, 0.348791, 1)
-theme_override_fonts/normal_font = ExtResource("2_v1dmw")
+theme_override_fonts/normal_font = ExtResource("3_ybiyg")
 theme_override_font_sizes/normal_font_size = 32
 text = "User Name"
 
@@ -79,7 +79,7 @@ offset_right = -93.5
 offset_bottom = 87.5
 grow_horizontal = 2
 theme_override_colors/default_color = Color(0.666819, 0.474342, 0.348791, 1)
-theme_override_fonts/normal_font = ExtResource("2_v1dmw")
+theme_override_fonts/normal_font = ExtResource("3_ybiyg")
 theme_override_font_sizes/normal_font_size = 50
 text = "User Details"
 
@@ -131,7 +131,7 @@ offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.666819, 0.474342, 0.348791, 1)
-theme_override_fonts/font = ExtResource("2_v1dmw")
+theme_override_fonts/font = ExtResource("3_ybiyg")
 theme_override_font_sizes/font_size = 30
 text = "SUBMIT"
 
@@ -149,7 +149,7 @@ offset_bottom = 159.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.666819, 0.474342, 0.348791, 1)
-theme_override_fonts/normal_font = ExtResource("2_v1dmw")
+theme_override_fonts/normal_font = ExtResource("3_ybiyg")
 theme_override_font_sizes/normal_font_size = 30
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var time_in_seconds = 5
 var progress_bar: ProgressBar
@@ -43,4 +43,4 @@ func _on_progress_timer_timeout(step: float):
 		progress_timer.stop()
 
 func _on_return_timer_timeout():
-	get_tree().change_scene_to_file("res://main_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/others/main_menu.tscn")

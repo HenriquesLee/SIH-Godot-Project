@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/Npc/leg_guide.gd" id="1_777en"]
 [ext_resource type="Texture2D" uid="uid://q6gpgb7f20du" path="res://assets/Sprites/characters/Male3.png" id="1_nghyi"]
-[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/objects/interactablecomponent.tscn" id="2_p8573"]
-[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/objects/interactable_label_component.tscn" id="3_x8x3w"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/others/interactablecomponent.tscn" id="2_p8573"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/others/interactable_label_component.tscn" id="3_x8x3w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_848vd"]
 atlas = ExtResource("1_nghyi")

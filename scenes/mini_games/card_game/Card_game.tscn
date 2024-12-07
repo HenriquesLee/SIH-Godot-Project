@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cjlfmvcc4387q"]
 
 [ext_resource type="VideoStream" path="res://assets/UI/card_game/video_bg.ogv" id="1_oo2o0"]
-[ext_resource type="Script" path="res://scripts/CardManager.gd" id="1_tmeep"]
-[ext_resource type="PackedScene" uid="uid://dlogk0481ouqs" path="res://scenes/CardSlot.tscn" id="3_axrim"]
-[ext_resource type="Script" path="res://scenes/PlayerHand.gd" id="3_jg3bf"]
+[ext_resource type="Script" path="res://scripts/mini_games/card_game/CardManager.gd" id="1_tmeep"]
+[ext_resource type="PackedScene" uid="uid://dlogk0481ouqs" path="res://scenes/mini_games/card_game/CardSlot.tscn" id="3_axrim"]
+[ext_resource type="Script" path="res://scripts/mini_games/card_game/PlayerHand.gd" id="3_jg3bf"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="5_2q5i0"]
 
 [node name="Main" type="Control"]

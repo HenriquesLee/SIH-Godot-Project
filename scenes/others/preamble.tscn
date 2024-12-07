@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqna6djsnx1jc"]
+
+[ext_resource type="Script" path="res://scripts/splash_screen/preamble.gd" id="1_ac2o1"]
+[ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="2_hwvdd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk10a"]
+atlas = ExtResource("2_hwvdd")
+region = Rect2(136.667, 10.552, 110.023, 124.611)
+
+[node name="Preamble" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ac2o1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_right = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_gk10a")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_top = 44.0
+offset_right = 110.0
+offset_bottom = 67.0
+grow_horizontal = 2
+text = "THE PREAMBLE OF INDIA"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -435.5
+offset_top = 108.0
+offset_right = 435.5
+offset_bottom = 495.0
+grow_horizontal = 2
+text = "WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC and to secure to all its citizens:
+
+JUSTICE, social, economic and political;
+
+LIBERTY of thought, expression, belief, faith and worship;
+
+EQUALITY of status and of opportunity;
+
+and to promote among them all
+
+FRATERNITY assuring the dignity of the individual and the unity and integrity of the Nation;
+
+IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Loading" type="Label" parent="."]
+offset_left = 93.0
+offset_top = 539.0
+offset_right = 249.0
+offset_bottom = 583.0
+text = "LOADING..."
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 93.0
+offset_top = 573.0
+offset_right = 1017.0
+offset_bottom = 617.0

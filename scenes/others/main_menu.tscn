@@ -1,19 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://ksqcqqs1mldf"]
+[gd_scene load_steps=10 format=3 uid="uid://bvokgogoijrof"]
 
-[ext_resource type="Texture2D" uid="uid://bop0udc76wudq" path="res://assets/UI/background.jpeg" id="1_d1ula"]
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_iq75x"]
-[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="3_o7cay"]
-[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_pje0l"]
-[ext_resource type="FontFile" uid="uid://k5q4oy0rhbbv" path="res://assets/UI/fonts/PixelOperator8.ttf" id="3_po6o1"]
-[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/objects/fade_transition.tscn" id="6_d6c0m"]
-[ext_resource type="AudioStream" uid="uid://dsvxqsfjbdka7" path="res://audio/menu_screen.mp3" id="7_ynvj7"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_av3i7"]
+[ext_resource type="Texture2D" uid="uid://br2tnh3lpgeh8" path="res://assets/UI/main_screen_bg.jpeg" id="2_oxhcp"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_dyr7q"]
+[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="4_dvubv"]
+[ext_resource type="FontFile" uid="uid://k5q4oy0rhbbv" path="res://assets/UI/fonts/PixelOperator8.ttf" id="5_yimm4"]
+[ext_resource type="AudioStream" uid="uid://dsvxqsfjbdka7" path="res://assets/audio/menu_screen.mp3" id="6_isj4i"]
+[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="7_ao1s7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
-atlas = ExtResource("3_o7cay")
+atlas = ExtResource("4_dvubv")
 region = Rect2(3, 2, 90, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2v7qe"]
-atlas = ExtResource("3_o7cay")
+atlas = ExtResource("4_dvubv")
 region = Rect2(99, 4, 90, 25)
 
 [node name="Main_menu" type="Control"]
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iq75x")
+script = ExtResource("1_av3i7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -32,18 +32,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_d1ula")
+texture = ExtResource("2_oxhcp")
 
 [node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 2
-offset_top = 120.0
-offset_right = 1152.0
-offset_bottom = 221.0
+offset_left = 220.0
+offset_top = 6.0
+offset_right = 920.0
+offset_bottom = 160.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 0
 theme_override_constants/outline_size = 39
-theme_override_fonts/font = ExtResource("3_pje0l")
-theme_override_font_sizes/font_size = 167
+theme_override_fonts/font = ExtResource("3_dyr7q")
+theme_override_font_sizes/font_size = 143
 text = "WELCOME"
 horizontal_alignment = 1
 
@@ -54,10 +55,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -3.0
-offset_right = -22.9999
-offset_bottom = 24.0
+offset_left = -122.0
+offset_top = -189.0
+offset_right = -31.9999
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
@@ -67,19 +68,20 @@ texture_pressed = SubResource("AtlasTexture_2v7qe")
 
 [node name="Label" type="Label" parent="TextureRect/Start"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.481
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -8.0
-offset_right = 35.0
-offset_bottom = 8.0
+anchor_bottom = 0.481
+offset_left = -27.8001
+offset_top = -6.587
+offset_right = 33.1999
+offset_bottom = 9.413
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.768917, 0.6038, 0.423545, 1)
-theme_override_fonts/font = ExtResource("3_po6o1")
+theme_override_colors/font_color = Color(0.338645, 0.164376, 0.00366821, 1)
+theme_override_fonts/font = ExtResource("5_yimm4")
+theme_override_font_sizes/font_size = 13
 text = "START"
 
 [node name="Quit" type="TextureButton" parent="TextureRect"]
@@ -89,10 +91,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -109.0
-offset_top = 98.0
-offset_right = -19.0
-offset_bottom = 125.0
+offset_left = -122.0
+offset_top = -111.0
+offset_right = -32.0
+offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
@@ -102,28 +104,29 @@ texture_pressed = SubResource("AtlasTexture_2v7qe")
 
 [node name="Label" type="Label" parent="TextureRect/Quit"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.519
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -26.0
-offset_top = -8.0
-offset_right = 26.0
-offset_bottom = 8.0
+anchor_bottom = 0.519
+offset_left = -18.2
+offset_top = -8.013
+offset_right = 20.8
+offset_bottom = 7.987
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.768917, 0.6038, 0.423545, 1)
-theme_override_fonts/font = ExtResource("3_po6o1")
+theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
+theme_override_fonts/font = ExtResource("5_yimm4")
+theme_override_font_sizes/font_size = 14
 text = "QUIT"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_ynvj7")
+stream = ExtResource("6_isj4i")
 volume_db = 2.0
 autoplay = true
 bus = &"Main menu"
 
-[node name="Fade_transition" parent="." instance=ExtResource("6_d6c0m")]
+[node name="Fade_transition" parent="." instance=ExtResource("7_ao1s7")]
 visible = false
 layout_mode = 1
 

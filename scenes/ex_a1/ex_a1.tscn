@@ -1,6 +1,6 @@
 [gd_scene load_steps=107 format=3 uid="uid://c140hdqrxiavp"]
 
-[ext_resource type="Script" path="res://scripts/start.gd" id="1_d1ek0"]
+[ext_resource type="Script" path="res://scripts/executive/ex_a1.gd" id="1_8sqbk"]
 [ext_resource type="Texture2D" uid="uid://c5fysfoeisnat" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Grass_1_Middle.png" id="3_7f46e"]
 [ext_resource type="Texture2D" uid="uid://btewd7fmpj0ld" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Path_Decoration.png" id="4_eyt81"]
 [ext_resource type="Texture2D" uid="uid://b4xak3ldohryi" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Path_Middle.png" id="5_wt3d7"]
@@ -50,9 +50,9 @@
 [ext_resource type="Texture2D" uid="uid://dk20qphsfhpd2" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 1 - DAY.png" id="44_y8je3"]
 [ext_resource type="Texture2D" uid="uid://d2alt2dv0ln8v" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 1 - NIGHT.png" id="45_kcvhc"]
 [ext_resource type="Texture2D" uid="uid://dohtuydqs5rg5" path="res://assets/Cute_Fantasy_assets/Outdoor decoration/Fence_Big.png" id="47_7bpdl"]
-[ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/objects/controls.tscn" id="52_d2yuf"]
+[ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="52_d2yuf"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="52_wvl2g"]
-[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/objects/fade_transition.tscn" id="53_v0q74"]
+[ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="53_v0q74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tvec5"]
 texture = ExtResource("23_rlx26")
@@ -1498,7 +1498,7 @@ sources/51 = SubResource("TileSetAtlasSource_nrl0i")
 
 [node name="ex_a1" type="Node2D"]
 position = Vector2(377, 140)
-script = ExtResource("1_d1ek0")
+script = ExtResource("1_8sqbk")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lx4tk")

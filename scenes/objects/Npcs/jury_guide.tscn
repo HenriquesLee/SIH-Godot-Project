@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/Npc/jury_guide.gd" id="1_xeheb"]
 [ext_resource type="Texture2D" uid="uid://q6gpgb7f20du" path="res://assets/Sprites/characters/Male3.png" id="2_mv082"]
-[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/objects/interactablecomponent.tscn" id="3_8ojas"]
-[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/objects/interactable_label_component.tscn" id="4_r8the"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/others/interactablecomponent.tscn" id="3_8ojas"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/others/interactable_label_component.tscn" id="4_r8the"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mftpd"]
 atlas = ExtResource("2_mv082")

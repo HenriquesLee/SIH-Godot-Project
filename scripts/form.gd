@@ -52,7 +52,7 @@ func is_valid_age(age: String) -> bool:
 func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	if response_code == 201:
 		var json = JSON.parse_string(body.get_string_from_utf8())
-		User.UserId = json["userid"]
-		print(User.UserId)
+		UserData.UserId = json["userid"]
+		print(UserData.UserId)
 	else:
 		print("Failed with code: ", response_code)

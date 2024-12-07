@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1hkdpt8quse1"
-path="res://.godot/imported/BlackBoard_Single_v6_wav.wav-1b3b7c79c0e8cb3df80cf5d7ca5c4098.sample"
+path="res://.godot/imported/BlackBoard_Single_v6_wav.wav-e44c0df9124efb476addb3c92fe8b668.sample"
 
 [deps]
 
-source_file="res://audio/BlackBoard_Single_v6_wav.wav"
-dest_files=["res://.godot/imported/BlackBoard_Single_v6_wav.wav-1b3b7c79c0e8cb3df80cf5d7ca5c4098.sample"]
+source_file="res://assets/audio/BlackBoard_Single_v6_wav.wav"
+dest_files=["res://.godot/imported/BlackBoard_Single_v6_wav.wav-e44c0df9124efb476addb3c92fe8b668.sample"]
 
 [params]
 

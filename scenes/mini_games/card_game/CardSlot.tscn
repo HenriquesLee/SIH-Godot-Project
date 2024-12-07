@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlogk0481ouqs"]
 
-[ext_resource type="Script" path="res://CardSlot.gd" id="1_3mdco"]
+[ext_resource type="Script" path="res://scripts/mini_games/card_game/CardSlot.gd" id="1_3mdco"]
 [ext_resource type="Texture2D" uid="uid://c852n1u0dd067" path="res://assets/UI/card_game/dotted placeholder.png" id="1_nat4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cngy3"]
