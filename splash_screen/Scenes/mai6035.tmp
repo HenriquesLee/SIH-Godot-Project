@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5tac550dp7ay"]
+
+[ext_resource type="Texture2D" uid="uid://cfpql373qr22e" path="res://assets/UI/splash screen/byte-high-resolution-logo-transparent.png" id="1_4cv61"]
+[ext_resource type="Script" path="res://splash_screen/Scenes/splash_screen.gd" id="1_dw83i"]
+
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dw83i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="splash_screen" type="CenterContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 152.0
+offset_right = 2376.0
+offset_bottom = 2152.0
+scale = Vector2(0.2105, 0.18275)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/splash_screen"]
+layout_mode = 2
+texture = ExtResource("1_4cv61")

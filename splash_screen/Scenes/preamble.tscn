@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dqna6djsnx1jc"]
+
+[node name="Preamble" type="Node2D"]
+position = Vector2(-9, -9)
+
+[node name="Loading" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 296.0
+offset_right = 311.0
+offset_bottom = 326.0
+text = "LOADING..."
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 148.0
+offset_top = 350.0
+offset_right = 1072.0
+offset_bottom = 394.0
