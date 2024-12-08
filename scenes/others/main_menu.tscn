@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvokgogoijrof"]
+[gd_scene load_steps=11 format=3 uid="uid://bvokgogoijrof"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_av3i7"]
 [ext_resource type="Texture2D" uid="uid://br2tnh3lpgeh8" path="res://assets/UI/main_screen_bg.jpeg" id="2_oxhcp"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://k5q4oy0rhbbv" path="res://assets/UI/fonts/PixelOperator8.ttf" id="5_yimm4"]
 [ext_resource type="AudioStream" uid="uid://dsvxqsfjbdka7" path="res://assets/audio/menu_screen.mp3" id="6_isj4i"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="7_ao1s7"]
+[ext_resource type="PackedScene" uid="uid://d3c22gefs7ov4" path="res://scenes/others/progress_bar.tscn" id="8_pprdg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
 atlas = ExtResource("4_dvubv")
@@ -133,6 +134,9 @@ layout_mode = 1
 [node name="Timer" type="Timer" parent="Fade_transition"]
 wait_time = 1.5
 one_shot = true
+
+[node name="Texture_ProgressBar" parent="." instance=ExtResource("8_pprdg")]
+position = Vector2(1037, 4)
 
 [connection signal="pressed" from="TextureRect/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]
