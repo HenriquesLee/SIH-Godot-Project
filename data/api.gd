@@ -1,7 +1,8 @@
 extends Node
 
 var API_LINK = "https://flaskserver-rho.vercel.app/"
-
+var dialogue = "https://flaskserver-rho.vercel.app/dialogue"
+var quiz_game = "https://flaskserver-rho.vercel.app/quiz"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

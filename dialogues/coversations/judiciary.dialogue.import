@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bhee1b51j8miv"
+path="res://.godot/imported/judiciary.dialogue-81e3995801d8c4e3d1e731c79efb1bd9.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/judiciary.dialogue"
+dest_files=["res://.godot/imported/judiciary.dialogue-81e3995801d8c4e3d1e731c79efb1bd9.tres"]
+
+[params]
+
+defaults=true

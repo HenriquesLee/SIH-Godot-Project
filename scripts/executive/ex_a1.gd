@@ -7,9 +7,4 @@ func _ready() -> void:
 	$Controls.show()
 	$CanvasLayer/Fade_transition.show()
 	$CanvasLayer/Fade_transition/AnimationPlayer.play("Fade_out")
-	trigger_dialogue_on_start()
 	
-func trigger_dialogue_on_start() -> void:
-	var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
-	get_tree().root.add_child(balloon)  # Add to the scene tree
-	balloon.start(load("res://dialogues/coversations/self.dialogue"), "Chinu")

@@ -29,7 +29,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func fetch_dialogue():
 	var post_data = {"area":"base_map"}
 	var headers = ["Content-Type: application/json"]
-	var response = http_request.request(Api.API_LINK,headers,HTTPClient.METHOD_GET,
+	var response = http_request.request(Api.dialogue,headers,HTTPClient.METHOD_GET,
 	JSON.stringify(post_data))
 	if response != OK:
 		print("An error occurred in the HTTP request.")
