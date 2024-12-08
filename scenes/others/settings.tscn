@@ -98,10 +98,10 @@ scale = Vector2(4.5, 4.44792)
 texture = SubResource("AtlasTexture_h8v5s")
 
 [node name="Button" type="Button" parent="SettingMenu"]
-offset_left = -43.0463
-offset_top = -29.0683
-offset_right = 42.9537
-offset_bottom = -2.06832
+offset_left = -49.0
+offset_top = -29.0
+offset_right = 48.0
+offset_bottom = -2.0
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
