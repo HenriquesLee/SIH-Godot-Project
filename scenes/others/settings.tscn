@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=3 uid="uid://bivte3qu8ws2s"]
+
+[ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="1_tyng5"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_u7wyt"]
+
+[sub_resource type="GDScript" id="GDScript_gokwj"]
+script/source = "extends Control  # Since your root is Control
+
+func _ready():
+	# Ensure Button4 (Report button) is connected
+	$SettingMenu/Button4.pressed.connect(_on_report_button_pressed)
+
+func _on_report_button_pressed():
+	# Create popup dynamically
+	var popup = create_feedback_popup()
+	add_child(popup)
+	popup.popup_centered()
+
+func create_feedback_popup() -> PopupPanel:
+	# Create Popup Panel
+	var feedback_popup = PopupPanel.new()
+	feedback_popup.size = Vector2(300, 400)
+	
+	# Vertical Container
+	var vbox = VBoxContainer.new()
+	vbox.set_anchors_preset(Control.PRESET_FULL_RECT)
+	vbox.add_theme_constant_override(\"separation\", 10)
+	feedback_popup.add_child(vbox)
+	
+	# Title
+	var title = Label.new()
+	title.text = \"Report an Issue\"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override(\"font_size\", 18)
+	vbox.add_child(title)
+	
+	# Issue Type Dropdown
+	var issue_type = OptionButton.new()
+	issue_type.add_item(\"Bug\")
+	issue_type.add_item(\"Feature Request\")
+	issue_type.add_item(\"Performance\")
+	issue_type.add_item(\"Other\")
+	vbox.add_child(issue_type)
+	
+	# Description Input
+	var description_input = TextEdit.new()
+	description_input.placeholder_text = \"Describe your issue here...\"
+	description_input.custom_minimum_size.y = 200
+	vbox.add_child(description_input)
+	
+	# Submit Button
+	var submit_button = Button.new()
+	submit_button.text = \"Submit Report\"
+	submit_button.pressed.connect(func():
+		var description = description_input.text.strip_edges()
+		if description.is_empty():
+			print(\"Please enter a description\")
+			return
+		
+		# Process feedback
+		print(\"Issue Type: \", issue_type.get_item_text(issue_type.selected))
+		print(\"Description: \", description)
+		
+		# Close popup
+		feedback_popup.queue_free()
+	)
+	vbox.add_child(submit_button)
+	
+	return feedback_popup
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8v5s"]
+atlas = ExtResource("1_tyng5")
+region = Rect2(0, 0, 128, 144)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sinmc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_no04q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1j30"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 5.0
+offset_right = -2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_gokwj")
+
+[node name="SettingMenu" type="Sprite2D" parent="."]
+position = Vector2(546, 326.75)
+scale = Vector2(4.5, 4.44792)
+texture = SubResource("AtlasTexture_h8v5s")
+
+[node name="Button" type="Button" parent="SettingMenu"]
+offset_left = -49.0
+offset_top = -29.0
+offset_right = 48.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
+theme_override_fonts/font = ExtResource("2_u7wyt")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sinmc")
+text = "LEADERBOARD"
+
+[node name="Button2" type="Button" parent="SettingMenu"]
+offset_left = -44.0
+offset_top = -6.0
+offset_right = 43.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
+theme_override_fonts/font = ExtResource("2_u7wyt")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_no04q")
+text = "MAIN MAP"
+
+[node name="Button4" type="Button" parent="SettingMenu"]
+offset_left = -43.0
+offset_top = 34.0
+offset_right = 42.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
+theme_override_fonts/font = ExtResource("2_u7wyt")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
+text = "REPORT"
+
+[node name="Button3" type="Button" parent="SettingMenu"]
+offset_left = -43.0
+offset_top = 14.0
+offset_right = 43.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
+theme_override_fonts/font = ExtResource("2_u7wyt")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
+text = "TUTORIAL"
