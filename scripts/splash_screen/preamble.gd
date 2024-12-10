@@ -8,14 +8,10 @@ var custom_font: FontVariation
 func _ready():
 	# Load and set custom font
 	custom_font = FontVariation.new()
-	custom_font.base_font = load("res://Jersey10-Regular.ttf")  # Replace with your font path
+
    
 
-	# Apply to labels
-	$Label.add_theme_font_override("font", custom_font)
-	$Label2.add_theme_font_override("font", custom_font)
-	$Loading.add_theme_font_override("font", custom_font)
-	
+
 	progress_bar = $ProgressBar
 	progress_bar.value = 0
 	progress_bar.max_value = 100

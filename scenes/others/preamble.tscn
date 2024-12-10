@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqna6djsnx1jc"]
+[gd_scene load_steps=5 format=3 uid="uid://dqna6djsnx1jc"]
 
 [ext_resource type="Script" path="res://scripts/splash_screen/preamble.gd" id="1_ac2o1"]
-[ext_resource type="Texture2D" uid="uid://dbqcmd8msgepm" path="res://assets/UI/progress_bar/border preamble.jpg" id="2_a5ka3"]
+[ext_resource type="Texture2D" uid="uid://dkexqcy4o2e6s" path="res://assets/UI/preamble_new_border.jpg" id="2_a6x28"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_w8ae3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgbi8"]
+atlas = ExtResource("2_a6x28")
 
 [node name="Preamble" type="Control"]
 layout_mode = 3
@@ -12,33 +15,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ac2o1")
+metadata/_edit_horizontal_guides_ = [-213.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -6.0
-offset_right = -5.0
-offset_bottom = 399.0
+offset_left = 3.0
+offset_top = -317.0
+offset_right = -2.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_a5ka3")
+texture = SubResource("AtlasTexture_hgbi8")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -219.0
-offset_top = 148.0
-offset_right = 198.0
-offset_bottom = 197.0
+offset_left = -220.0
+offset_top = 9.0
+offset_right = 197.0
+offset_bottom = 58.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_w8ae3")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 39
 text = "THE PREAMBLE OF INDIA"
 horizontal_alignment = 1
 
@@ -47,37 +51,32 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -297.0
-offset_top = 208.0
-offset_right = 284.0
-offset_bottom = 877.0
+offset_left = -437.0
+offset_top = 60.0
+offset_right = 463.0
+offset_bottom = 522.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_w8ae3")
 theme_override_font_sizes/font_size = 36
-text = "WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC and to secure to all its citizens:
-JUSTICE, social, economic and political;
-LIBERTY of thought, expression, belief, faith and worship;
-EQUALITY of status and of opportunity;
-and to promote among them all
-FRATERNITY assuring the dignity of the individual and the unity and integrity of the Nation;
-IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION."
+text = "
+WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC and to secure to all its citizens: JUSTICE, social, economic and political; LIBERTY of thought, expression, belief, faith and worship; EQUALITY of status and of opportunity; and to promote among them all FRATERNITY assuring the dignity of the individual and the unity and integrity of the Nation; IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION. can u make it short"
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Loading" type="Label" parent="."]
 layout_mode = 0
-offset_left = 93.0
-offset_top = 539.0
-offset_right = 249.0
-offset_bottom = 583.0
+offset_left = 1585.0
+offset_top = 289.0
+offset_right = 1741.0
+offset_bottom = 333.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_w8ae3")
 text = "LOADING..."
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 895.0
-offset_right = 1027.0
-offset_bottom = 939.0
+offset_left = 105.0
+offset_top = 524.0
+offset_right = 1029.0
+offset_bottom = 568.0
