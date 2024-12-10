@@ -7,4 +7,3 @@ func _ready() -> void:
 	$Controls.show()
 	$CanvasLayer/Fade_transition.show()
 	$CanvasLayer/Fade_transition/AnimationPlayer.play("Fade_out")
-	
