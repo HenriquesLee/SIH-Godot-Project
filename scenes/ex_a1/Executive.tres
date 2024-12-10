@@ -618,10 +618,12 @@ texture = ExtResource("20_dgulf")
 texture = ExtResource("21_jwcrn")
 2:0/size_in_atlas = Vector2i(2, 5)
 2:0/0 = 0
+2:0/0/z_index = 5
 2:0/0/y_sort_origin = 5
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 20, -4, 20)
 4:0/size_in_atlas = Vector2i(2, 5)
 4:0/0 = 0
+4:0/0/z_index = 5
 4:0/0/y_sort_origin = 5
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 16, -4, 16)
 
