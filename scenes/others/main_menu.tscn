@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bvokgogoijrof"]
+[gd_scene load_steps=13 format=3 uid="uid://bvokgogoijrof"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_av3i7"]
 [ext_resource type="Texture2D" uid="uid://br2tnh3lpgeh8" path="res://assets/UI/main_screen_bg.jpeg" id="2_oxhcp"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://dsvxqsfjbdka7" path="res://assets/audio/menu_screen.mp3" id="6_isj4i"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="7_ao1s7"]
 [ext_resource type="PackedScene" uid="uid://d3c22gefs7ov4" path="res://scenes/others/progress_bar.tscn" id="8_pprdg"]
+[ext_resource type="Texture2D" uid="uid://ousq0e2r2q33" path="res://assets/UI/settings.png" id="9_ro3e6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
 atlas = ExtResource("4_dvubv")
@@ -16,6 +17,8 @@ region = Rect2(3, 2, 90, 27)
 [sub_resource type="AtlasTexture" id="AtlasTexture_2v7qe"]
 atlas = ExtResource("4_dvubv")
 region = Rect2(99, 4, 90, 25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erhkm"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -138,6 +141,17 @@ one_shot = true
 [node name="Texture_ProgressBar" parent="." instance=ExtResource("8_pprdg")]
 position = Vector2(1037, 4)
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = -1.0
+offset_right = 61.0
+offset_bottom = 57.0
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_erhkm")
+icon = ExtResource("9_ro3e6")
+expand_icon = true
+
 [connection signal="pressed" from="TextureRect/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="Fade_transition/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

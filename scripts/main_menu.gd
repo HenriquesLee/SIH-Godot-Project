@@ -15,3 +15,7 @@ func _on_timer_timeout() -> void:
 	if button_type == "start":
 		get_tree().change_scene_to_file("res://scenes/others/base map.tscn")
  # Replace with function body.
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/others/settings.tscn")

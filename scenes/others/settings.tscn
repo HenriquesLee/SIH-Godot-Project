@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bivte3qu8ws2s"]
+[gd_scene load_steps=9 format=3 uid="uid://bivte3qu8ws2s"]
 
 [ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="1_tyng5"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_u7wyt"]
@@ -79,6 +79,8 @@ region = Rect2(0, 0, 128, 144)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1j30"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_udfe5"]
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -140,3 +142,14 @@ theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "TUTORIAL"
+
+[node name="Exit_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 538.0
+offset_right = 735.0
+offset_bottom = 574.0
+theme_override_fonts/font = ExtResource("2_u7wyt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_udfe5")
+text = ">>EXIT"
