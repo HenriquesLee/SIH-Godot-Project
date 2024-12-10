@@ -31,7 +31,7 @@ func stop_wheel():
 
 func transition_to_quiz_scene():
 	await get_tree().create_timer(time_in_seconds).timeout
-	var quiz_game_scene = preload("res://scenes/quiz_game.tscn").instantiate()
+	var quiz_game_scene = preload("res://scenes/mini_games/spin_the_wheel/quiz_game.tscn").instantiate()
 	get_tree().current_scene.queue_free()
 	get_tree().root.add_child(quiz_game_scene)
 	get_tree().current_scene = quiz_game_scene

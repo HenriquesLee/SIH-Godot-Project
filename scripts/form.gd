@@ -31,7 +31,7 @@ func _on_texture_button_pressed() -> void:
 	var post_data = {"username": username, "age": int(age)}
 	var headers = ["Content-Type: application/json"]
 	
-	http_request.request(Api.API_LINK,headers,
+	http_request.request(Api.form,headers,
 	HTTPClient.METHOD_POST,
 	JSON.stringify(post_data))
 	
@@ -54,5 +54,6 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 		var json = JSON.parse_string(body.get_string_from_utf8())
 		UserData.UserId = json["userid"]
 		print(UserData.UserId)
+		get_tree().change_scene_to_file("res://scenes/others/main_menu.tscn")
 	else:
 		print("Failed with code: ", response_code)

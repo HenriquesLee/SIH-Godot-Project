@@ -39,4 +39,4 @@ func _on_progress_timer_timeout(step: float):
 		progress_timer.stop()
 
 func _on_return_timer_timeout():
-	get_tree().change_scene_to_file("res://scenes/others/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/others/form.tscn")

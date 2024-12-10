@@ -67,6 +67,10 @@ func create_feedback_popup() -> PopupPanel:
 	vbox.add_child(submit_button)
 	
 	return feedback_popup
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/others/main_menu.tscn\")
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8v5s"]
@@ -153,3 +157,5 @@ theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_udfe5")
 text = ">>EXIT"
+
+[connection signal="pressed" from="Exit_Button" to="." method="_on_exit_button_pressed"]

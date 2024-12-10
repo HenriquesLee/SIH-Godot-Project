@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg0gn3idudnim"]
+[gd_scene load_steps=7 format=3 uid="uid://bg0gn3idudnim"]
 
+[ext_resource type="Script" path="res://scripts/mini_games/spin_the_wheel/quiz_game.gd" id="1_nypxa"]
 [ext_resource type="VideoStream" path="res://assets/UI/card_game/video_bg.ogv" id="1_qgaxs"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_qalyu"]
 
@@ -24,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nypxa")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -46,10 +48,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -445.5
-offset_top = 6.0
-offset_right = 527.5
-offset_bottom = 207.0
+offset_left = -493.5
+offset_top = 266.0
+offset_right = 479.5
+offset_bottom = 401.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("3_qalyu")
 theme_override_font_sizes/normal_font_size = 62
@@ -57,9 +59,9 @@ theme_override_font_sizes/normal_font_size = 62
 [node name="Button" type="Button" parent="VideoStreamPlayer"]
 layout_mode = 0
 offset_left = 573.0
-offset_top = 389.0
+offset_top = 436.0
 offset_right = 1325.0
-offset_bottom = 480.0
+offset_bottom = 527.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_qalyu")
 theme_override_font_sizes/font_size = 46
@@ -68,9 +70,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
 [node name="Button2" type="Button" parent="VideoStreamPlayer"]
 layout_mode = 0
 offset_left = 573.0
-offset_top = 518.0
+offset_top = 550.0
 offset_right = 1330.0
-offset_bottom = 607.0
+offset_bottom = 639.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_qalyu")
 theme_override_font_sizes/font_size = 42
@@ -79,9 +81,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v2peq")
 [node name="Button3" type="Button" parent="VideoStreamPlayer"]
 layout_mode = 0
 offset_left = 576.0
-offset_top = 646.0
+offset_top = 661.0
 offset_right = 1322.0
-offset_bottom = 742.0
+offset_bottom = 757.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_qalyu")
 theme_override_font_sizes/font_size = 42

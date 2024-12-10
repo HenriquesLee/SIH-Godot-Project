@@ -6,13 +6,12 @@ var time_in_seconds = 1
 
 @export var json_path: String = "res://data/questions.json"
 @export var section: String = "Legislature" # Default section
-
-@onready var question_label = $TextureRect/RichTextLabel
+@onready var question_label: RichTextLabel = $VideoStreamPlayer/RichTextLabel
 @onready var buttons = [
-	$TextureRect/Button,
-	$TextureRect/Button2,
-	$TextureRect/Button3,
-	$TextureRect/Button4
+	$VideoStreamPlayer/Button,
+	$VideoStreamPlayer/Button2,
+	$VideoStreamPlayer/Button3,
+	$VideoStreamPlayer/Button4
 ]
 
 func _ready():
