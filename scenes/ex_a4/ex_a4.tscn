@@ -1,13 +1,23 @@
-[gd_scene load_steps=5 format=4 uid="uid://dnqxu8ba1t2n5"]
+[gd_scene load_steps=9 format=4 uid="uid://dnqxu8ba1t2n5"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_5ab06"]
+[ext_resource type="Script" path="res://scripts/executive/ex_a_4.gd" id="1_rcmfc"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_aie0x"]
 [ext_resource type="Texture2D" uid="uid://csd87rh0scp6j" path="res://assets/UI/spin_the_wheel/arrow-removebg-preview.png" id="3_8fbiy"]
-[ext_resource type="PackedScene" uid="uid://cvuhy3dvh607g" path="res://scenes/objects/npc.tscn" id="5_b6yxu"]
+[ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="5_jjc66"]
+[ext_resource type="PackedScene" uid="uid://dg0yk7f45b648" path="res://scenes/objects/scripts.tscn" id="6_o48lf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cira6"]
+atlas = ExtResource("5_jjc66")
+region = Rect2(96.6741, 128.08, 15.4589, 16.3508)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mcopo"]
+radius = 26.9329
 
 [node name="ExA4" type="Node2D"]
 y_sort_enabled = true
 scale = Vector2(1.00318, 1.00318)
+script = ExtResource("1_rcmfc")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_5ab06")
@@ -48,7 +58,7 @@ tile_set = ExtResource("1_5ab06")
 [node name="player" parent="." node_paths=PackedStringArray("arrow_sprite") instance=ExtResource("2_aie0x")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(-24, -791)
+position = Vector2(1508.2, -175.442)
 scale = Vector2(0.947148, 0.990426)
 arrow_sprite = NodePath("Sprite2D")
 arrow_scale = 0.1
@@ -61,6 +71,15 @@ zoom = Vector2(4, 4)
 z_index = -1
 texture = ExtResource("3_8fbiy")
 
-[node name="NPC" parent="." instance=ExtResource("5_b6yxu")]
-position = Vector2(-459.539, -340.916)
-script = null
+[node name="chest 1" type="Sprite2D" parent="."]
+position = Vector2(1340.74, -722.702)
+texture = SubResource("AtlasTexture_cira6")
+
+[node name="Area2D" type="Area2D" parent="chest 1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chest 1/Area2D"]
+shape = SubResource("CircleShape2D_mcopo")
+
+[node name="script" parent="." instance=ExtResource("6_o48lf")]
+
+[connection signal="area_entered" from="chest 1/Area2D" to="." method="_on_chest1_area_entered"]

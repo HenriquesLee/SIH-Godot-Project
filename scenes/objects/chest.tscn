@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://t1wtxig75ync"]
+
+[ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="1_g6ovd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52oo3"]
+atlas = ExtResource("1_g6ovd")
+region = Rect2(96.1106, 128.001, 16.3785, 16.7787)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uu85i"]
+radius = 20.8806
+
+[node name="Node2D" type="Sprite2D"]
+texture = SubResource("AtlasTexture_52oo3")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_uu85i")

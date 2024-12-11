@@ -20,7 +20,7 @@ func _on_executive_path_body_entered(body: Node2D) -> void:
 	print("Intreacted")
 	$CanvasLayer/Fade_transition.show()
 	$CanvasLayer/Fade_transition/AnimationPlayer.play("Fade_in")
-	get_tree().change_scene_to_file("res://scenes/ex_a1/ex_a1.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/ex_a4/ex_a4.tscn") # Replace with function body.
 	
 
 func _on_legislative_path_body_entered(body: Node2D) -> void:
