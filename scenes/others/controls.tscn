@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjxo728bh4po"]
+[gd_scene load_steps=10 format=3 uid="uid://cjxo728bh4po"]
 
+[ext_resource type="Script" path="res://scenes/others/controls.gd" id="1_dm12a"]
 [ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_om4px"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="2_nkuye"]
 
@@ -26,6 +27,7 @@ atlas = ExtResource("1_om4px")
 region = Rect2(750, 191, 21, 18)
 
 [node name="Controls" type="CanvasLayer"]
+script = ExtResource("1_dm12a")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchors_preset = 3
@@ -77,3 +79,5 @@ offset_bottom = 59.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3nrtf")
 icon = SubResource("AtlasTexture_5frqx")
 expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

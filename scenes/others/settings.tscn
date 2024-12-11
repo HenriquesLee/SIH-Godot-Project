@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bivte3qu8ws2s"]
+[gd_scene load_steps=8 format=3 uid="uid://bivte3qu8ws2s"]
 
 [ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="1_tyng5"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_u7wyt"]
@@ -10,7 +10,7 @@ func _ready():
 	# Ensure Button4 (Report button) is connected
 	$SettingMenu/Button4.pressed.connect(_on_report_button_pressed)
 
-func _on_report_button_pressed():
+func _on_report_button_pressed():  # Corrected function name
 	# Create popup dynamically
 	var popup = create_feedback_popup()
 	add_child(popup)
@@ -68,24 +68,27 @@ func create_feedback_popup() -> PopupPanel:
 	
 	return feedback_popup
 
-
 func _on_exit_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/others/main_menu.tscn\")
+	queue_free()  # Closes the settings scene
+
+   
+
+
+
+   
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8v5s"]
 atlas = ExtResource("1_tyng5")
 region = Rect2(0, 0, 128, 144)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sinmc"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_no04q"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1j30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sinmc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hof26"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,33 +106,11 @@ position = Vector2(620, 310)
 scale = Vector2(6.36719, 5.20139)
 texture = SubResource("AtlasTexture_h8v5s")
 
-[node name="Button" type="Button" parent="SettingMenu"]
-offset_left = -44.0
-offset_top = -36.0
-offset_right = 42.0
-offset_bottom = -16.0
-theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
-theme_override_fonts/font = ExtResource("2_u7wyt")
-theme_override_font_sizes/font_size = 18
-theme_override_styles/normal = SubResource("StyleBoxEmpty_sinmc")
-text = "LEADERBOARD"
-
-[node name="Button2" type="Button" parent="SettingMenu"]
-offset_left = -30.0
-offset_top = -5.0
-offset_right = 28.0
-offset_bottom = 15.0
-theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
-theme_override_fonts/font = ExtResource("2_u7wyt")
-theme_override_font_sizes/font_size = 18
-theme_override_styles/normal = SubResource("StyleBoxEmpty_no04q")
-text = "MAIN MAP"
-
 [node name="Button4" type="Button" parent="SettingMenu"]
-offset_left = -35.4945
-offset_top = 24.032
-offset_right = 30.5055
-offset_bottom = 46.032
+offset_left = -31.5681
+offset_top = 9.2283
+offset_right = 34.4319
+offset_bottom = 31.2283
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
@@ -137,10 +118,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "REPORT"
 
 [node name="Button3" type="Button" parent="SettingMenu"]
-offset_left = -28.0
-offset_top = 9.0
-offset_right = 28.0
-offset_bottom = 31.0
+offset_left = -27.0135
+offset_top = -11.7276
+offset_right = 28.9865
+offset_bottom = 10.2724
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
@@ -148,10 +129,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "TUTORIAL"
 
 [node name="Button5" type="Button" parent="SettingMenu"]
-offset_left = -32.8245
-offset_top = 38.259
-offset_right = 31.1755
-offset_bottom = 60.259
+offset_left = -31.8822
+offset_top = 30.9533
+offset_right = 32.1178
+offset_bottom = 52.9533
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
@@ -159,10 +140,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "LANGUAGE"
 
 [node name="Button6" type="Button" parent="SettingMenu"]
-offset_left = -46.4098
-offset_top = -19.4754
-offset_right = 48.5902
-offset_bottom = 0.524586
+offset_left = -46.4883
+offset_top = -30.3765
+offset_right = 48.5117
+offset_bottom = -10.3765
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 18

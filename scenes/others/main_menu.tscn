@@ -158,10 +158,10 @@ position = Vector2(1037, 4)
 
 [node name="Settings_Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 18.0
-offset_top = -1.0
-offset_right = 61.0
-offset_bottom = 57.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 45.0
+offset_bottom = 60.0
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_erhkm")
 icon = SubResource("AtlasTexture_ydmwm")
 expand_icon = true
@@ -202,3 +202,4 @@ expand_icon = true
 [connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="Fade_transition/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Settings_Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
