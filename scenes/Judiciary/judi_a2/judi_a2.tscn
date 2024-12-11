@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bypbssmg46cdn"]
 
-[ext_resource type="TileSet" uid="uid://deg4eg1mu0ig7" path="res://scenes/Judiciary/caves.tres" id="1_6b0su"]
+[ext_resource type="TileSet" uid="uid://12ntbojqbfna" path="res://scenes/Judiciary/caves.tres" id="1_6b0su"]
 
 [node name="JudiA2" type="Node2D"]
 

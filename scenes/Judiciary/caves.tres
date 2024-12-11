@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=72 format=3 uid="uid://deg4eg1mu0ig7"]
+[gd_resource type="TileSet" load_steps=72 format=3 uid="uid://12ntbojqbfna"]
 
 [ext_resource type="Texture2D" uid="uid://obx0fiaicgc1" path="res://assets/Cute_Fantasy_assets/Tiles/Cave/Cave_Floor_Decoration.png" id="1_escdy"]
 [ext_resource type="Texture2D" uid="uid://clbbg64iu3qye" path="res://assets/Cute_Fantasy_assets/Tiles/Cave/Cave_Floor_Middle.png" id="2_145pa"]
@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="25_8tywa"]
 [ext_resource type="Texture2D" uid="uid://gtpprmpp5sxh" path="res://assets/Cute_Fantasy_assets/Outdoor decoration/Signs.png" id="26_8ycci"]
 [ext_resource type="Texture2D" uid="uid://b4xak3ldohryi" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Path_Middle.png" id="27_dj021"]
-[ext_resource type="Texture2D" uid="uid://bjn115l0jayah" path="res://assets/ohmydungeon_v1.1.png" id="27_qajkd"]
+[ext_resource type="Texture2D" uid="uid://bjn115l0jayah" path="res://assets/ohmydungeon_v1.1.png" id="27_xg2v0"]
 [ext_resource type="Texture2D" uid="uid://bnr2lm2wfq311" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/GROUND TILE - NIGHT.png" id="28_n2lti"]
 [ext_resource type="Texture2D" uid="uid://tvvbvigdaxhv" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/GROUND TILE - DAY.png" id="29_cww56"]
 [ext_resource type="Texture2D" uid="uid://bv2u81fk5qwhn" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/GROUND DETAIL 2 - NIGHT.png" id="30_6uswb"]
@@ -807,8 +807,8 @@ texture = ExtResource("26_8ycci")
 0:21/0/z_index = 1
 0:21/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.71429, 12.5714, 10.2857, 12.5714, 10.2857, 21.7143, 3.42857, 21.7143)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eax4j"]
-texture = ExtResource("27_qajkd")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62e4r"]
+texture = ExtResource("27_xg2v0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -934,7 +934,7 @@ sources/28 = SubResource("TileSetAtlasSource_ohtoy")
 sources/29 = SubResource("TileSetAtlasSource_usoid")
 sources/30 = SubResource("TileSetAtlasSource_q6kx7")
 sources/31 = SubResource("TileSetAtlasSource_ltiqc")
-sources/32 = SubResource("TileSetAtlasSource_eax4j")
+sources/32 = SubResource("TileSetAtlasSource_62e4r")
 pattern_0 = SubResource("TileMapPattern_x41ew")
 pattern_1 = SubResource("TileMapPattern_2k21s")
 pattern_2 = SubResource("TileMapPattern_4l6jq")
