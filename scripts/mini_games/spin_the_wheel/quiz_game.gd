@@ -123,3 +123,5 @@ func check_answer(index: int) -> void:
 		# Replace with actual scene transition
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
 	)
+func _on_exit_button_pressed():
+	get_tree().quit()

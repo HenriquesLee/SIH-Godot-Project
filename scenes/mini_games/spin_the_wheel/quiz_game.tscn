@@ -48,11 +48,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -493.5
-offset_top = 266.0
-offset_right = 479.5
-offset_bottom = 401.0
+offset_left = -397.5
+offset_top = 274.0
+offset_right = 339.5
+offset_bottom = 413.0
 grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_qalyu")
 theme_override_font_sizes/normal_font_size = 62
 
@@ -118,3 +119,5 @@ text = ">>EXIT"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 585)
+
+[connection signal="pressed" from="VideoStreamPlayer/ExitButton" to="." method="_on_exit_button_pressed"]

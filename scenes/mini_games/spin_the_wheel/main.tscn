@@ -10,10 +10,10 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="BgSpin" type="VideoStreamPlayer" parent="."]
-offset_left = -596.0
-offset_top = -560.0
-offset_right = 15.0
-offset_bottom = -207.0
+offset_left = -1291.0
+offset_top = -968.0
+offset_right = -666.0
+offset_bottom = -594.0
 scale = Vector2(5.61252, 5.68387)
 stream = ExtResource("1_voc3o")
 autoplay = true
@@ -35,7 +35,7 @@ texture = ExtResource("2_wqtqw")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0.796078, 0.721569)
-position = Vector2(10, 30)
+position = Vector2(-2, 18)
 scale = Vector2(8.54445, 8.16667)
 texture = ExtResource("3_ntne6")
 
@@ -43,7 +43,7 @@ texture = ExtResource("3_ntne6")
 position = Vector2(102, -462)
 
 [node name="PinSprite" type="Sprite2D" parent="Pin"]
-position = Vector2(-45.9999, -9.99999)
+position = Vector2(-106, -118)
 rotation = -4.70025
 scale = Vector2(2.44361, 2.22696)
 texture = ExtResource("4_xs1qc")

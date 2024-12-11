@@ -30,12 +30,14 @@ offset_right = 448.0
 offset_bottom = 891.0
 
 [node name="Button2" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 490.0
 offset_top = 766.0
 offset_right = 840.0
 offset_bottom = 896.0
 
 [node name="Button3" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 884.0
 offset_top = 767.0
 offset_right = 1244.0
@@ -69,6 +71,7 @@ offset_right = 667.0
 offset_bottom = 194.0
 
 [node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 721.0
 offset_top = 184.0
 offset_right = 1087.0

@@ -2,9 +2,8 @@ extends Node2D
 
 const HAND_COUNT = 4
 const CARD_SCENE_PATH = "res://scenes/mini_games/card_game/Card.tscn"
-const CARD_WIDTH = 200
-const HAND_Y_POSITION = 890
-
+const CARD_WIDTH = 250
+const HAND_Y_POSITION = 500
 var player_hand = []
 var center_screen_x
 
