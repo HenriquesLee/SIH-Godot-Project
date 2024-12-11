@@ -43,7 +43,7 @@ position = Vector2(-132, -290)
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_pmeko")
 texture_pressed = SubResource("AtlasTexture_uurjj")
-action = "hint"
+action = "show_hint"
 
 [node name="interact2" type="HBoxContainer" parent="."]
 anchors_preset = 3
