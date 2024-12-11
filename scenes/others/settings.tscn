@@ -7,14 +7,19 @@
 script/source = "extends Control  # Since your root is Control
 
 func _ready():
-	# Ensure Button4 (Report button) is connected
-	$SettingMenu/Button4.pressed.connect(_on_report_button_pressed)
+	# Ensure Tutorial and Report buttons are connected
+	$SettingMenu/Report.pressed.connect(_on_report_button_pressed)
+	
 
-func _on_report_button_pressed():  # Corrected function name
+func _on_report_button_pressed():  # Function for the Report button
+	print(\"Report button pressed. Creating feedback popup...\")
 	# Create popup dynamically
 	var popup = create_feedback_popup()
 	add_child(popup)
 	popup.popup_centered()
+
+# Replace with the actual path of your Tutorial scene
+
 
 func create_feedback_popup() -> PopupPanel:
 	# Create Popup Panel
@@ -52,6 +57,7 @@ func create_feedback_popup() -> PopupPanel:
 	var submit_button = Button.new()
 	submit_button.text = \"Submit Report\"
 	submit_button.pressed.connect(func():
+		print(\"Submit Report button pressed.\")
 		var description = description_input.text.strip_edges()
 		if description.is_empty():
 			print(\"Please enter a description\")
@@ -63,25 +69,19 @@ func create_feedback_popup() -> PopupPanel:
 		
 		# Close popup
 		feedback_popup.queue_free()
+		print(\"Feedback popup closed.\")
 	)
 	vbox.add_child(submit_button)
 	
 	return feedback_popup
 
 func _on_exit_button_pressed() -> void:
-	var previous_scene = SceneNavigationManager.pop_scene()
-	
-	if previous_scene and previous_scene != \"\":
-		# Change to the previous scene
-		get_tree().change_scene_to_file(previous_scene)
-	else:
-		print(\"No previous scene available!\")
-
-   
+	print(\"Exiting settings scene.\")
+	queue_free()  # Closes the settings scene
 
 
-
-   
+func _on_tutorial_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/others/tutorial.tscn\")
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8v5s"]
@@ -112,44 +112,44 @@ position = Vector2(620, 310)
 scale = Vector2(6.36719, 5.20139)
 texture = SubResource("AtlasTexture_h8v5s")
 
-[node name="Button4" type="Button" parent="SettingMenu"]
-offset_left = -31.5681
-offset_top = 9.2283
-offset_right = 34.4319
-offset_bottom = 31.2283
+[node name="Report" type="Button" parent="SettingMenu"]
+offset_left = -35.0233
+offset_top = 11.5354
+offset_right = 30.9767
+offset_bottom = 33.5354
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "REPORT"
 
-[node name="Button3" type="Button" parent="SettingMenu"]
-offset_left = -27.0135
-offset_top = -11.7276
-offset_right = 28.9865
-offset_bottom = 10.2724
+[node name="Tutorial" type="Button" parent="SettingMenu"]
+offset_left = -33.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 10.0
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "TUTORIAL"
 
-[node name="Button5" type="Button" parent="SettingMenu"]
-offset_left = -31.8822
-offset_top = 30.9533
-offset_right = 32.1178
-offset_bottom = 52.9533
+[node name="Language" type="Button" parent="SettingMenu"]
+offset_left = -37.5362
+offset_top = 34.6061
+offset_right = 38.4638
+offset_bottom = 56.6061
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "LANGUAGE"
 
-[node name="Button6" type="Button" parent="SettingMenu"]
+[node name="Save_Progress" type="Button" parent="SettingMenu"]
 offset_left = -46.4883
-offset_top = -30.3765
+offset_top = -34.2216
 offset_right = 48.5117
-offset_bottom = -10.3765
+offset_bottom = -14.2216
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 18
@@ -158,13 +158,14 @@ text = "SAVE PROGRESS"
 
 [node name="Exit_Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 850.0
-offset_top = 551.0
-offset_right = 912.0
-offset_bottom = 600.0
+offset_left = 856.0
+offset_top = 56.0
+offset_right = 918.0
+offset_bottom = 105.0
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_hof26")
 text = ">>EXIT"
 
+[connection signal="pressed" from="SettingMenu/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Exit_Button" to="." method="_on_exit_button_pressed"]
