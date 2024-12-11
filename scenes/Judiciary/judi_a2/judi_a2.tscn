@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bypbssmg46cdn"]
 
-[ext_resource type="TileSet" uid="uid://12ntbojqbfna" path="res://scenes/Judiciary/caves.tres" id="1_6b0su"]
+[ext_resource type="TileSet" uid="uid://br36c12ro5hsq" path="res://scenes/Judiciary/caves.tres" id="1_6b0su"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_slj43"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="3_q76dp"]
 
