@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var speed: float = 80.0
 
 # Target and Arrow Settings
-@onready var target_object = get_node("../NPC")  # The object/NPC the arrow will point to
+@onready var target_object = get_node("../Exc_Guide")  # The object/NPC the arrow will point to
 @export var arrow_sprite: Sprite2D  # The arrow sprite to display
 @export var rotation_offset: float = -15.0  # Rotate the arrow if needed
 

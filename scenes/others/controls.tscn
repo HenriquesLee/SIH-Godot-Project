@@ -19,6 +19,12 @@ region = Rect2(709, 132, 22, 24)
 atlas = ExtResource("1_om4px")
 region = Rect2(741, 134, 22, 22)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3nrtf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5frqx"]
+atlas = ExtResource("1_om4px")
+region = Rect2(750, 191, 21, 18)
+
 [node name="Controls" type="CanvasLayer"]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -64,3 +70,10 @@ action_left = "move_left"
 action_right = "move_right"
 action_up = "move_forward"
 action_down = "move_backward"
+
+[node name="Button" type="Button" parent="."]
+offset_right = 59.0
+offset_bottom = 59.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3nrtf")
+icon = SubResource("AtlasTexture_5frqx")
+expand_icon = true
