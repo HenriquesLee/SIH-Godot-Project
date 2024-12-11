@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ckx7c888mpbos"
+path="res://.godot/imported/base_guide.dialogue-8638ef5e88baf167a0a19c6dd043641a.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/base_guide.dialogue"
+dest_files=["res://.godot/imported/base_guide.dialogue-8638ef5e88baf167a0a19c6dd043641a.tres"]
+
+[params]
+
+defaults=true
