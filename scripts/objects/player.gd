@@ -5,12 +5,12 @@ extends CharacterBody2D
 
 # Target and Arrow Settings
 @onready var target_object = get_node("../Exc_Guide")  # The object/NPC the arrow will point to
-@export var arrow_sprite: Sprite2D  # The arrow sprite to display
-@export var rotation_offset: float = -15.0  # Rotate the arrow if needed
+@export var arrow_sprite: Sprite2D  # Sprite2D for the arrow
+@export var rotation_offset: float = -10.0  # Rotation offset for the arrow
 
 # Visual Customization
 @export var arrow_color: Color = Color.WHITE  # Color of the arrow
-@export var arrow_scale: float = 0.8  # Scale of the arrow
+@export var arrow_scale: float = 0.5  # Scale of the arrow
 
 # Reference to the AnimatedSprite2D node
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -28,11 +28,17 @@ var arrow_hide_timer: float = 0.0
 func _ready():
 	# Ensure the arrow is hidden initially
 	if arrow_sprite:
+		# Load the texture for the arrow sprite
+		arrow_sprite.texture = preload("res://assets/pointer.png")
+		
 		arrow_sprite.visible = false
 		
 		# Apply initial color and scale
 		arrow_sprite.modulate = arrow_color
 		arrow_sprite.scale = Vector2.ONE * arrow_scale
+		
+		# Set the arrow sprite's position
+		arrow_sprite.position = Vector2(0, 21.125)
 
 func _process(delta: float) -> void:
 	# Handle Movement
