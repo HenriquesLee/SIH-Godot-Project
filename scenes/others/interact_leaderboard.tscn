@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddnvm74il5lub"]
+
+[ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="1_5iipy"]
+[ext_resource type="Script" path="res://scripts/objects/interact_leaderboard.gd" id="2_5l1ll"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/others/interactablecomponent.tscn" id="3_ksiwg"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/others/interactable_label_component.tscn" id="4_0p3ps"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erpnu"]
+atlas = ExtResource("1_5iipy")
+region = Rect2(80.0892, 176.033, 16.049, 15.1594)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_thanu"]
+radius = 12.1655
+
+[node name="Node2D" type="Sprite2D"]
+texture = SubResource("AtlasTexture_erpnu")
+script = ExtResource("2_5l1ll")
+
+[node name="interablecomponent" parent="." instance=ExtResource("3_ksiwg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interablecomponent"]
+shape = SubResource("CircleShape2D_thanu")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_0p3ps")]
+offset_left = 15.0
+offset_top = -22.0
+offset_right = 35.0
+offset_bottom = -2.0

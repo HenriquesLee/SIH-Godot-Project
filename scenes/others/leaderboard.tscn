@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbtwwrqe47lq5"]
+[gd_scene load_steps=13 format=3 uid="uid://dbtwwrqe47lq5"]
 
 [ext_resource type="Texture2D" uid="uid://dmi3pc8kq3he3" path="res://assets/UI/Sprite sheets/Setting menu.png" id="1_n5gjh"]
 [ext_resource type="Script" path="res://scripts/objects/leaderboard.gd" id="1_qbqjw"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_br08v"]
+[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="4_kmimm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ch4k"]
 
@@ -24,6 +25,10 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_gsfof")
 [sub_resource type="AtlasTexture" id="AtlasTexture_5774v"]
 atlas = ExtResource("1_n5gjh")
 region = Rect2(136, 8, 111, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgxkp"]
+atlas = ExtResource("4_kmimm")
+region = Rect2(2.16986, 1.64649, 92.1659, 27.1231)
 
 [node name="Leaderboard" type="Control"]
 layout_mode = 3
@@ -85,4 +90,25 @@ theme_override_fonts/font = ExtResource("2_br08v")
 theme_override_font_sizes/font_size = 80
 text = "Leader Board"
 
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 73.0
+offset_right = 396.0
+offset_bottom = 102.0
+scale = Vector2(1.2, 1.2)
+texture_normal = SubResource("AtlasTexture_xgxkp")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 20.8333
+offset_top = -4.16666
+offset_right = 95.8333
+offset_bottom = 29.8333
+theme_override_colors/font_color = Color(0.666667, 0.47451, 0.34902, 1)
+theme_override_fonts/font = ExtResource("2_br08v")
+theme_override_font_sizes/font_size = 30
+text = "EXIT"
+
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

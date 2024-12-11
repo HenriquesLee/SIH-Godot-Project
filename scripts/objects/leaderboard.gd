@@ -82,3 +82,7 @@ func _on_leaderboard_request_completed(result, response_code, headers, body):
 		print("Display text set to label: ", display_text)
 	else:
 		print("ERROR: Cannot set label text - label is null")
+
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/others/base map.tscn") # Replace with function body.
