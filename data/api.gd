@@ -1,6 +1,7 @@
 extends Node
 
 var API_LINK = "https://flaskserver-rho.vercel.app/"
+var leaderboard = "https://flaskserver-rho.vercel.app/leaderboard"
 var form = "https://flaskserver-rho.vercel.app/insert"
 var dialogue = "https://flaskserver-rho.vercel.app/dialogue"
 var quiz_game = "https://flaskserver-rho.vercel.app/quiz"
