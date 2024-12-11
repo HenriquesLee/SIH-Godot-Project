@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dnqxu8ba1t2n5"]
+[gd_scene load_steps=10 format=4 uid="uid://dnqxu8ba1t2n5"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_5ab06"]
 [ext_resource type="Script" path="res://scripts/executive/ex_a_4.gd" id="1_rcmfc"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="4_ixce7"]
 [ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="5_jjc66"]
 [ext_resource type="PackedScene" uid="uid://dg0yk7f45b648" path="res://scenes/objects/scripts.tscn" id="6_o48lf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry1qk"]
+size = Vector2(174.445, 72.8007)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cira6"]
 atlas = ExtResource("5_jjc66")
@@ -18,6 +21,17 @@ radius = 26.9329
 y_sort_enabled = true
 scale = Vector2(1.00318, 1.00318)
 script = ExtResource("1_rcmfc")
+
+[node name="Assesment 1" type="Area2D" parent="."]
+position = Vector2(-1428.46, 640.962)
+scale = Vector2(1, 1)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Assesment 1"]
+position = Vector2(28.4097, -26.3999)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_ry1qk")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_5ab06")
@@ -58,14 +72,14 @@ tile_set = ExtResource("1_5ab06")
 [node name="player" parent="." node_paths=PackedStringArray("arrow_sprite") instance=ExtResource("2_aie0x")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(1508.2, -175.442)
+position = Vector2(-1336.75, 502.402)
 scale = Vector2(0.947148, 0.990426)
 arrow_sprite = NodePath("Sprite2D")
 arrow_scale = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(0, 5)
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 z_index = -1
@@ -76,10 +90,17 @@ position = Vector2(1340.74, -722.702)
 texture = SubResource("AtlasTexture_cira6")
 
 [node name="Area2D" type="Area2D" parent="chest 1"]
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chest 1/Area2D"]
 shape = SubResource("CircleShape2D_mcopo")
 
 [node name="script" parent="." instance=ExtResource("6_o48lf")]
+visible = false
 
-[connection signal="area_entered" from="chest 1/Area2D" to="." method="_on_chest1_area_entered"]
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="body_entered" from="Assesment 1" to="." method="_on_assesment_1_body_entered"]
+[connection signal="body_entered" from="chest 1/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

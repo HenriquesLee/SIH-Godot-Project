@@ -34,9 +34,9 @@ func _ready() -> void:
 	http_request.request_completed.connect(_on_http_request_request_completed)
 
 func fetch_questions() -> void:
-	var post_data = {"area": "ex", "test": "quiz_ex_1"}
+	var post_data = {"area": "ex", "test": "quiz_ex_1","collection":"quiz"}
 	var headers = ["Content-Type: application/json"]
-	var response = http_request.request(Api.quiz_game, headers, HTTPClient.METHOD_GET,
+	var response = http_request.request(Api.game, headers, HTTPClient.METHOD_GET,
 		JSON.stringify(post_data))
 	if response != OK:
 		print("An error occurred in the HTTP request.")
@@ -63,8 +63,8 @@ func display_question() -> void:
 
 func _on_button_pressed(selected_index: int) -> void:
 	var question = questions[current_question_index]
-	var correct_answer = question["answer"]
-	
+	var answer = question["answer"]
+	var correct_answer = answer[0]
 	# Disable all buttons after selection
 	disable_buttons()
 	
@@ -116,7 +116,7 @@ func check_game_complete() -> void:
 
 func _on_exit_pressed() -> void:
 	# Exit the application when exit button is pressed
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scenes/ex_a4/ex_a4.tscn")
 
 func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
 	if response_code == 200:
