@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvokgogoijrof"]
+[gd_scene load_steps=18 format=3 uid="uid://bvokgogoijrof"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_av3i7"]
 [ext_resource type="Texture2D" uid="uid://br2tnh3lpgeh8" path="res://assets/UI/main_screen_bg.jpeg" id="2_oxhcp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="7_ao1s7"]
 [ext_resource type="PackedScene" uid="uid://d3c22gefs7ov4" path="res://scenes/others/progress_bar.tscn" id="8_pprdg"]
 [ext_resource type="Texture2D" uid="uid://driw07aim88ob" path="res://assets/UI/Sprite sheets/Icons/All Icons.png" id="9_euos0"]
+[ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="10_i2xcn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
 atlas = ExtResource("4_dvubv")
@@ -23,6 +24,16 @@ region = Rect2(99, 4, 90, 25)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ydmwm"]
 atlas = ExtResource("9_euos0")
 region = Rect2(143, 0, 17, 17.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_orvng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iomph"]
+atlas = ExtResource("10_i2xcn")
+region = Rect2(372.692, 38.4, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg5be"]
+atlas = ExtResource("10_i2xcn")
+region = Rect2(175.2, 212.95, 18.7, 18.7)
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -145,7 +156,7 @@ one_shot = true
 [node name="Texture_ProgressBar" parent="." instance=ExtResource("8_pprdg")]
 position = Vector2(1037, 4)
 
-[node name="Button" type="Button" parent="."]
+[node name="Settings_Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 18.0
 offset_top = -1.0
@@ -155,7 +166,39 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_erhkm")
 icon = SubResource("AtlasTexture_ydmwm")
 expand_icon = true
 
+[node name="AI_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 125.0
+offset_right = 1127.0
+offset_bottom = 226.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_orvng")
+icon = SubResource("AtlasTexture_iomph")
+icon_alignment = 1
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AI_Button"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 35.0
+offset_top = 32.0
+offset_right = 62.0
+offset_bottom = 66.0
+theme_override_fonts/normal_font = ExtResource("3_dyr7q")
+theme_override_font_sizes/normal_font_size = 31
+text = "AI"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 231.0
+offset_right = 1114.0
+offset_bottom = 293.0
+icon = SubResource("AtlasTexture_kg5be")
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="TextureRect/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="TextureRect/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="Fade_transition/Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings_Button" to="." method="_on_button_pressed"]
