@@ -1531,6 +1531,8 @@ shape = SubResource("RectangleShape2D_sh3hc")
 
 [node name="Bottom boundary" type="Area2D" parent="Node"]
 position = Vector2(2, 816)
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Bottom boundary"]
 shape = SubResource("WorldBoundaryShape2D_u1rn3")
@@ -1538,6 +1540,8 @@ shape = SubResource("WorldBoundaryShape2D_u1rn3")
 [node name="Right Boundary" type="Area2D" parent="Node"]
 position = Vector2(832, -15)
 rotation = -3.14159
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Right Boundary"]
 rotation = 1.5708
@@ -1545,6 +1549,8 @@ shape = SubResource("WorldBoundaryShape2D_1n0v3")
 
 [node name="Left Boundary" type="Area2D" parent="Node"]
 position = Vector2(-823, -6)
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Left Boundary"]
 rotation = 1.5708
@@ -1552,6 +1558,8 @@ shape = SubResource("WorldBoundaryShape2D_1n0v3")
 
 [node name="Top Boundary" type="Area2D" parent="Node"]
 position = Vector2(0, -801)
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Top Boundary"]
 rotation = 3.14159
