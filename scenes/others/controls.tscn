@@ -1,7 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjxo728bh4po"]
+[gd_scene load_steps=7 format=3 uid="uid://cjxo728bh4po"]
 
 [ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_om4px"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="2_nkuye"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmeko"]
+atlas = ExtResource("1_om4px")
+region = Rect2(708.157, 164.55, 22.5433, 23.1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uurjj"]
+atlas = ExtResource("1_om4px")
+region = Rect2(740.25, 164.447, 22.579, 24.6316)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkbfk"]
 atlas = ExtResource("1_om4px")
@@ -12,6 +20,24 @@ atlas = ExtResource("1_om4px")
 region = Rect2(741, 134, 22, 22)
 
 [node name="Controls" type="CanvasLayer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="HBoxContainer"]
+position = Vector2(-132, -290)
+scale = Vector2(4, 4)
+texture_normal = SubResource("AtlasTexture_pmeko")
+texture_pressed = SubResource("AtlasTexture_uurjj")
+action = "hint"
 
 [node name="interact2" type="HBoxContainer" parent="."]
 anchors_preset = 3
