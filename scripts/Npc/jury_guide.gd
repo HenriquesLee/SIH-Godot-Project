@@ -42,8 +42,8 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 		if error == OK:
 			var dialogue_data = json_parser.get_data()
 			# Remove existing file if it exists
-			if FileAccess.file_exists("res://dialogues/coversations/judiciary.dialogue"):
-				DirAccess.remove_absolute("res://dialogues/coversations/judiciary.dialogue")
+			if FileAccess.file_exists("res://dialogues/coversations/base_guide.dialogue"):
+				DirAccess.remove_absolute("res://dialogues/coversations/base_guide.dialogue")
 			# Create dialogue file content
 			var dialogue_file_content = "~ start\n"
 			print(dialogue_data.base_map.npc_3)
@@ -54,7 +54,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 			dialogue_file_content += "=> END\n"
 			
 			# Write new file
-			var file = FileAccess.open("res://dialogues/coversations/judiciary.dialogue", FileAccess.WRITE)
+			var file = FileAccess.open("res://dialogues/coversations/base_guide.dialogue", FileAccess.WRITE)
 			file.store_string(dialogue_file_content)
 			file.close()
 	else:
@@ -63,4 +63,4 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 func trigger_dialogue_on_start() -> void:
 	var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
 	get_tree().root.add_child(balloon)  # Add to the scene tree
-	balloon.start(load("res://dialogues/coversations/judiciary.dialogue"), "start")
+	balloon.start(load("res://dialogues/coversations/base_guide.dialogue"), "start")

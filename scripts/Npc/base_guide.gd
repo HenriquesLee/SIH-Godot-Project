@@ -2,7 +2,8 @@ extends Node2D
 
 var balloon_scene = preload("res://dialogues/game_balloon.tscn")
 @onready var interactable_label_component: Control = $InteractableLabelComponent
-@onready var interactablecomponent: InteractableComponent = $interactablecomponent
+@onready var interablecomponent: InteractableComponent = $interablecomponent
+
 
 var in_range: bool
 var json_parser = JSON.new()
@@ -10,8 +11,8 @@ var json_parser = JSON.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	interactablecomponent.interactable_activated.connect(on_interactable_activated)
-	interactablecomponent.interactable_deactivated.connect(on_interactable_deactivated)
+	interablecomponent.interactable_activated.connect(on_interactable_activated)
+	interablecomponent.interactable_deactivated.connect(on_interactable_deactivated)
 	interactable_label_component.hide()	
 
 func on_interactable_activated() -> void:
@@ -42,19 +43,19 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 		if error == OK:
 			var dialogue_data = json_parser.get_data()
 			# Remove existing file if it exists
-			if FileAccess.file_exists("res://dialogues/coversations/gaurd.dialogue"):
-				DirAccess.remove_absolute("res://dialogues/coversations/gaurd.dialogue")
+			if FileAccess.file_exists("res://dialogues/coversations/base_guide.dialogue"):
+				DirAccess.remove_absolute("res://dialogues/coversations/base_guide.dialogue")
 			# Create dialogue file content
 			var dialogue_file_content = "~ start\n"
-			print(dialogue_data.base_map.npc_3)
+			print(dialogue_data.base_map.guard)
 			# Add dialogues from JSON
-			for dialogue in dialogue_data.base_map.gaurd:
+			for dialogue in dialogue_data.base_map.guard:
 				dialogue_file_content += dialogue.character + ": " + dialogue.dialogue + "\n"
 				
 			dialogue_file_content += "=> END\n"
 			
 			# Write new file
-			var file = FileAccess.open("res://dialogues/coversations/gaurd.dialogue", FileAccess.WRITE)
+			var file = FileAccess.open("res://dialogues/coversations/base_guide.dialogue", FileAccess.WRITE)
 			file.store_string(dialogue_file_content)
 			file.close()
 	else:
@@ -63,4 +64,4 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 func trigger_dialogue_on_start() -> void:
 	var balloon: BaseGameDialogueBalloon = balloon_scene.instantiate()
 	get_tree().root.add_child(balloon)  # Add to the scene tree
-	balloon.start(load("res://dialogues/coversations/judiciary.dialogue"), "start")
+	balloon.start(load("res://dialogues/coversations/base_guide.dialogue"), "start")
