@@ -20,6 +20,7 @@ config/icon="res://art/icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 UserData="*res://data/user_data.gd"
 Api="*res://data/api.gd"
+SceneNavigationManager="*res://scripts/SceneNavigationManager.gd"
 
 [dialogic]
 

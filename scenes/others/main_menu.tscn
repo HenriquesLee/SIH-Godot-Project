@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bvokgogoijrof"]
+[gd_scene load_steps=19 format=3 uid="uid://bvokgogoijrof"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_av3i7"]
 [ext_resource type="Texture2D" uid="uid://br2tnh3lpgeh8" path="res://assets/UI/main_screen_bg.jpeg" id="2_oxhcp"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d3c22gefs7ov4" path="res://scenes/others/progress_bar.tscn" id="8_pprdg"]
 [ext_resource type="Texture2D" uid="uid://driw07aim88ob" path="res://assets/UI/Sprite sheets/Icons/All Icons.png" id="9_euos0"]
 [ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="10_i2xcn"]
+[ext_resource type="Script" path="res://scenes/others/ai_button.gd" id="11_uaplj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo8o"]
 atlas = ExtResource("4_dvubv")
@@ -176,6 +177,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_orvng")
 icon = SubResource("AtlasTexture_iomph")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("11_uaplj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="AI_Button"]
 layout_mode = 1

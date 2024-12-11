@@ -18,4 +18,11 @@ func _on_timer_timeout() -> void:
 
 
 func _on_button_pressed() -> void:
+	# Save the current scene's path before navigating
+	var current_scene_path = get_tree().current_scene.scene_file_path
+	
+	# Push the current scene to the navigation stack
+	SceneNavigationManager.push_scene(current_scene_path)
+	
+	# Navigate to the Settings scene
 	get_tree().change_scene_to_file("res://scenes/others/settings.tscn")

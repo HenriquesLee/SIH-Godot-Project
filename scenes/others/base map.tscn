@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://dd8f01qfyfmh5" path="res://assets/Cute_Fantasy_assets/Tiles/Cave/Cave_Door.png" id="38_3m513"]
 [ext_resource type="Texture2D" uid="uid://bw5sdv61m5lh" path="res://assets/Cute_Fantasy_assets/Tiles/Cobble_Road/Cobble_Road_2.png" id="39_6plyr"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="40_03ebn"]
-[ext_resource type="PackedScene" uid="uid://cvuhy3dvh607g" path="res://scenes/objects/Npcs/jury_guide.tscn" id="41_ufjpd"]
+[ext_resource type="PackedScene" uid="uid://cvuhy3dvh607g" path="res://scenes/objects/npc.tscn" id="41_ufjpd"]
 [ext_resource type="PackedScene" uid="uid://d0k44kvkwrsie" path="res://scenes/objects/Npcs/exc_guide.tscn" id="42_4tjxd"]
 [ext_resource type="PackedScene" uid="uid://cdlye1r87f48p" path="res://scenes/objects/Npcs/base_guide.tscn" id="42_j6qvk"]
 [ext_resource type="PackedScene" uid="uid://bf37s0iwxeyhj" path="res://scenes/objects/Npcs/leg_guide.tscn" id="43_ulnw4"]
@@ -1493,6 +1493,7 @@ limit_bottom = 812
 
 [node name="Jury GUide" parent="." instance=ExtResource("41_ufjpd")]
 position = Vector2(103, 28)
+script = null
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Jury GUide"]
 
@@ -1572,7 +1573,6 @@ rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_1n0v3")
 
 [node name="Controls" parent="." instance=ExtResource("44_u3vd2")]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

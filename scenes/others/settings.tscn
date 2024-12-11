@@ -69,7 +69,13 @@ func create_feedback_popup() -> PopupPanel:
 	return feedback_popup
 
 func _on_exit_button_pressed() -> void:
-	queue_free()  # Closes the settings scene
+	var previous_scene = SceneNavigationManager.pop_scene()
+	
+	if previous_scene and previous_scene != \"\":
+		# Change to the previous scene
+		get_tree().change_scene_to_file(previous_scene)
+	else:
+		print(\"No previous scene available!\")
 
    
 
