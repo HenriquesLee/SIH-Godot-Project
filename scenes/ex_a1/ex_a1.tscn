@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=4 uid="uid://c140hdqrxiavp"]
+[gd_scene load_steps=108 format=4 uid="uid://c140hdqrxiavp"]
 
 [ext_resource type="Script" path="res://scripts/executive/ex_a1.gd" id="1_8sqbk"]
 [ext_resource type="Texture2D" uid="uid://c5fysfoeisnat" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Grass_1_Middle.png" id="3_7f46e"]
@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://d2alt2dv0ln8v" path="res://assets/Tilesets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/FENCE 1 - NIGHT.png" id="45_kcvhc"]
 [ext_resource type="Texture2D" uid="uid://dohtuydqs5rg5" path="res://assets/Cute_Fantasy_assets/Outdoor decoration/Fence_Big.png" id="47_7bpdl"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="52_d2yuf"]
+[ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="52_u01rx"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="52_wvl2g"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="53_v0q74"]
 
@@ -1721,12 +1722,16 @@ use_parent_material = true
 tile_map_data = PackedByteArray("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")
 tile_set = SubResource("TileSet_lx4tk")
 
-[node name="player" parent="." instance=ExtResource("52_wvl2g")]
+[node name="player" parent="." node_paths=PackedStringArray("arrow_sprite") instance=ExtResource("52_wvl2g")]
 y_sort_enabled = true
 position = Vector2(-362, 258)
+arrow_sprite = NodePath("Sprite2D")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+texture = ExtResource("52_u01rx")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
