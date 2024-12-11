@@ -17,6 +17,8 @@ texture = SubResource("AtlasTexture_erpnu")
 script = ExtResource("2_5l1ll")
 
 [node name="interablecomponent" parent="." instance=ExtResource("3_ksiwg")]
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interablecomponent"]
 shape = SubResource("CircleShape2D_thanu")
