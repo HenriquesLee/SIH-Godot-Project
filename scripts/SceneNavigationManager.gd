@@ -1,6 +1,5 @@
 extends Node
 
-# Singleton/Autoload script to manage scene navigation
 
 var previous_scene_path: String = ""
 
