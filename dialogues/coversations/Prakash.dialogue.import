@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bhmrcevan2kij"
+path="res://.godot/imported/Prakash.dialogue-94cee273591e6b2b0c3ce546d1b679b1.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/Prakash.dialogue"
+dest_files=["res://.godot/imported/Prakash.dialogue-94cee273591e6b2b0c3ce546d1b679b1.tres"]
+
+[params]
+
+defaults=true

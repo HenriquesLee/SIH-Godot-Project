@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2fr77aqqa4by"]
+
+[ext_resource type="Script" path="res://tick_game.gd" id="1_gn4kt"]
+[ext_resource type="Texture2D" uid="uid://yeq5u8wmgji1" path="res://assets/UI/card_game/tree bg.jpg" id="2_n7jwn"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_preld"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1166.0
+offset_bottom = 651.0
+script = ExtResource("1_gn4kt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 170.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_n7jwn")
+
+[node name="SwipeContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1247.0
+offset_bottom = 640.0
+
+[node name="CardContainer" type="CenterContainer" parent="SwipeContainer"]
+layout_mode = 2
+
+[node name="Card" type="Panel" parent="SwipeContainer/CardContainer"]
+layout_mode = 2
+
+[node name="CardLabel" type="Label" parent="SwipeContainer/CardContainer/Card"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Buttons" type="HBoxContainer" parent="SwipeContainer"]
+layout_mode = 2
+
+[node name="WrongButton" type="Button" parent="SwipeContainer/Buttons"]
+layout_mode = 2
+
+[node name="RightButton" type="Button" parent="SwipeContainer/Buttons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("3_preld")
+theme_override_font_sizes/font_size = 41
+text = ">>EXIT"
