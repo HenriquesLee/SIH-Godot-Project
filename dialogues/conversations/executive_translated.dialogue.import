@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ctds0saxdu35r"
+path="res://.godot/imported/executive_translated.dialogue-de1fd70b81a01ed6d7f5cb73c4834b38.tres"
+
+[deps]
+
+source_file="res://dialogues/conversations/executive_translated.dialogue"
+dest_files=["res://.godot/imported/executive_translated.dialogue-de1fd70b81a01ed6d7f5cb73c4834b38.tres"]
+
+[params]
+
+defaults=true

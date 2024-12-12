@@ -140,10 +140,10 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_y1j30")
 text = "TUTORIAL"
 
 [node name="Language" type="Button" parent="SettingMenu"]
-offset_left = -37.5362
-offset_top = 34.6061
-offset_right = 38.4638
-offset_bottom = 56.6061
+offset_left = -38.0
+offset_top = 35.0
+offset_right = 42.0
+offset_bottom = 57.0
 theme_override_colors/font_color = Color(0.337255, 0.164706, 0.00392157, 1)
 theme_override_fonts/font = ExtResource("2_u7wyt")
 theme_override_font_sizes/font_size = 19
