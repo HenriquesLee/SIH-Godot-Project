@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg0yk7f45b648"]
+[gd_scene load_steps=7 format=3 uid="uid://dg0yk7f45b648"]
 
 [ext_resource type="Texture2D" uid="uid://dkexqcy4o2e6s" path="res://assets/UI/preamble_new_border.jpg" id="1_62cjp"]
+[ext_resource type="Script" path="res://scripts/objects/readables.gd" id="1_fwa0c"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_117q1"]
+[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="4_gi8la"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s05w"]
 atlas = ExtResource("1_62cjp")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_suppg"]
+atlas = ExtResource("4_gi8la")
+region = Rect2(0, 0, 95, 31)
+
 [node name="Control" type="CanvasLayer"]
+script = ExtResource("1_fwa0c")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -33,3 +40,29 @@ theme_override_colors/default_color = Color(0.459673, 0.232347, 0.113551, 1)
 theme_override_fonts/normal_font = ExtResource("2_117q1")
 theme_override_font_sizes/normal_font_size = 50
 text = "Loading....."
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 789.0
+offset_top = 515.0
+offset_right = 884.0
+offset_bottom = 546.0
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_suppg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -14.0
+offset_right = 17.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.768627, 0.603922, 0.423529, 1)
+text = "EXIT"
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

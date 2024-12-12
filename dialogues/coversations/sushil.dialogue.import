@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ikd6eccdi7yq"
+path="res://.godot/imported/sushil.dialogue-7bcea9ce9dabb552878768c52692ff83.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/sushil.dialogue"
+dest_files=["res://.godot/imported/sushil.dialogue-7bcea9ce9dabb552878768c52692ff83.tres"]
+
+[params]
+
+defaults=true

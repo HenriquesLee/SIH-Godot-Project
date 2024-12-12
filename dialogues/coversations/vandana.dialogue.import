@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bxm73tjjf0ih7"
+path="res://.godot/imported/vandana.dialogue-b9532b96ff457bb163a6c23178a720a6.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/vandana.dialogue"
+dest_files=["res://.godot/imported/vandana.dialogue-b9532b96ff457bb163a6c23178a720a6.tres"]
+
+[params]
+
+defaults=true

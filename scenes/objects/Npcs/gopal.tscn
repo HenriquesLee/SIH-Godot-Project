@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqlbguqd1mupc"]
+
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/others/interactable_label_component.tscn" id="1_b5k1d"]
+[ext_resource type="Script" path="res://scripts/Npc/gopal.gd" id="1_fy6qe"]
+[ext_resource type="Texture2D" uid="uid://ciy2xw4ts2ubj" path="res://assets/Sprites/characters/Male2.png" id="2_m4ue8"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/others/interactablecomponent.tscn" id="3_2xxfo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kv3wt"]
+atlas = ExtResource("2_m4ue8")
+region = Rect2(0, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isig6"]
+atlas = ExtResource("2_m4ue8")
+region = Rect2(32, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs3bt"]
+atlas = ExtResource("2_m4ue8")
+region = Rect2(64, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pofjx"]
+atlas = ExtResource("2_m4ue8")
+region = Rect2(96, 192, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alte0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kv3wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isig6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs3bt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pofjx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55m50"]
+radius = 33.2415
+
+[node name="Gopal" type="Node2D"]
+script = ExtResource("1_fy6qe")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("1_b5k1d")]
+offset_left = 10.0
+offset_top = -39.0
+offset_right = 30.0
+offset_bottom = -19.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_alte0")
+
+[node name="interablecomponent" parent="." instance=ExtResource("3_2xxfo")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interablecomponent"]
+shape = SubResource("CircleShape2D_55m50")

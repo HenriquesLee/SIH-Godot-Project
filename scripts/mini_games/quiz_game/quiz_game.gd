@@ -17,7 +17,7 @@ var json = JSON.new()
 	$VideoStreamPlayer/Button3,
 	$VideoStreamPlayer/Button4
 ]
-@onready var exit_button = $VideoStreamPlayer/ExitButton
+@onready var exit_button: Button = $VideoStreamPlayer/ExitButton
 
 func _ready() -> void:
 	# Initialize the quiz by displaying the first question

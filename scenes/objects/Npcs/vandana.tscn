@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://dhssxiws3gd2i"]
+
+[ext_resource type="Texture2D" uid="uid://td2x0gkex8vv" path="res://assets/Sprites/characters/Female1.png" id="1_cbtw8"]
+[ext_resource type="Script" path="res://scripts/Npc/vandana.gd" id="1_tndrg"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/others/interactablecomponent.tscn" id="2_fcoe0"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/others/interactable_label_component.tscn" id="3_qetbu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k4d6"]
+atlas = ExtResource("1_cbtw8")
+region = Rect2(0, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rol6t"]
+atlas = ExtResource("1_cbtw8")
+region = Rect2(32, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ve73"]
+atlas = ExtResource("1_cbtw8")
+region = Rect2(64, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n34d"]
+atlas = ExtResource("1_cbtw8")
+region = Rect2(96, 336, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdcpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k4d6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rol6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ve73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n34d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dle1"]
+radius = 21.587
+
+[node name="Vandana" type="Node2D"]
+script = ExtResource("1_tndrg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xdcpf")
+
+[node name="interablecomponent" parent="." instance=ExtResource("2_fcoe0")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interablecomponent"]
+shape = SubResource("CircleShape2D_7dle1")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("3_qetbu")]
+offset_left = -37.0
+offset_top = -30.0
+offset_right = -17.0
+offset_bottom = -10.0

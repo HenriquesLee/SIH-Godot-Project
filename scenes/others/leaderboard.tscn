@@ -97,16 +97,16 @@ layout_mode = 0
 offset_left = 304.0
 offset_top = 73.0
 offset_right = 396.0
-offset_bottom = 102.0
+offset_bottom = 100.0
 scale = Vector2(1.2, 1.2)
 texture_normal = SubResource("AtlasTexture_xgxkp")
 
 [node name="Label" type="RichTextLabel" parent="TextureButton"]
 layout_mode = 0
-offset_left = 21.0
-offset_top = -4.0
-offset_right = 97.0
-offset_bottom = 30.0
+offset_left = 30.0
+offset_top = -1.66667
+offset_right = 88.0
+offset_bottom = 21.3333
 theme_override_colors/default_color = Color(0.666667, 0.47451, 0.34902, 1)
 theme_override_fonts/normal_font = ExtResource("2_br08v")
 theme_override_font_sizes/normal_font_size = 30

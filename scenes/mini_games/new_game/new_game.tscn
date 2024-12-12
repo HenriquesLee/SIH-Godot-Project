@@ -85,3 +85,7 @@ offset_top = 53.0
 offset_right = 342.0
 offset_bottom = 161.0
 theme_override_fonts/normal_font = ExtResource("3_d0sga")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

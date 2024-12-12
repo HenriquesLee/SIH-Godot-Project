@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dntx6edgpwjrl"
+path="res://.godot/imported/gopal.dialogue-09ee004602634ff701c3e3dc021a9471.tres"
+
+[deps]
+
+source_file="res://dialogues/coversations/gopal.dialogue"
+dest_files=["res://.godot/imported/gopal.dialogue-09ee004602634ff701c3e3dc021a9471.tres"]
+
+[params]
+
+defaults=true
