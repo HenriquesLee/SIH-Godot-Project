@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba1qe87fuivoh"]
+[gd_scene load_steps=5 format=3 uid="uid://ba1qe87fuivoh"]
 
 [ext_resource type="TileSet" uid="uid://d2566a7gifi7d" path="res://scenes/Legislative/legi_a1/water world.tres" id="1_0bga3"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_ow7c0"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="3_3w6kc"]
+[ext_resource type="AudioStream" uid="uid://cd5rpbrgti0au" path="res://assets/audio/Legislative Map 1 (Indravan Isles).mp3" id="4_ca085"]
 
 [node name="LegiA2" type="Node2D"]
 position = Vector2(0, -1)
@@ -30,3 +31,7 @@ zoom = Vector2(3, 3)
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 position = Vector2(6, 0)
 texture = ExtResource("3_3w6kc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ca085")
+autoplay = true

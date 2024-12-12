@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df5wdlef4ktpl"
+path="res://.godot/imported/Judiciary Map 2 (maze).mp3-963628ba879db374f8c1570985e31e94.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Judiciary Map 2 (maze).mp3"
+dest_files=["res://.godot/imported/Judiciary Map 2 (maze).mp3-963628ba879db374f8c1570985e31e94.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
