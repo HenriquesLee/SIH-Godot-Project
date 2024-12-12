@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=4 uid="uid://c140hdqrxiavp"]
+[gd_scene load_steps=110 format=4 uid="uid://c140hdqrxiavp"]
 
 [ext_resource type="Script" path="res://scripts/executive/ex_a1.gd" id="1_8sqbk"]
 [ext_resource type="Texture2D" uid="uid://c5fysfoeisnat" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Grass_1_Middle.png" id="3_7f46e"]
@@ -53,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="52_d2yuf"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="52_u01rx"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="52_wvl2g"]
+[ext_resource type="PackedScene" uid="uid://btc3s0tiumned" path="res://scenes/others/controls_2.tscn" id="53_4mkgi"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="53_v0q74"]
 [ext_resource type="AudioStream" uid="uid://clr6mqppg77sd" path="res://assets/audio/Executive Map 4 (Town of Elites).mp3" id="55_8d31m"]
 
@@ -1733,6 +1734,8 @@ zoom = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 texture = ExtResource("52_u01rx")
+
+[node name="Controls2" parent="." instance=ExtResource("53_4mkgi")]
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 

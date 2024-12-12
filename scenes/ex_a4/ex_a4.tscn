@@ -1,13 +1,13 @@
-[gd_scene load_steps=20 format=4 uid="uid://dnqxu8ba1t2n5"]
+[gd_scene load_steps=22 format=4 uid="uid://dnqxu8ba1t2n5"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_5ab06"]
 [ext_resource type="Script" path="res://scripts/executive/ex_a_4.gd" id="1_rcmfc"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_aie0x"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="2_j0bjr"]
-[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/sushil.tscn" id="3_d8avh"]
-[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/vandana.tscn" id="4_gmm7q"]
+[ext_resource type="PackedScene" uid="uid://i0t4mtytya7m" path="res://scenes/objects/Npcs/sushil.tscn" id="3_d8avh"]
+[ext_resource type="PackedScene" uid="uid://dhssxiws3gd2i" path="res://scenes/objects/Npcs/vandana.tscn" id="4_gmm7q"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="4_ixce7"]
-[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/gopal.tscn" id="5_adkqe"]
+[ext_resource type="PackedScene" uid="uid://bqlbguqd1mupc" path="res://scenes/objects/Npcs/gopal.tscn" id="5_adkqe"]
 [ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="5_jjc66"]
 [ext_resource type="PackedScene" uid="uid://dg0yk7f45b648" path="res://scenes/objects/scripts.tscn" id="6_o48lf"]
 [ext_resource type="PackedScene" uid="uid://btc3s0tiumned" path="res://scenes/others/controls_2.tscn" id="11_1ijgg"]
@@ -36,6 +36,12 @@ radius = 19.9617
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jg23b"]
 radius = 21.5188
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emhqr"]
+size = Vector2(110.68, 219.334)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hnrl"]
+radius = 61.2057
 
 [node name="ExA4" type="Node2D"]
 y_sort_enabled = true
@@ -195,6 +201,23 @@ visible = false
 
 [node name="Controls2" parent="." instance=ExtResource("11_1ijgg")]
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1834.17, -70.7749)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-29.905, 4.76837e-07)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_emhqr")
+
+[node name="Assesment" type="Area2D" parent="."]
+position = Vector2(-635.978, -511.374)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Assesment"]
+position = Vector2(102.673, 14.9524)
+shape = SubResource("CircleShape2D_4hnrl")
+
 [connection signal="body_entered" from="Assesment 1" to="." method="_on_assesment_1_body_entered"]
 [connection signal="request_completed" from="Vandana/HTTPRequest" to="Vandana" method="_on_http_request_request_completed"]
 [connection signal="request_completed" from="Sushil/HTTPRequest" to="Sushil" method="_on_http_request_request_completed"]
@@ -206,3 +229,5 @@ visible = false
 [connection signal="body_entered" from="chest 5/Area2D" to="." method="_on_chest_5_body_entered"]
 [connection signal="body_entered" from="chest 6/Area2D" to="." method="_on_chest_6_body_entered"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Assesment" to="." method="_on_assesment_body_entered"]

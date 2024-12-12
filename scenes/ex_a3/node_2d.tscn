@@ -1,13 +1,14 @@
-[gd_scene load_steps=16 format=4 uid="uid://dyrragrrjdwk2"]
+[gd_scene load_steps=17 format=4 uid="uid://dyrragrrjdwk2"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_khrim"]
-[ext_resource type="PackedScene" uid="uid://de6aqcf5t3e81" path="res://scenes/objects/Npcs/prakash.tscn" id="2_4d7wt"]
+[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/prakash.tscn" id="2_4d7wt"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_6s53f"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="2_asebf"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="3_rx2et"]
 [ext_resource type="AudioStream" uid="uid://c6hua1xcgdkqp" path="res://assets/audio/Executive Map 3 (City).mp3" id="4_hds4q"]
-[ext_resource type="PackedScene" uid="uid://dwldmxwxgolce" path="res://scenes/objects/Npcs/prabhas.tscn" id="6_kvl42"]
+[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/prabhas.tscn" id="6_kvl42"]
 [ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="7_i0peh"]
+[ext_resource type="PackedScene" uid="uid://btc3s0tiumned" path="res://scenes/others/controls_2.tscn" id="9_14lom"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1fusl"]
 atlas = ExtResource("7_i0peh")
@@ -140,6 +141,8 @@ texture = SubResource("AtlasTexture_1fusl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chest 5/Area2D"]
 shape = SubResource("CircleShape2D_0irhi")
+
+[node name="Controls2" parent="." instance=ExtResource("9_14lom")]
 
 [node name="chest 6" type="Sprite2D" parent="."]
 position = Vector2(-761, 842)

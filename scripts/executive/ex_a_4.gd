@@ -175,3 +175,11 @@ func _on_chest_6_body_entered(body: Node2D) -> void:
 		# Set the text and show the reading material
 		text.text = formatted_text
 		reading_material.show()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/ex_a3/node_2d.tscn")
+
+
+func _on_assesment_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://tickgame.tscn")
