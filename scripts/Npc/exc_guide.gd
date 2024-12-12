@@ -12,7 +12,7 @@ const API_KEY = "AIzaSyD1h8zNaWMAVk5VMDkyNZL2ByCaJwOGX9Y"
 
 var json_parser = JSON.new()
 var in_range: bool
-var target_language: String = "Marathi"
+var target_language: String = Language.language
 
 # Fallback dialogue in case of server error
 var FALLBACK_DIALOGUE = """~ start

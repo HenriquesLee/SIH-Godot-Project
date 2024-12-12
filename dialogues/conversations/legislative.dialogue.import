@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bnifh86paldem"
+path="res://.godot/imported/legislative.dialogue-8abf6d303221aaba82fde72ae44f6d71.tres"
+
+[deps]
+
+source_file="res://dialogues/conversations/legislative.dialogue"
+dest_files=["res://.godot/imported/legislative.dialogue-8abf6d303221aaba82fde72ae44f6d71.tres"]
+
+[params]
+
+defaults=true

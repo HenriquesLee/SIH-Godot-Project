@@ -5,12 +5,13 @@
 
 [sub_resource type="GDScript" id="GDScript_gokwj"]
 script/source = "extends Control  # Since your root is Control
-
 func _ready():
 	# Ensure Tutorial and Report buttons are connected
 	$SettingMenu/Report.pressed.connect(_on_report_button_pressed)
+	$SettingMenu/Language.pressed.connect(_on_language_button_pressed)
+	$Exit_Button.pressed.connect(_on_exit_button_pressed)
+	$SettingMenu/Tutorial.pressed.connect(_on_tutorial_pressed)
 	
-
 func _on_report_button_pressed():  # Function for the Report button
 	print(\"Report button pressed. Creating feedback popup...\")
 	# Create popup dynamically
@@ -19,8 +20,6 @@ func _on_report_button_pressed():  # Function for the Report button
 	popup.popup_centered()
 
 # Replace with the actual path of your Tutorial scene
-
-
 func create_feedback_popup() -> PopupPanel:
 	# Create Popup Panel
 	var feedback_popup = PopupPanel.new()
@@ -74,6 +73,59 @@ func create_feedback_popup() -> PopupPanel:
 	vbox.add_child(submit_button)
 	
 	return feedback_popup
+
+func _on_language_button_pressed():
+	print(\"Language button pressed. Creating language selection popup...\")
+	# Create popup dynamically
+	var popup = create_language_popup()
+	add_child(popup)
+	popup.popup_centered()
+
+func create_language_popup() -> PopupPanel:
+	# Create Popup Panel
+	var language_popup = PopupPanel.new()
+	language_popup.size = Vector2(300, 400)
+	
+	# Vertical Container
+	var vbox = VBoxContainer.new()
+	vbox.set_anchors_preset(Control.PRESET_FULL_RECT)
+	vbox.add_theme_constant_override(\"separation\", 10)
+	language_popup.add_child(vbox)
+	
+	# Title
+	var title = Label.new()
+	title.text = \"Select Language\"
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override(\"font_size\", 18)
+	vbox.add_child(title)
+	
+	# Language Input
+	var language_input = LineEdit.new()
+	language_input.placeholder_text = \"Enter language\"
+	vbox.add_child(language_input)
+	
+	# Submit Button
+	var submit_button = Button.new()
+	submit_button.text = \"Set Language\"
+	submit_button.pressed.connect(func():
+		print(\"Language selection button pressed.\")
+		
+		# Get input language
+		var language = language_input.text.strip_edges()
+		
+		if not language.is_empty():
+			# Store language in Global script
+			Language.set_language(language)
+			print(\"Language set to: \", language)
+			
+			# Close popup
+			language_popup.queue_free()
+		else:
+			print(\"Please enter a language\")
+	)
+	vbox.add_child(submit_button)
+	
+	return language_popup
 
 func _on_exit_button_pressed() -> void:
 	# Get the top scene from the stack

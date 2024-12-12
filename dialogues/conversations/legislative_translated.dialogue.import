@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dgog6elhldf56"
+path="res://.godot/imported/legislative_translated.dialogue-118b004be7f8cf627768744a31cf5990.tres"
+
+[deps]
+
+source_file="res://dialogues/conversations/legislative_translated.dialogue"
+dest_files=["res://.godot/imported/legislative_translated.dialogue-118b004be7f8cf627768744a31cf5990.tres"]
+
+[params]
+
+defaults=true

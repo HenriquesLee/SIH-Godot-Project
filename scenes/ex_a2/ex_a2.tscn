@@ -1,10 +1,30 @@
 [gd_scene load_steps=6 format=3 uid="uid://cke23sbk77q3p"]
+[gd_scene load_steps=15 format=3 uid="uid://cke23sbk77q3p"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_ds7l6"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_5a22b"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="3_cif0l"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="4_8w5sa"]
 [ext_resource type="AudioStream" uid="uid://cedq2kl7o1xt5" path="res://assets/audio/Executive Map 2 (HoneyComb Village).mp3" id="5_r1u2n"]
+[ext_resource type="PackedScene" uid="uid://byqjihfai56gp" path="res://scenes/objects/Npcs/kartik.tscn" id="5_knpt2"]
+[ext_resource type="PackedScene" uid="uid://c1c7gpbjqydla" path="res://scenes/objects/Npcs/guruji.tscn" id="6_xd7h0"]
+[ext_resource type="PackedScene" uid="uid://dvnw5wjhsukfm" path="res://scenes/objects/Npcs/ravidas.tscn" id="7_sbpqa"]
+[ext_resource type="PackedScene" uid="uid://t1wtxig75ync" path="res://scenes/objects/chest.tscn" id="8_hj8om"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7fewb"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f3b67"]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cpiw"]
+radius = 20.0998
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c4kv1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wclfl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lga6l"]
 
 [node name="ExA2" type="Node2D"]
 
@@ -39,3 +59,66 @@ texture = ExtResource("3_cif0l")
 stream = ExtResource("5_r1u2n")
 volume_db = 24.0
 autoplay = true
+[node name="kartik" parent="." instance=ExtResource("5_knpt2")]
+position = Vector2(-40, 24)
+
+[node name="HTTPRequest" type="HTTPRequest" parent="kartik"]
+
+[node name="Guruji" parent="." instance=ExtResource("6_xd7h0")]
+position = Vector2(878, -1523)
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Guruji"]
+
+[node name="Ravidas" parent="." instance=ExtResource("7_sbpqa")]
+position = Vector2(215, 1104)
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Ravidas"]
+
+[node name="Chest" parent="." instance=ExtResource("8_hj8om")]
+position = Vector2(-1831, -321)
+
+[node name="Area2D2" type="Area2D" parent="Chest"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest/Area2D2"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_7fewb")
+
+[node name="Chest2" parent="." instance=ExtResource("8_hj8om")]
+position = Vector2(-1882, -596)
+
+[node name="Area2D2" type="Area2D" parent="Chest2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest2/Area2D2"]
+shape = SubResource("CircleShape2D_f3b67")
+
+[node name="Chest3" parent="." instance=ExtResource("8_hj8om")]
+position = Vector2(-2049, -567)
+
+[node name="Area2D2" type="Area2D" parent="Chest3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest3/Area2D2"]
+shape = SubResource("CircleShape2D_4cpiw")
+
+[node name="Chest4" parent="." instance=ExtResource("8_hj8om")]
+position = Vector2(-2210, -270)
+
+[node name="Area2D2" type="Area2D" parent="Chest4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest4/Area2D2"]
+shape = SubResource("CircleShape2D_c4kv1")
+
+[node name="Chest5" parent="." instance=ExtResource("8_hj8om")]
+position = Vector2(-1488, -20)
+
+[node name="Area2D2" type="Area2D" parent="Chest5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest5/Area2D2"]
+shape = SubResource("CircleShape2D_wclfl")
+
+[node name="Chest6" parent="." instance=ExtResource("8_hj8om")]
+position = Vector2(-2220, -512)
+
+[node name="Area2D2" type="Area2D" parent="Chest6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest6/Area2D2"]
+shape = SubResource("CircleShape2D_lga6l")

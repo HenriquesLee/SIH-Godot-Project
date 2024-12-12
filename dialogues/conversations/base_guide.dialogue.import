@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://eelc466ijhy1"
+path="res://.godot/imported/base_guide.dialogue-1f232f1660dcfb3c6c654a05ca257ba3.tres"
+
+[deps]
+
+source_file="res://dialogues/conversations/base_guide.dialogue"
+dest_files=["res://.godot/imported/base_guide.dialogue-1f232f1660dcfb3c6c654a05ca257ba3.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://dvnw5wjhsukfm"]
+
+[ext_resource type="Script" path="res://scenes/objects/Npcs/ravidas.gd" id="1_6al2a"]
+[ext_resource type="Texture2D" uid="uid://dpraluleo576m" path="res://assets/Sprites/characters/Male1.png" id="1_d4m0c"]
+[ext_resource type="PackedScene" uid="uid://dls27bepd1ppc" path="res://scenes/others/interactablecomponent.tscn" id="2_0w63h"]
+[ext_resource type="PackedScene" uid="uid://c5gd5jmwvse6l" path="res://scenes/others/interactable_label_component.tscn" id="3_gtxoc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beur4"]
+atlas = ExtResource("1_d4m0c")
+region = Rect2(0, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mei0o"]
+atlas = ExtResource("1_d4m0c")
+region = Rect2(32, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4cuv"]
+atlas = ExtResource("1_d4m0c")
+region = Rect2(64, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpqrs"]
+atlas = ExtResource("1_d4m0c")
+region = Rect2(96, 480, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajo5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beur4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mei0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4cuv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpqrs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ueacp"]
+radius = 38.1182
+
+[node name="Ravidas" type="Node2D"]
+script = ExtResource("1_6al2a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ajo5a")
+frame_progress = 0.205449
+
+[node name="interablecomponent" parent="." instance=ExtResource("2_0w63h")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interablecomponent"]
+shape = SubResource("CircleShape2D_ueacp")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("3_gtxoc")]
+offset_left = 32.0
+offset_top = -50.0
+offset_right = 52.0
+offset_bottom = -30.0
