@@ -83,12 +83,6 @@ func _on_leaderboard_request_completed(result, response_code, headers, body):
 	else:
 		print("ERROR: Cannot set label text - label is null")
 
-	var previous_scene = SceneNavigationManager.pop_scene()
-	
-	if previous_scene and previous_scene != "":
-		# Change to the previous scene
-		get_tree().change_scene_to_file(previous_scene)
-	else:
-		print("No previous scene available!")
+
 func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/others/base map.tscn") # Replace with function body.
