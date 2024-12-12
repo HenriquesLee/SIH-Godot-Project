@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://dyrragrrjdwk2"]
+[gd_scene load_steps=5 format=4 uid="uid://dyrragrrjdwk2"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_khrim"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_6s53f"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="3_rx2et"]
+[ext_resource type="AudioStream" uid="uid://c6hua1xcgdkqp" path="res://assets/audio/Executive Map 3 (City).mp3" id="4_hds4q"]
 
 [node name="ex_a3" type="Node2D"]
 y_sort_enabled = true
@@ -51,3 +52,7 @@ zoom = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 texture = ExtResource("3_rx2et")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_hds4q")
+autoplay = true

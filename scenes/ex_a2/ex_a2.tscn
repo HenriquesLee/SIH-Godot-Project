@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cke23sbk77q3p"]
+[gd_scene load_steps=6 format=3 uid="uid://cke23sbk77q3p"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_ds7l6"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_5a22b"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="3_cif0l"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="4_8w5sa"]
+[ext_resource type="AudioStream" uid="uid://cedq2kl7o1xt5" path="res://assets/audio/Executive Map 2 (HoneyComb Village).mp3" id="5_r1u2n"]
 
 [node name="ExA2" type="Node2D"]
 
@@ -33,3 +34,8 @@ zoom = Vector2(4, 4)
 texture = ExtResource("3_cif0l")
 
 [node name="Controls" parent="." instance=ExtResource("4_8w5sa")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_r1u2n")
+volume_db = 24.0
+autoplay = true

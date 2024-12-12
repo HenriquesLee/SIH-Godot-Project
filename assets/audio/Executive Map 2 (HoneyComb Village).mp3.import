@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cedq2kl7o1xt5"
+path="res://.godot/imported/Executive Map 2 (HoneyComb Village).mp3-22e2e19b2589331054b9a136af8b047d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Executive Map 2 (HoneyComb Village).mp3"
+dest_files=["res://.godot/imported/Executive Map 2 (HoneyComb Village).mp3-22e2e19b2589331054b9a136af8b047d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

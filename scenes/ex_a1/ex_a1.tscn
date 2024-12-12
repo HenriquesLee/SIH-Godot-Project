@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=4 uid="uid://c140hdqrxiavp"]
+[gd_scene load_steps=109 format=4 uid="uid://c140hdqrxiavp"]
 
 [ext_resource type="Script" path="res://scripts/executive/ex_a1.gd" id="1_8sqbk"]
 [ext_resource type="Texture2D" uid="uid://c5fysfoeisnat" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Grass_1_Middle.png" id="3_7f46e"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="52_u01rx"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="52_wvl2g"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="53_v0q74"]
+[ext_resource type="AudioStream" uid="uid://clr6mqppg77sd" path="res://assets/audio/Executive Map 4 (Town of Elites).mp3" id="55_8d31m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tvec5"]
 texture = ExtResource("23_rlx26")
@@ -1745,5 +1746,10 @@ offset_left = 377.0
 offset_top = 140.0
 offset_right = 377.0
 offset_bottom = 140.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("55_8d31m")
+volume_db = 24.0
+autoplay = true
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

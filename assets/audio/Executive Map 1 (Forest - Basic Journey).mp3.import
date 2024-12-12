@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctuu3beh3d8o4"
+path="res://.godot/imported/Executive Map 1 (Forest - Basic Journey).mp3-c53c7102ae7fb83f2b2c4e77a382b721.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Executive Map 1 (Forest - Basic Journey).mp3"
+dest_files=["res://.godot/imported/Executive Map 1 (Forest - Basic Journey).mp3-c53c7102ae7fb83f2b2c4e77a382b721.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

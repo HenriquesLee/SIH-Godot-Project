@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmy7q65580xhg"
+path="res://.godot/imported/Executive Map 1 (Introduction).mp3-db04cf701ed68f38b762e96dd7fea179.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Executive Map 1 (Introduction).mp3"
+dest_files=["res://.godot/imported/Executive Map 1 (Introduction).mp3-db04cf701ed68f38b762e96dd7fea179.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
