@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkor57og42i4i"]
+
+[ext_resource type="Texture2D" uid="uid://dkexqcy4o2e6s" path="res://assets/UI/preamble_new_border.jpg" id="1_wr7mq"]
+
+[node name="Node2D" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -14.0
+offset_top = -200.0
+offset_right = 1300.0
+offset_bottom = 760.0
+texture = ExtResource("1_wr7mq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 208.0
+offset_right = 1172.0
+offset_bottom = 851.0

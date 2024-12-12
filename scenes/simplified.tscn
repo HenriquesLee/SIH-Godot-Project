@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://bg8yrp7aimkr6"]
+
+[ext_resource type="Texture2D" uid="uid://dkexqcy4o2e6s" path="res://assets/UI/preamble_new_border.jpg" id="1_8uov5"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="2_1nj0v"]
+[ext_resource type="Texture2D" uid="uid://djialooc57oby" path="res://assets/UI/Sprite sheets/UI Big Play Button.png" id="3_xehc0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3nbq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra7l4"]
+atlas = ExtResource("3_xehc0")
+region = Rect2(0, 0, 96, 29.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bhx2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5y4u"]
+atlas = ExtResource("3_xehc0")
+region = Rect2(2, 0, 92, 29.5)
+
+[node name="Node2D" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -14.0
+offset_top = -200.0
+offset_right = 1300.0
+offset_bottom = 760.0
+texture = ExtResource("1_8uov5")
+
+[node name="READ_GAMES" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 246.0
+offset_right = 965.0
+offset_bottom = 493.0
+theme_override_fonts/font = ExtResource("2_1nj0v")
+theme_override_font_sizes/font_size = 102
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l3nbq")
+icon = SubResource("AtlasTexture_ra7l4")
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/READ_GAMES"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 71.0
+offset_right = 570.0
+offset_bottom = 197.0
+theme_override_fonts/normal_font = ExtResource("2_1nj0v")
+theme_override_font_sizes/normal_font_size = 102
+text = "READ ARTICLES"
+
+[node name="MINI_GAMES" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 556.0
+offset_right = 965.0
+offset_bottom = 793.0
+theme_override_fonts/font = ExtResource("2_1nj0v")
+theme_override_font_sizes/font_size = 102
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6bhx2")
+icon = SubResource("AtlasTexture_c5y4u")
+expand_icon = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/MINI_GAMES"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 59.0
+offset_right = 537.0
+offset_bottom = 180.0
+theme_override_fonts/normal_font = ExtResource("2_1nj0v")
+theme_override_font_sizes/normal_font_size = 102
+text = "MINI GAMES"
