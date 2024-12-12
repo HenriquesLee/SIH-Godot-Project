@@ -12,9 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dg0yk7f45b648" path="res://scenes/objects/scripts.tscn" id="6_o48lf"]
 [ext_resource type="PackedScene" uid="uid://btc3s0tiumned" path="res://scenes/others/controls_2.tscn" id="11_1ijgg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry1qk"]
-size = Vector2(174.445, 72.8007)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_cira6"]
 atlas = ExtResource("5_jjc66")
 region = Rect2(96.6741, 128.08, 15.4589, 16.3508)
@@ -37,6 +34,9 @@ radius = 19.9617
 [sub_resource type="CircleShape2D" id="CircleShape2D_jg23b"]
 radius = 21.5188
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry1qk"]
+size = Vector2(174.445, 72.8007)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emhqr"]
 size = Vector2(110.68, 219.334)
 
@@ -49,16 +49,6 @@ scale = Vector2(1.00318, 1.00318)
 script = ExtResource("1_rcmfc")
 
 [node name="Controls" parent="." instance=ExtResource("2_j0bjr")]
-
-[node name="Assesment 1" type="Area2D" parent="."]
-position = Vector2(-1428.46, 640.962)
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Assesment 1"]
-position = Vector2(28.4097, -26.3999)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_ry1qk")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_5ab06")
@@ -115,7 +105,7 @@ position = Vector2(1422.48, -69.7781)
 [node name="player" parent="." node_paths=PackedStringArray("arrow_sprite") instance=ExtResource("2_aie0x")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(-1322.79, 526.326)
+position = Vector2(1664.71, -100.68)
 scale = Vector2(0.947148, 0.990426)
 arrow_sprite = NodePath("Sprite2D")
 arrow_scale = 0.1
@@ -201,6 +191,17 @@ visible = false
 
 [node name="Controls2" parent="." instance=ExtResource("11_1ijgg")]
 
+[node name="Assesment 1" type="Area2D" parent="."]
+position = Vector2(-1428.46, 640.962)
+scale = Vector2(1, 1)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Assesment 1"]
+position = Vector2(28.4097, -26.3999)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_ry1qk")
+
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-1834.17, -70.7749)
 collision_layer = 8
@@ -213,12 +214,13 @@ shape = SubResource("RectangleShape2D_emhqr")
 
 [node name="Assesment" type="Area2D" parent="."]
 position = Vector2(-635.978, -511.374)
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Assesment"]
 position = Vector2(102.673, 14.9524)
 shape = SubResource("CircleShape2D_4hnrl")
 
-[connection signal="body_entered" from="Assesment 1" to="." method="_on_assesment_1_body_entered"]
 [connection signal="request_completed" from="Vandana/HTTPRequest" to="Vandana" method="_on_http_request_request_completed"]
 [connection signal="request_completed" from="Sushil/HTTPRequest" to="Sushil" method="_on_http_request_request_completed"]
 [connection signal="request_completed" from="Gopal/HTTPRequest" to="Gopal" method="_on_http_request_request_completed"]
@@ -229,5 +231,6 @@ shape = SubResource("CircleShape2D_4hnrl")
 [connection signal="body_entered" from="chest 5/Area2D" to="." method="_on_chest_5_body_entered"]
 [connection signal="body_entered" from="chest 6/Area2D" to="." method="_on_chest_6_body_entered"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="body_entered" from="Assesment 1" to="." method="_on_assesment_1_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Assesment" to="." method="_on_assesment_body_entered"]
