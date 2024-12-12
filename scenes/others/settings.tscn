@@ -76,9 +76,14 @@ func create_feedback_popup() -> PopupPanel:
 	return feedback_popup
 
 func _on_exit_button_pressed() -> void:
-	print(\"Exiting settings scene.\")
-	queue_free()  # Closes the settings scene
-
+	# Get the top scene from the stack
+	var previous_scene = SceneNavigationManager.pop_scene()
+	
+	if previous_scene and previous_scene != \"\":
+		# Change to the previous scene
+		get_tree().change_scene_to_file(previous_scene)
+	else:
+		print(\"No previous scene available!\")
 
 func _on_tutorial_pressed() -> void:
 	get_tree().change_scene_to_file(\"res://scenes/others/tutorial.tscn\")

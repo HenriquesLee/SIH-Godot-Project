@@ -24,7 +24,6 @@ script = ExtResource("1_rcmfc")
 
 [node name="Assesment 1" type="Area2D" parent="."]
 position = Vector2(-1428.46, 640.962)
-scale = Vector2(1, 1)
 collision_layer = 8
 collision_mask = 2
 
