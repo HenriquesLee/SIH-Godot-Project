@@ -1,15 +1,16 @@
-[gd_scene load_steps=19 format=4 uid="uid://dnqxu8ba1t2n5"]
+[gd_scene load_steps=20 format=4 uid="uid://dnqxu8ba1t2n5"]
 
 [ext_resource type="TileSet" uid="uid://cj1objhepkpgw" path="res://scenes/ex_a1/Executive.tres" id="1_5ab06"]
 [ext_resource type="Script" path="res://scripts/executive/ex_a_4.gd" id="1_rcmfc"]
 [ext_resource type="PackedScene" uid="uid://qq5dw07f4rmg" path="res://scenes/objects/player.tscn" id="2_aie0x"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="2_j0bjr"]
-[ext_resource type="PackedScene" uid="uid://i0t4mtytya7m" path="res://scenes/objects/Npcs/sushil.tscn" id="3_d8avh"]
-[ext_resource type="PackedScene" uid="uid://dhssxiws3gd2i" path="res://scenes/objects/Npcs/vandana.tscn" id="4_gmm7q"]
+[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/sushil.tscn" id="3_d8avh"]
+[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/vandana.tscn" id="4_gmm7q"]
 [ext_resource type="Texture2D" uid="uid://c8ff3jt6os6li" path="res://assets/pointer.png" id="4_ixce7"]
-[ext_resource type="PackedScene" uid="uid://bqlbguqd1mupc" path="res://scenes/objects/Npcs/gopal.tscn" id="5_adkqe"]
+[ext_resource type="PackedScene" path="res://scenes/objects/Npcs/gopal.tscn" id="5_adkqe"]
 [ext_resource type="Texture2D" uid="uid://dl6g4gkqk8mva" path="res://assets/Tilesets/New/Solaria Demo Tiles.png" id="5_jjc66"]
 [ext_resource type="PackedScene" uid="uid://dg0yk7f45b648" path="res://scenes/objects/scripts.tscn" id="6_o48lf"]
+[ext_resource type="PackedScene" uid="uid://btc3s0tiumned" path="res://scenes/others/controls_2.tscn" id="11_1ijgg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry1qk"]
 size = Vector2(174.445, 72.8007)
@@ -191,6 +192,8 @@ shape = SubResource("CircleShape2D_jg23b")
 visible = false
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Controls2" parent="." instance=ExtResource("11_1ijgg")]
 
 [connection signal="body_entered" from="Assesment 1" to="." method="_on_assesment_1_body_entered"]
 [connection signal="request_completed" from="Vandana/HTTPRequest" to="Vandana" method="_on_http_request_request_completed"]
