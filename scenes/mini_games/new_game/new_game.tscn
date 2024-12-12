@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://caybnuukktl3w" path="res://assets/UI/dialog box medium.png" id="2_qn52g"]
 [ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_d0sga"]
 
-[node name="Control" type="Control"]
+[node name="Control2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

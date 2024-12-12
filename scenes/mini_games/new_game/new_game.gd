@@ -1,9 +1,13 @@
 extends Control
 
+# Variables for the quiz
 var current_question_index = 0
+var json = JSON.new()
 var score = 0
 var required_score = 3  # Minimum score to pass
+var questions = [] # Minimum score to pass
 @onready var exit_button: Button = $TextureRect/ExitButton
+@onready var http_request: HTTPRequest = $HTTPRequest
 
 # Variables for UI components
 @onready var judge_texture = $TextureRect3
@@ -19,31 +23,10 @@ var required_score = 3  # Minimum score to pass
 
 # Dialogue and questions
 var judge_dialogue = "Welcome to the court. Let's begin the session!"
-var questions = [
-	{
-		"question": "How is the Vice-President elected?",
-		"options": ["By Members of Legislative Assemblies", "By an Electoral College of MPs", "By citizens directly"],
-		"correct_index": 1
-	},
-	{
-		"question": "Which body resolves disputes regarding the election of the President?",
-		"options": ["Election Commission", "Lok Sabha", "Supreme Court"],
-		"correct_index": 2
-	},
-	{
-		"question": "What special power does the President hold under Article 72?",
-		"options": ["Declare a state of emergency", "Grant pardons for offenses", "Dissolve Parliament"],
-		"correct_index": 1
-	},
-	{
-		"question": "What is the term length for the Vice-President?",
-		"options": ["4 years", "5 years", "6 years"],
-		"correct_index": 1
-	}
-]
 
 func _ready():
 	# Initial setup
+	fetch_questions()
 	initialize_ui()
 	exit_button.visible = false
 
@@ -75,11 +58,22 @@ func proceed_to_question() -> void:
 
 func show_question() -> void:
 	# Load current question
-	var current_question = questions[current_question_index]
-	crowd_texture.get_child(0).text = current_question["question"]
-	button1.text = current_question["options"][0]
-	button2.text = current_question["options"][1]
-	button3.text = current_question["options"][2]
+	if questions.is_empty():
+		return
+		
+	# Reset button colors
+	for button in buttons:
+		button.modulate = Color(1, 1, 1, 1)  # Reset to default white color
+		button.disabled = false
+	
+	# Hide exit button
+	exit_button.visible = false
+	
+	# Display the current question and set the text for the answer buttons
+	var question = questions[current_question_index]
+	crowd_texture.get_child(0).text = question["question"]
+	for i in range(3):
+		buttons[i].text = question["options"][i]
 	button1.visible = true
 	button2.visible = true
 	button3.visible = true
@@ -92,7 +86,7 @@ func _on_button_pressed(button_index: int) -> void:
 
 func check_answer(selected_index: int) -> void:
 	var current_question = questions[current_question_index]
-	if selected_index == current_question["correct_index"]:
+	if buttons[selected_index].text == current_question["answer"][0]:
 		# Correct answer
 		buttons[selected_index].modulate = Color(0, 1, 0)  # Green for correct answer
 		score += 1
@@ -102,7 +96,7 @@ func check_answer(selected_index: int) -> void:
 		
 		# Find and highlight the correct answer in green
 		for i in range(buttons.size()):
-			if i == current_question["correct_index"]:
+			if buttons[i].text == current_question["answer"][0]:
 				buttons[i].modulate = Color(0, 1, 0)
 				break
 	
@@ -127,3 +121,24 @@ func check_game_complete() -> void:
 	else:
 		print("Game over! You didn't pass the quiz.")
 	# Optionally, show a summary or restart the game
+
+func fetch_questions() -> void:
+	var post_data = {"area": "ex", "test": "quiz_ex_1","collection":"quiz"}
+	var headers = ["Content-Type: application/json"]
+	var response = http_request.request(Api.game, headers, HTTPClient.METHOD_GET,
+		JSON.stringify(post_data))
+	if response != OK:
+		print("An error occurred in the HTTP request.")
+func _on_http_request_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
+	if response_code == 200:
+		print("Success")
+		var error = json.parse(body.get_string_from_utf8())
+		if error == OK:
+			var response_data = json.get_data()
+			questions = response_data["data"]
+			if not questions.is_empty():
+				show_question()
+			else:
+				print("No questions received from the server")
+	else:
+		print("HTTP Request failed with response code: ", response_code)

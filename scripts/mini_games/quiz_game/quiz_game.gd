@@ -3,11 +3,12 @@ extends Control
 # Variables for the quiz
 var current_question_index = 0
 var score = 0
-var required_score = 3  # Minimum score to pass
+var required_score = 1  # Minimum score to pass
 var questions = []  # Store fetched questions
-
+var _save = SaveGame.new()
 @onready var http_request: HTTPRequest = $HTTPRequest
 var json = JSON.new()
+@onready var on_game_complete: HTTPRequest = $On_Game_complete
 
 # Cached UI elements
 @onready var question_label = $VideoStreamPlayer/RichTextLabel
@@ -104,13 +105,14 @@ func check_game_complete() -> void:
 	# Display the result of the quiz
 	if score >= required_score:
 		question_label.text = "Congratulations! You passed the quiz!\nScore: %d/%d" % [score, questions.size()]
-		
+		submit_score()
 		# Hide answer buttons
 		for button in buttons:
 			button.visible = false
 		
 		# Show exit button
 		exit_button.visible = true
+		
 	else:
 		question_label.text = "Game over! You need at least %d correct answers to pass.\nYour score: %d/%d" % [required_score, score, questions.size()]
 
@@ -130,3 +132,24 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 				print("No questions received from the server")
 	else:
 		print("HTTP Request failed with response code: ", response_code)
+func submit_score():
+	print("Success")
+	var score_data = {
+		#"area": "ex",
+		#"test": "quiz_ex_1",
+		"userid": UserData.UserId,
+		"score": score*10,
+		
+	}
+	var headers = ["Content-Type: application/json"]
+	
+	# Send the HTTP request to submit the score
+	var error = on_game_complete.request(
+		Api.post_score,  # Assuming this is the same endpoint used for fetching questions
+		headers, 
+		HTTPClient.METHOD_POST, 
+		JSON.stringify(score_data)
+	)
+func _on_on_game_complete_request_completed(result: int, response_code: int, headers: PackedStringArray, body: PackedByteArray) -> void:
+	if response_code == 201:
+		print("Score submitted successfully")

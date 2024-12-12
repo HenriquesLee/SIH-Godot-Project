@@ -5,7 +5,7 @@ extends Control
 @onready var submit: TextureButton = $TextureRect/Submit
 @onready var rich_text_label_4: RichTextLabel = $TextureRect/RichTextLabel4
 @onready var http_request: HTTPRequest = $HTTPRequest
-
+var _save = SaveGame.new()
 func _ready() -> void:
 	rich_text_label_4.hide()
 
@@ -53,7 +53,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 	if response_code == 201:
 		var json = JSON.parse_string(body.get_string_from_utf8())
 		UserData.UserId = json["userid"]
-		print(UserData.UserId)
+		print(_save.character.user_id)
 		get_tree().change_scene_to_file("res://scenes/others/main_menu.tscn")
 	else:
 		print("Failed with code: ", response_code)

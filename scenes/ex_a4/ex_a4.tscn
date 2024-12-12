@@ -108,7 +108,7 @@ position = Vector2(1422.48, -69.7781)
 [node name="player" parent="." node_paths=PackedStringArray("arrow_sprite") instance=ExtResource("2_aie0x")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(1670.69, -85.7274)
+position = Vector2(-1322.79, 526.326)
 scale = Vector2(0.947148, 0.990426)
 arrow_sprite = NodePath("Sprite2D")
 arrow_scale = 0.1
