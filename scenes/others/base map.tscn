@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://biutp6sduvrno"]
+[gd_scene load_steps=101 format=3 uid="uid://biutp6sduvrno"]
 
 [ext_resource type="Script" path="res://scripts/base_map.gd" id="1_3sdbm"]
 [ext_resource type="Texture2D" uid="uid://c5fysfoeisnat" path="res://assets/Cute_Fantasy_assets/Tiles/Grass/Grass_1_Middle.png" id="2_3slul"]
@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://bf37s0iwxeyhj" path="res://scenes/objects/Npcs/leg_guide.tscn" id="43_ulnw4"]
 [ext_resource type="PackedScene" uid="uid://cjxo728bh4po" path="res://scenes/others/controls.tscn" id="44_u3vd2"]
 [ext_resource type="PackedScene" uid="uid://bw7fske4qa025" path="res://scenes/others/fade_transition.tscn" id="45_lcuni"]
+[ext_resource type="PackedScene" uid="uid://btc3s0tiumned" path="res://scenes/others/controls_2.tscn" id="47_qexya"]
 [ext_resource type="AudioStream" uid="uid://8jqgc0b2wme2" path="res://assets/audio/background_music.mp3" id="49_e08lk"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_gvrkq"]
@@ -1581,6 +1582,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Top Boundary"]
 rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_1n0v3")
+
+[node name="Controls2" parent="." instance=ExtResource("47_qexya")]
 
 [node name="Controls" parent="." instance=ExtResource("44_u3vd2")]
 visible = false
