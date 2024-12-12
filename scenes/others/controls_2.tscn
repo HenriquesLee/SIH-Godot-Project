@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://btc3s0tiumned"]
+
+[ext_resource type="Texture2D" uid="uid://d0x7wtwvenmk5" path="res://assets/UI/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_7jjas"]
+[ext_resource type="Script" path="res://scenes/others/ai_button.gd" id="2_hjhps"]
+[ext_resource type="Script" path="res://scenes/others/setting_button.gd" id="2_r4wj4"]
+[ext_resource type="FontFile" uid="uid://cotm02uvrmm48" path="res://assets/UI/fonts/Jersey10-Regular.ttf" id="3_vk8li"]
+[ext_resource type="Script" path="res://scenes/others/yt_button.gd" id="4_e5bhn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qd26a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h853g"]
+atlas = ExtResource("1_7jjas")
+region = Rect2(750, 191, 21, 18)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_liqc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_502py"]
+atlas = ExtResource("1_7jjas")
+region = Rect2(372.692, 38.4, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma4rp"]
+atlas = ExtResource("1_7jjas")
+region = Rect2(175.2, 212.95, 18.7, 18.7)
+
+[node name="Controls2" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 59.0
+offset_bottom = 59.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qd26a")
+icon = SubResource("AtlasTexture_h853g")
+expand_icon = true
+script = ExtResource("2_r4wj4")
+
+[node name="AI_Button" type="Button" parent="."]
+offset_left = 960.0
+offset_top = 106.0
+offset_right = 1066.0
+offset_bottom = 204.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_liqc2")
+icon = SubResource("AtlasTexture_502py")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_hjhps")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AI_Button"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 46.0
+offset_top = 32.0
+offset_right = 73.0
+offset_bottom = 63.0
+theme_override_fonts/normal_font = ExtResource("3_vk8li")
+theme_override_font_sizes/normal_font_size = 28
+text = "AI"
+
+[node name="YT_Button" type="Button" parent="."]
+offset_left = 991.0
+offset_top = 220.0
+offset_right = 1052.0
+offset_bottom = 293.0
+icon = SubResource("AtlasTexture_ma4rp")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_e5bhn")
